@@ -1,0 +1,18 @@
+language: d
+branches:
+  only:
+  - master
+script:
+- git pull --recurse-submodules
+- git submodule update --remote --recursive
+- make -f doc/Makefile html
+deploy:
+  provider: s3
+  bucket: mir.dlang.io
+  acl: public_read
+  region: eu-west-1
+  local_dir: web
+  skip_cleanup: true
+  access_key_id: "AKIAIVZTIYXFNTQ5EP4Q"
+  secret_access_key:
+    secure: ms1Wkr/eWWEt74lQ1Ltuu0UKS7rVP4cL11GluyPRx202/Yd9iBTtQWHyf0lZEJG0CRPNG19W3Qoqn5kUw66rbFIM1Ww4S04ZTmvAcXM0mRbA77sNmzLnCeNukFbohYJHVN87TcpYh/Lz/DRyaENhch5BRT8N355MqjYBp/5bRqPtqrskv7Xxpi7PliawgUz6EKrEVtMWUU2UhKdhOuxVHcBDEsXCMQBDBsSmyxYc9Yn+XJBW3sKDg80MAupLal2LkMUAAcr2l59usWydMzw9jguocBOYjXYmyMqEmIjAXHnjOmrxOSNwYrKdvpXxuJcANZl+QFNelSVmFBxC3EpqD3qGHjnIYFspshI4nkQogypcVVSVCedxXUZKTD5GUnqKGi7O7ECtO3UibW7QpW5bXcoSP/Y3kGL0mOR75rhyc5inR+PjVYgjfxRKSPvNthISyUwvzvz2gDjzo4j+ME5iZGWJRocwIDELSxJPoIcLP3hHtJp/OpGCgApPczOLV2Dj3rKRpWg1AE3BMn9fGKlGOv3EM3bmwvmoLznY/lbB5JFYybO81/uZWHyc3Y/tKeWvxbgEonL7D5xl0tfaqM1up53q+56mnouPo+/zkGsj3yDL5xTslLt7CXuGmMa6gjzB8+mLD5xjOo2+iB56up4zsojsPVXQFBDX3YZMrGfn8Ac=
