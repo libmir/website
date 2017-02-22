@@ -1,0 +1,39 @@
+[submodule "mir-algorithm"]
+	path = mir-algorithm
+	url = https://github.com/libmir/mir-algorithm
+[submodule "doc/dlang.org"]
+	path = doc/dlang.org
+	url = https://github.com/dlang/dlang.org
+[submodule "doc/artwork"]
+	path = doc/artwork
+	url = https://github.com/libmir/mir-artwork
+[submodule "mir-glas"]
+	path = mir-glas
+	url = https://github.com/libmir/mir-glas
+[submodule "mir-cpuid"]
+	path = mir-cpuid
+	url = https://github.com/libmir/mir-cpuid
+[submodule "mir-internal"]
+	path = mir-internal
+	url = https://github.com/libmir/mir-internal
+[submodule "mir-neural"]
+	path = mir-neural
+	url = https://github.com/libmir/mir-neural
+[submodule "mir-runtime"]
+	path = mir-runtime
+	url = https://github.com/libmir/mir-runtime
+[submodule "mir-math"]
+	path = mir-math
+	url = https://github.com/libmir/mir-math
+[submodule "mir-std"]
+	path = mir-std
+	url = https://github.com/libmir/mir-std
+[submodule "dcv"]
+	path = dcv
+	url = https://github.com/libmir/dcv
+[submodule "mir"]
+	path = mir
+	url = https://github.com/libmir/mir
+[submodule "mir-random"]
+	path = mir-random
+	url = https://github.com/libmir/mir-random
