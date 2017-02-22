@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>mir.random.flex - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='mir.random.flex' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/mir/random/flex/package.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">mir.random.flex</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary">Flex module that allows to sample from arbitrary random distributions.
+</div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Sebastian Wilzbach, Ilya Yaroshenko
+<div class="blankline"></div>
+
+
+The Transformed Density Rejection with Inflection Points (Flex) algorithm
+can sample from arbitrary distributions given (1) its log-density function f,
+(2) its first two derivatives and (3) a partitioning into intervals
+with at most one inflection point.
+<div class="blankline"></div>
+
+
+These can be easily found by plotting <span class="d_inlinecode donthyphenate notranslate">f''</span>.
+<b>Inflection points</b> can be identified by observing at which points <span class="d_inlinecode donthyphenate notranslate">f''</span> is 0
+and an inflection interval which is defined by two inflection points can either be:
+<div class="blankline"></div>
+
+
+<ul>    <li><span class="d_inlinecode donthyphenate notranslate">g(x)</span> is entirely concave (<span class="d_inlinecode donthyphenate notranslate">f''</span> is entirely negative)</li>
+    <li><span class="d_inlinecode donthyphenate notranslate">g(x)</span> is entirely convex (<span class="d_inlinecode donthyphenate notranslate">f''</span> is entirely positive)</li>
+    <li><span class="d_inlinecode donthyphenate notranslate">g(x)</span> contains one inflection point (<span class="d_inlinecode donthyphenate notranslate">f''</span> intersects the x-axis once)</li>
+</ul>
+<div class="blankline"></div>
+
+
+It is not important to identify the exact inflection points, but the user input requires:
+<div class="blankline"></div>
+
+
+<ul>    <li>Continuous density function <span class="d_inlinecode donthyphenate notranslate">g(x)</span>.</li>
+    <li>Continuous differentiability of <span class="d_inlinecode donthyphenate notranslate">g(x)</span> except in a finite number of
+      points which need to have a one-sided derivative.</li>
+    <li><b>Doubled</b> continuous differentiability of <span class="d_inlinecode donthyphenate notranslate">g(x)</span> except in a finite number of
+      points which need to be inflection points.</li>
+    <li>At most one inflection point per interval</li>
+</ul>
+<div class="blankline"></div>
+
+
+Internally the Flex algorithm transforms the distribution with a special
+transformation function and constructs for every interval a linear <span class="d_inlinecode donthyphenate notranslate">hat</span> function
+that majorizes the <span class="d_inlinecode donthyphenate notranslate">pdf</span> and a linear <span class="d_inlinecode donthyphenate notranslate">squeeze</span> function that is majorized by
+the <span class="d_inlinecode donthyphenate notranslate">pdf</span> from the user-defined, mutually-exclusive partitioning.
+<div class="blankline"></div>
+
+
+<h3>Efficiency <span class="d_inlinecode donthyphenate notranslate">rho</span></h3>
+<div class="blankline"></div>
+
+
+In further steps the algorithm splits those intervals until a chosen efficiency
+<span class="d_inlinecode donthyphenate notranslate">rho</span> between the ratio of the sum of all hat areas to the sum of
+all squeeze areas is reached.
+For example an efficiency of 1.1 means that <span class="d_inlinecode donthyphenate notranslate">10 / 110</span> of all
+drawn uniform numbers don't match the target distribution and need be resampled.
+A higher efficiency constructs more intervals, and thus requires more iterations
+and a longer setup phase, but increases the speed of sampling.
+<div class="blankline"></div>
+
+
+<h3>Unbounded intervals</h3>
+<div class="blankline"></div>
+
+
+In each unbounded interval the transformation and thus the density must be
+concave and strictly monotone.
+<div class="blankline"></div>
+
+
+<h3>Transformation function (T_c)</h3> <a name="t_c_family"></a>
+<div class="blankline"></div>
+
+
+The Flex algorithm uses a family of T_c transformations:
+<div class="blankline"></div>
+
+
+<ul>    <li>`T_0(x) = log(x)</li>
+    <li>`T_c(x) = sign(c) * x^c</li>
+</ul>
+<div class="blankline"></div>
+
+
+Thus <span class="d_inlinecode donthyphenate notranslate">c</span> has the following properties
+<div class="blankline"></div>
+
+
+<ul>    <li>Decreasing <span class="d_inlinecode donthyphenate notranslate">c</span> may decrease the number of inflection points</li>
+    <li>For unbounded domains, <span class="d_inlinecode donthyphenate notranslate">c &gt; -1</span> is required</li>
+    <li>For unbounded densities, <span class="d_inlinecode donthyphenate notranslate">c</span> must be sufficiently small, but should
+         be great than -1. A common choice is <span class="d_inlinecode donthyphenate notranslate">-0.5</span></li>
+    <li><span class="d_inlinecode donthyphenate notranslate">c=0</span> is the pure <span class="d_inlinecode donthyphenate notranslate">log</span> transformation and thus decreases the
+         vulnerability for under- and overflows</li>
+</ul>
+
+</div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">References:</span>
+Botts, Carsten, Wolfgang Hörmann, and Josef Leydold.
+    "<a href="http://epub.wu-wien.ac.at/3158/1/techreport-110.pdf">    Transformed density rejection with inflection points.</a>"
+    Statistics and Computing 23.2 (2013): 251-260.
+
+</p></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".flex"></span><div class="quickindex" id="quickindex.flex"></div>auto <span class="def-anchor" id="flex"></span><code class="ddoc_psymbol">flex</code><span class="template_param_list" title="Template parameter list">(S, F0, F1, F2)</span>(in F0 <code class="ddoc_param">f0</code>, in F1 <code class="ddoc_param">f1</code>, in F2 <code class="ddoc_param">f2</code>, S <code class="ddoc_param">c</code>, S[] <code class="ddoc_param">points</code>, S <code class="ddoc_param">rho</code> = 1.1, int <code class="ddoc_param">maxApproxPoints</code> = 1000)<br><span class="constraint">if (isFloatingPoint!S)</span>;
+<br><br>auto <span class="def-anchor" id="flex"></span><code class="ddoc_psymbol">flex</code><span class="template_param_list" title="Template parameter list">(S, Pdf, F0, F1, F2)</span>(in Pdf <code class="ddoc_param">pdf</code>, in F0 <code class="ddoc_param">f0</code>, in F1 <code class="ddoc_param">f1</code>, in F2 <code class="ddoc_param">f2</code>, S <code class="ddoc_param">c</code>, S[] <code class="ddoc_param">points</code>, S <code class="ddoc_param">rho</code> = 1.1, int <code class="ddoc_param">maxApproxPoints</code> = 1000)<br><span class="constraint">if (isFloatingPoint!S)</span>;
+<br><br>auto <span class="def-anchor" id="flex"></span><code class="ddoc_psymbol">flex</code><span class="template_param_list" title="Template parameter list">(S, F0, F1, F2)</span>(in F0 <code class="ddoc_param">f0</code>, in F1 <code class="ddoc_param">f1</code>, in F2 <code class="ddoc_param">f2</code>, S[] <code class="ddoc_param">cs</code>, S[] <code class="ddoc_param">points</code>, S <code class="ddoc_param">rho</code> = 1.1, int <code class="ddoc_param">maxApproxPoints</code> = 1000)<br><span class="constraint">if (isFloatingPoint!S)</span>;
+<br><br>auto <span class="def-anchor" id="flex"></span><code class="ddoc_psymbol">flex</code><span class="template_param_list" title="Template parameter list">(S, Pdf, F0, F1, F2)</span>(in Pdf <code class="ddoc_param">pdf</code>, in F0 <code class="ddoc_param">f0</code>, in F1 <code class="ddoc_param">f1</code>, in F2 <code class="ddoc_param">f2</code>, S[] <code class="ddoc_param">cs</code>, S[] <code class="ddoc_param">points</code>, S <code class="ddoc_param">rho</code> = 1.1, int <code class="ddoc_param">maxApproxPoints</code> = 1000)<br><span class="constraint">if (isFloatingPoint!S)</span>;
+<br><br>auto <span class="def-anchor" id="flex"></span><code class="ddoc_psymbol">flex</code><span class="template_param_list" title="Template parameter list">(S, Pdf)</span>(in Pdf <code class="ddoc_param">pdf</code>, in FlexInterval!S[] <code class="ddoc_param">intervals</code>)<br><span class="constraint">if (isFloatingPoint!S)</span>;
+<br></div></dt>
+<dd><div class="summary">The Transformed Density Rejection with Inflection Points (Flex) algorithm
+can sample from arbitrary distributions given its density function f, its
+first two derivatives and a partitioning into <code class="ddoc_param">intervals</code> with at most one inflection
+point. The partitioning needs to be mutually exclusive and sorted.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Pdf <code class="ddoc_param">pdf</code></td>
+<td class="param_desc">probability density function of the distribution</td></tr>
+<tr class="param"><td class="param_id">F0 <code class="ddoc_param">f0</code></td>
+<td class="param_desc">logarithmic <code class="ddoc_param">pdf</code></td></tr>
+<tr class="param"><td class="param_id">F1 <code class="ddoc_param">f1</code></td>
+<td class="param_desc">first derivative of logarithmic <code class="ddoc_param">pdf</code></td></tr>
+<tr class="param"><td class="param_id">F2 <code class="ddoc_param">f2</code></td>
+<td class="param_desc">second derivative of logarithmic <code class="ddoc_param">pdf</code></td></tr>
+<tr class="param"><td class="param_id">S <code class="ddoc_param">c</code></td>
+<td class="param_desc"><a href="#t_c_family">T_c family</a> value</td></tr>
+<tr class="param"><td class="param_id">S[] <code class="ddoc_param">cs</code></td>
+<td class="param_desc"><a href="#t_c_family">T_c family</a> array</td></tr>
+<tr class="param"><td class="param_id">S[] <code class="ddoc_param">points</code></td>
+<td class="param_desc">non-overlapping partitioning with at most one inflection point per interval</td></tr>
+<tr class="param"><td class="param_id">S <code class="ddoc_param">rho</code></td>
+<td class="param_desc">efficiency of the Flex algorithm</td></tr>
+<tr class="param"><td class="param_id">int <code class="ddoc_param">maxApproxPoints</code></td>
+<td class="param_desc">maximal number of <code class="ddoc_param">points</code> to use for the hat/squeeze approximation</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Flex Generator.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Flex"></span><div class="quickindex" id="quickindex.Flex"></div>struct <span class="def-anchor" id="Flex"></span><code class="ddoc_psymbol">Flex</code>(S, Pdf) if (isFloatingPoint!S);
+<br></div></dt>
+<dd><div class="summary">Data body of the <span class="def-anchor" id="Flex"></span><code class="ddoc_psymbol">Flex</code> algorithm.
+Can be used to sample from the distribution.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.math : approxEqual;
+<span class="d_keyword">import</span> std.meta : AliasSeq;
+<span class="d_keyword">import</span> mir.random.engine.xorshift : Xorshift;
+<span class="d_keyword">auto</span> gen = Xorshift(42);
+<span class="d_keyword">alias</span> S = <span class="d_keyword">double</span>;
+<span class="d_keyword">auto</span> f0 = (S x) =&gt; -x^^4 + 5 * x^^2 - 4;
+<span class="d_keyword">auto</span> f1 = (S x) =&gt; 10 * x - 4 * x^^3;
+<span class="d_keyword">auto</span> f2 = (S x) =&gt; 10 - 12 * x^^2;
+S[] points = [-3, -1.5, 0, 1.5, 3];
+
+<span class="d_keyword">auto</span> tf = flex(f0, f1, f2, 1.5, points, 1.1);
+<span class="d_keyword">auto</span> value = tf(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".Flex.intervals"></span><div class="quickindex" id="quickindex.Flex.intervals"></div>const @property const(FlexInterval!S[]) <span class="def-anchor" id="intervals"></span><code class="ddoc_psymbol">intervals</code>();
+<br></div></dt>
+<dd><div class="summary">Generated partition points</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Flex.opCall"></span><div class="quickindex" id="quickindex.Flex.opCall"></div>S <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(RNG)</span>(ref RNG <code class="ddoc_param">rng</code>)<br><span class="constraint">if (isRandomEngine!RNG)</span>;
+<br></div></dt>
+<dd><div class="summary">Sample a value from the distribution.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">RNG <code class="ddoc_param">rng</code></td>
+<td class="param_desc">random number generator to use</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Array of length <span class="d_inlinecode donthyphenate notranslate">n</span> with the samples</div></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FlexInterval"></span><div class="quickindex" id="quickindex.FlexInterval"></div>struct <span class="def-anchor" id="FlexInterval"></span><code class="ddoc_psymbol">FlexInterval</code>(S) if (isFloatingPoint!S);
+<br></div></dt>
+<dd><div class="summary">Reduced version of <a href="#Interval"><span class="d_inlinecode donthyphenate notranslate">Interval</span></a>. Contains only the necessary information
+needed in the generation phase.</div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".FlexInterval.lx"></span><div class="quickindex" id="quickindex.FlexInterval.lx"></div>S <span class="def-anchor" id="lx"></span><code class="ddoc_psymbol">lx</code>;
+<br></div></dt>
+<dd><div class="summary">Left position of the interval</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FlexInterval.rx"></span><div class="quickindex" id="quickindex.FlexInterval.rx"></div>S <span class="def-anchor" id="rx"></span><code class="ddoc_psymbol">rx</code>;
+<br></div></dt>
+<dd><div class="summary">Right position of the interval</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FlexInterval.c"></span><div class="quickindex" id="quickindex.FlexInterval.c"></div>S <span class="def-anchor" id="c"></span><code class="ddoc_psymbol">c</code>;
+<br></div></dt>
+<dd><div class="summary">T_c family of the interval</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FlexInterval.hat"></span><div class="quickindex" id="quickindex.FlexInterval.hat"></div>LinearFun!S <span class="def-anchor" id="hat"></span><code class="ddoc_psymbol">hat</code>;
+<br></div></dt>
+<dd><div class="summary">The majorizing linear <span class="def-anchor" id="hat"></span><code class="ddoc_psymbol">hat</code> function</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FlexInterval.squeeze"></span><div class="quickindex" id="quickindex.FlexInterval.squeeze"></div>LinearFun!S <span class="def-anchor" id="squeeze"></span><code class="ddoc_psymbol">squeeze</code>;
+<br></div></dt>
+<dd><div class="summary">The linear <span class="def-anchor" id="squeeze"></span><code class="ddoc_psymbol">squeeze</code> function which is majorized by log(f(x))</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FlexInterval.hatArea"></span><div class="quickindex" id="quickindex.FlexInterval.hatArea"></div>S <span class="def-anchor" id="hatArea"></span><code class="ddoc_psymbol">hatArea</code>;
+<br></div></dt>
+<dd><div class="summary">The total area that is spanned by the hat function in this interval</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FlexInterval.squeezeArea"></span><div class="quickindex" id="quickindex.FlexInterval.squeezeArea"></div>S <span class="def-anchor" id="squeezeArea"></span><code class="ddoc_psymbol">squeezeArea</code>;
+<br></div></dt>
+<dd><div class="summary">The total area that is spanned by the squeeze function in this interval</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".flexIntervals"></span><div class="quickindex" id="quickindex.flexIntervals"></div>FlexInterval!S[] <span class="def-anchor" id="flexIntervals"></span><code class="ddoc_psymbol">flexIntervals</code><span class="template_param_list" title="Template parameter list">(S, F0, F1, F2)</span>(in F0 <code class="ddoc_param">f0</code>, in F1 <code class="ddoc_param">f1</code>, in F2 <code class="ddoc_param">f2</code>, in S[] <code class="ddoc_param">cs</code>, in S[] <code class="ddoc_param">points</code>, in S <code class="ddoc_param">rho</code> = 1.1, in int <code class="ddoc_param">maxApproxPoints</code> = 1000);
+<br></div></dt>
+<dd><div class="summary">Calculate the intervals for the Flex algorithm for a T_c family given its
+density function, the first two derivatives and a valid start partitioning.
+The Flex algorithm will try to split the intervals until a chosen efficiency
+<code class="ddoc_param">rho</code> is reached.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">F0 <code class="ddoc_param">f0</code></td>
+<td class="param_desc">probability density function of the distribution</td></tr>
+<tr class="param"><td class="param_id">F1 <code class="ddoc_param">f1</code></td>
+<td class="param_desc">first derivative of <code class="ddoc_param">f0</code></td></tr>
+<tr class="param"><td class="param_id">F1 <code class="ddoc_param">f1</code></td>
+<td class="param_desc">second derivative of <code class="ddoc_param">f0</code></td></tr>
+<tr class="param"><td class="param_id">S[] <code class="ddoc_param">cs</code></td>
+<td class="param_desc">T_c family (single value or array)</td></tr>
+<tr class="param"><td class="param_id">S[] <code class="ddoc_param">points</code></td>
+<td class="param_desc">non-overlapping partitioning with at most one inflection point per interval</td></tr>
+<tr class="param"><td class="param_id">S <code class="ddoc_param">rho</code></td>
+<td class="param_desc">efficiency of the Flex algorithm</td></tr>
+<tr class="param"><td class="param_id">int <code class="ddoc_param">maxApproxPoints</code></td>
+<td class="param_desc">maximal number of splitting <code class="ddoc_param">points</code> before Flex is aborted</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Array of <a href="#FlexInterval"><span class="d_inlinecode donthyphenate notranslate">FlexInterval</span></a>'s.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".flexInverse"></span><div class="quickindex" id="quickindex.flexInverse"></div>S <span class="def-anchor" id="flexInverse"></span><code class="ddoc_psymbol">flexInverse</code><span class="template_param_list" title="Template parameter list">(bool common = false, S)</span>(in S <code class="ddoc_param">x</code>, in S <code class="ddoc_param">c</code>);
+<br></div></dt>
+<dd><div class="summary">Compute inverse transformation of a T_c family given point <code class="ddoc_param">x</code>.
+Based on Table 1, column 3 of Botts et al. (2013).
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">common</td>
+<td class="param_desc">whether <code class="ddoc_param">c</code> be 0, -0.5, -1 or 1</td></tr>
+<tr class="param"><td class="param_id">S <code class="ddoc_param">x</code></td>
+<td class="param_desc">value to transform</td></tr>
+<tr class="param"><td class="param_id">S <code class="ddoc_param">c</code></td>
+<td class="param_desc">T_c family to use for the transformation</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Flex-inversed value of <code class="ddoc_param">x</code></div></div>
+
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright &copy; 1999-2017 by the <a href="../foundation.html">D Language Foundation</a> | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:14 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

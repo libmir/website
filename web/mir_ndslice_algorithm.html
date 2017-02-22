@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>mir.ndslice.algorithm - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='mir.ndslice.algorithm' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/mir/ndslice/algorithm.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">mir.ndslice.algorithm</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary">This is a submodule of <a href="mir_ndslice.html"><span class="d_inlinecode donthyphenate notranslate">mir.ndslice</span></a>.
+</div>
+<div class="description">It contains basic multidimensional iteration algorithms.
+<div class="blankline"></div>
+
+
+<table class="book"><caption><h2>Function</h2></caption><tr><th scope="col">Function Name</th> <th scope="col">Description</th></tr>
+<tr><td class="donthyphenate nobr"><a href="#all"><span class="d_inlinecode donthyphenate notranslate">all</span></a></td> <td>Checks if all elements satisfy to a predicate.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#any"><span class="d_inlinecode donthyphenate notranslate">any</span></a></td> <td>Checks if at least one element satisfy to a predicate.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#cmp"><span class="d_inlinecode donthyphenate notranslate">cmp</span></a></td> <td>Compares two slices.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#count"><span class="d_inlinecode donthyphenate notranslate">count</span></a></td> <td>Counts elements in a slices according to a predicate.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#each"><span class="d_inlinecode donthyphenate notranslate">each</span></a></td> <td>Iterates all elements.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#equal"><span class="d_inlinecode donthyphenate notranslate">equal</span></a></td> <td>Compares two slices for equality.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#find"><span class="d_inlinecode donthyphenate notranslate">find</span></a></td> <td>Finds backward index.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#reduce"><span class="d_inlinecode donthyphenate notranslate">reduce</span></a></td> <td>Accumulates all elements.</td></tr>
+</table>
+<div class="blankline"></div>
+
+
+<div class="blankline"></div>
+
+
+All operators are suitable to change slices using <span class="d_inlinecode donthyphenate notranslate">ref</span> argument qualification in a function declaration.
+Note, that string lambdas in Mir are <span class="d_inlinecode donthyphenate notranslate">auto ref</span> functions.
+
+</div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko
+
+</div></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".reduce"></span><div class="quickindex" id="quickindex.reduce"></div>template <span class="def-anchor" id="reduce"></span><code class="ddoc_psymbol">reduce</code>(alias fun)<br></div></dt>
+<dd><div class="summary">Implements the homonym function (also known as <span class="d_inlinecode donthyphenate notranslate">accumulate</span>,
+<span class="d_inlinecode donthyphenate notranslate">compress</span>, <span class="d_inlinecode donthyphenate notranslate">inject</span>, or <span class="d_inlinecode donthyphenate notranslate">fold</span>) present in various programming
+languages of functional flavor. The call <span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="reduce"></span><code class="ddoc_psymbol">reduce</code>!(fun)(seed, slice1, ..., sliceN)</span>
+first assigns <span class="d_inlinecode donthyphenate notranslate">seed</span> to an internal variable <span class="d_inlinecode donthyphenate notranslate">result</span>,
+also called the accumulator. Then, for each set of element <span class="d_inlinecode donthyphenate notranslate">x1, ..., xN</span> in
+<span class="d_inlinecode donthyphenate notranslate">slice1, ..., sliceN</span>, <span class="d_inlinecode donthyphenate notranslate">result = fun(result, x1, ..., xN)</span> gets evaluated. Finally,
+<span class="d_inlinecode donthyphenate notranslate">result</span> is returned.
+</div>
+<div class="description"><span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="reduce"></span><code class="ddoc_psymbol">reduce</code></span> allows to iterate multiple slices in the lockstep.
+
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+<a href="mir_ndslice_topology.html#.pack"><em class="tt">pack</em></a>&nbsp; can be used to specify dimensions.
+</p></div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">fun</td>
+<td class="param_desc">A function.</td></tr>
+</table></div></div>
+<div class="keyval SeeAlso"><span class="key keySeeAlso">See Also:</span> <div class="val valSeeAlso"><a href="http://llvm.org/docs/LangRef.html#fast-math-flags">LLVM IR: Fast Math Flags</a>
+<div class="blankline"></div>
+
+
+    <a href="http://en.wikipedia.org/wiki/Fold_(higher-order_function)">Fold (higher-order function)</a></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Single slice
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota;
+
+<span class="d_comment">//| 0 1 2 | =&gt; 3  |
+</span><span class="d_comment">//| 3 4 5 | =&gt; 12 | =&gt; 15
+</span><span class="d_keyword">auto</span> sl = iota(2, 3);
+
+<span class="d_comment">// sum of all element in the slice
+</span><span class="d_keyword">auto</span> res = size_t(0).<span class="d_psymbol">reduce</span>!<span class="d_string">"a + b"</span>(sl);
+
+<span class="d_keyword">assert</span>(res == 15);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Multiple slices, dot product
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.allocation : slice;
+<span class="d_keyword">import</span> mir.ndslice.topology : as, iota;
+<span class="d_keyword">import</span> mir.ndslice.internal : fastmath;
+
+<span class="d_keyword">static</span> @fastmath T fmuladd(T)(<span class="d_keyword">const</span> T a, <span class="d_keyword">const</span> T b, <span class="d_keyword">const</span> T c)
+{
+    <span class="d_keyword">return</span> a + b * c;
+}
+
+<span class="d_comment">//| 0 1 2 |
+</span><span class="d_comment">//| 3 4 5 |
+</span><span class="d_keyword">auto</span> a = iota([2, 3], 0).as!<span class="d_keyword">double</span>.slice;
+<span class="d_comment">//| 1 2 3 |
+</span><span class="d_comment">//| 4 5 6 |
+</span><span class="d_keyword">auto</span> b = iota([2, 3], 1).as!<span class="d_keyword">double</span>.slice;
+
+<span class="d_keyword">alias</span> dot = <span class="d_psymbol">reduce</span>!fmuladd;
+<span class="d_keyword">auto</span> res = dot(0.0, a, b);
+
+<span class="d_comment">// check the result:
+</span><span class="d_keyword">import</span> mir.ndslice.topology : flattened;
+<span class="d_keyword">import</span> std.numeric : dotProduct;
+<span class="d_keyword">assert</span>(res == dotProduct(a.flattened, b.flattened));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Zipped slices, dot product
+<pre class="d_code notranslate"><span class="d_keyword">import</span> std.typecons : Yes;
+<span class="d_keyword">import</span> std.numeric : dotProduct;
+<span class="d_keyword">import</span> mir.ndslice.allocation : slice;
+<span class="d_keyword">import</span> mir.ndslice.topology : as, iota, zip, universal;
+<span class="d_keyword">import</span> mir.ndslice.internal : fastmath;
+
+<span class="d_keyword">static</span> @fastmath T fmuladd(T, Z)(<span class="d_keyword">const</span> T a, Z z)
+{
+    <span class="d_keyword">return</span> a + z.a * z.b;
+}
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> sl1 = iota(2, 3).as!<span class="d_keyword">double</span>.slice.universal;
+<span class="d_comment">// 1 2 3
+</span><span class="d_comment">// 4 5 6
+</span><span class="d_keyword">auto</span> sl2 = iota([2, 3], 1).as!<span class="d_keyword">double</span>.slice;
+
+<span class="d_comment">// slices must have the same strides for `zip!true`.
+</span><span class="d_keyword">assert</span>(sl1.strides == sl2.strides);
+
+<span class="d_keyword">auto</span> z = zip!<span class="d_keyword">true</span>(sl1, sl2);
+
+<span class="d_keyword">auto</span> dot = <span class="d_psymbol">reduce</span>!fmuladd(0.0, z);
+
+<span class="d_keyword">assert</span>(dot == dotProduct(iota(6), iota([6], 1)));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Tensor mutation on-the-fly
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.allocation : slice;
+<span class="d_keyword">import</span> mir.ndslice.topology : as, iota;
+<span class="d_keyword">import</span> mir.ndslice.internal : fastmath;
+
+<span class="d_keyword">static</span> @fastmath T fun(T)(<span class="d_keyword">const</span> T a, <span class="d_keyword">ref</span> T b)
+{
+    <span class="d_keyword">return</span> a + b++;
+}
+
+<span class="d_comment">//| 0 1 2 |
+</span><span class="d_comment">//| 3 4 5 |
+</span><span class="d_keyword">auto</span> sl = iota(2, 3).as!<span class="d_keyword">double</span>.slice;
+
+<span class="d_keyword">auto</span> res = <span class="d_psymbol">reduce</span>!fun(<span class="d_keyword">double</span>(0), sl);
+
+<span class="d_keyword">assert</span>(res == 15);
+
+<span class="d_comment">//| 1 2 3 |
+</span><span class="d_comment">//| 4 5 6 |
+</span><span class="d_keyword">assert</span>(sl == iota([2, 3], 1));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Packed slices.
+<div class="blankline"></div>
+
+
+Computes minimum value of maximum values for each row.
+<pre class="d_code notranslate"><span class="d_comment">// LDC is LLVM D Compiler
+</span><span class="d_keyword">version</span>(LDC)
+    <span class="d_keyword">import</span> ldc.intrinsics : fmax = llvm_maxnum, fmin = llvm_minnum;
+<span class="d_comment">// std.math prevents vectorization for now
+</span><span class="d_keyword">else</span>
+    <span class="d_keyword">import</span> std.math : fmax, fmin;
+<span class="d_keyword">import</span> mir.ndslice.allocation : slice;
+<span class="d_keyword">import</span> mir.ndslice.dynamic : transposed;
+<span class="d_keyword">import</span> mir.ndslice.topology : as, iota, pack, map, universal;
+
+<span class="d_keyword">alias</span> maxVal = (a) =&gt; <span class="d_psymbol">reduce</span>!fmax(-<span class="d_keyword">double</span>.infinity, a);
+<span class="d_keyword">alias</span> minVal = (a) =&gt; <span class="d_psymbol">reduce</span>!fmin(<span class="d_keyword">double</span>.infinity, a);
+<span class="d_keyword">alias</span> minimaxVal = (a) =&gt; minVal(a.pack!1.map!maxVal);
+
+<span class="d_keyword">auto</span> sl = iota(2, 3).as!<span class="d_keyword">double</span>.slice;
+
+<span class="d_comment">// Vectorized computation: row stride equals 1.
+</span><span class="d_comment">//| 0 1 2 | =&gt; | 2 |
+</span><span class="d_comment">//| 3 4 5 | =&gt; | 5 | =&gt; 2
+</span><span class="d_keyword">auto</span> res = minimaxVal(sl);
+<span class="d_keyword">assert</span>(res == 2);
+
+<span class="d_comment">// Common computation: row stride does not equal 1.
+</span><span class="d_comment">//| 0 1 2 |    | 0 3 | =&gt; | 3 |
+</span><span class="d_comment">//| 3 4 5 | =&gt; | 1 4 | =&gt; | 4 |
+</span><span class="d_comment">//             | 2 5 | =&gt; | 5 | =&gt; 3
+</span><span class="d_keyword">auto</span> resT = minimaxVal(sl.universal.transposed);
+<span class="d_keyword">assert</span>(resT == 3);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".reduce.reduce"></span><div class="quickindex" id="quickindex.reduce.reduce"></div>auto <span class="def-anchor" id="reduce"></span><code class="ddoc_psymbol">reduce</code><span class="template_param_list" title="Template parameter list">(S, Slices...)</span>(S <code class="ddoc_param">seed</code>, Slices <code class="ddoc_param">slices</code>)<br><span class="constraint">if (Slices.length &amp;&amp; allSatisfy!(isSlice, Slices))</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">S <code class="ddoc_param">seed</code></td>
+<td class="param_desc">An initial accumulation value.</td></tr>
+<tr class="param"><td class="param_id">Slices <code class="ddoc_param">slices</code></td>
+<td class="param_desc">One or more <code class="ddoc_param">slices</code>.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">the accumulated <span class="d_inlinecode donthyphenate notranslate">result</span></div></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".each"></span><div class="quickindex" id="quickindex.each"></div>template <span class="def-anchor" id="each"></span><code class="ddoc_psymbol">each</code>(alias fun)<br></div></dt>
+<dd><div class="summary">The call <span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="each"></span><code class="ddoc_psymbol">each</code>!(fun)(slice1, ..., sliceN)</span>
+evaluates <span class="d_inlinecode donthyphenate notranslate">fun</span> for <span class="def-anchor" id="each"></span><code class="ddoc_psymbol">each</code> set of elements <span class="d_inlinecode donthyphenate notranslate">x1, ..., xN</span> in
+<span class="d_inlinecode donthyphenate notranslate">slice1, ..., sliceN</span> respectively.
+</div>
+<div class="description"><span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="each"></span><code class="ddoc_psymbol">each</code></span> allows to iterate multiple slices in the lockstep.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">fun</td>
+<td class="param_desc">A function.</td></tr>
+</table></div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+<a href="mir_ndslice_dynamic.html#.transposed"><em class="tt">transposed</em></a>&nbsp; and
+    <a href="mir_ndslice_topology.html#.pack"><em class="tt">pack</em></a>&nbsp; can be used to specify dimensions.
+</p></div>
+<div class="keyval SeeAlso"><span class="key keySeeAlso">See Also:</span> <div class="val valSeeAlso">This is functionally similar to <a href="#reduce"><span class="d_inlinecode donthyphenate notranslate">reduce</span></a> but has not seed.</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Single slice, multiply-add
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.allocation : slice;
+<span class="d_keyword">import</span> mir.ndslice.topology : as, iota;
+
+<span class="d_comment">//| 0 1 2 |
+</span><span class="d_comment">//| 3 4 5 |
+</span><span class="d_keyword">auto</span> sl = iota(2, 3).as!<span class="d_keyword">double</span>.slice;
+
+sl.<span class="d_psymbol">each</span>!((<span class="d_keyword">ref</span> a) { a = a * 10 + 5; });
+
+<span class="d_keyword">import</span> std.stdio;
+<span class="d_keyword">assert</span>(sl ==
+    [[ 5, 15, 25],
+     [35, 45, 55]]);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Swap two slices
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.utility : swap;
+<span class="d_keyword">import</span> mir.ndslice.allocation : slice;
+<span class="d_keyword">import</span> mir.ndslice.topology : as, iota;
+
+<span class="d_comment">//| 0 1 2 |
+</span><span class="d_comment">//| 3 4 5 |
+</span><span class="d_keyword">auto</span> a = iota([2, 3], 0).as!<span class="d_keyword">double</span>.slice;
+<span class="d_comment">//| 10 11 12 |
+</span><span class="d_comment">//| 13 14 15 |
+</span><span class="d_keyword">auto</span> b = iota([2, 3], 10).as!<span class="d_keyword">double</span>.slice;
+
+<span class="d_psymbol">each</span>!swap(a, b);
+
+<span class="d_keyword">assert</span>(a == iota([2, 3], 10));
+<span class="d_keyword">assert</span>(b == iota([2, 3], 0));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Swap two zipped slices
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.utility : swap;
+<span class="d_keyword">import</span> mir.ndslice.allocation : slice;
+<span class="d_keyword">import</span> mir.ndslice.topology : as, zip, iota;
+
+<span class="d_comment">//| 0 1 2 |
+</span><span class="d_comment">//| 3 4 5 |
+</span><span class="d_keyword">auto</span> a = iota([2, 3], 0).as!<span class="d_keyword">double</span>.slice;
+<span class="d_comment">//| 10 11 12 |
+</span><span class="d_comment">//| 13 14 15 |
+</span><span class="d_keyword">auto</span> b = iota([2, 3], 10).as!<span class="d_keyword">double</span>.slice;
+
+<span class="d_keyword">auto</span> z = zip(a, b);
+
+z.<span class="d_psymbol">each</span>!(z =&gt; swap(z.a, z.b));
+
+<span class="d_keyword">assert</span>(a == iota([2, 3], 10));
+<span class="d_keyword">assert</span>(b == iota([2, 3], 0));
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".each.each"></span><div class="quickindex" id="quickindex.each.each"></div>auto <span class="def-anchor" id="each"></span><code class="ddoc_psymbol">each</code><span class="template_param_list" title="Template parameter list">(Slices...)</span>(Slices <code class="ddoc_param">slices</code>)<br><span class="constraint">if (Slices.length &amp;&amp; allSatisfy!(isSlice, Slices))</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Slices <code class="ddoc_param">slices</code></td>
+<td class="param_desc">One or more <code class="ddoc_param">slices</code>.</td></tr>
+</table></div></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".find"></span><div class="quickindex" id="quickindex.find"></div>template <span class="def-anchor" id="find"></span><code class="ddoc_psymbol">find</code>(alias pred)<br></div></dt>
+<dd><div class="summary">Finds a backward index for which
+<span class="d_inlinecode donthyphenate notranslate">pred(slices[0].backward(index), ..., slices[$-1].backward(index))</span> equals <span class="d_inlinecode donthyphenate notranslate">true</span>.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">pred</td>
+<td class="param_desc">A predicate.</td></tr>
+</table></div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Optimization:</span>
+    To check if any element was found
+    use the last dimension (row index).
+    This will slightly optimize the code.
+<pre class="d_code notranslate"><span class="d_comment">// $-1 instead of 0
+</span><span class="d_keyword">if</span> (backwardIndex[$-1])
+{
+    <span class="d_keyword">auto</span> elem1 = slice1.backward(backwardIndex);
+    <span class="d_comment">//...
+</span>    <span class="d_keyword">auto</span> elemK = sliceK.backward(backwardIndex);
+}
+<span class="d_keyword">else</span>
+{
+    <span class="d_comment">// not found
+</span>}
+</pre>
+
+</p></div>
+<div class="keyval SeeAlso"><span class="key keySeeAlso">See Also:</span> <div class="val valSeeAlso"><a href="#any"><span class="d_inlinecode donthyphenate notranslate">any</span></a>
+<div class="blankline"></div>
+
+
+    <a href="mir_ndslice_slice.html#.Slice.backward"><span class="d_inlinecode donthyphenate notranslate">mir.ndslice.slice.Slice.backward</span></a></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota;
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> sl = iota(2, 3);
+size_t[2] bi = sl.<span class="d_psymbol">find</span>!<span class="d_string">"a == 3"</span>;
+<span class="d_keyword">assert</span>(sl.backward(bi) == 3);
+
+bi = sl.<span class="d_psymbol">find</span>!<span class="d_string">"a == 6"</span>;
+<span class="d_keyword">assert</span>(bi[0] == 0);
+<span class="d_keyword">assert</span>(bi[1] == 0);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Multiple slices
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> a = iota(2, 3);
+<span class="d_comment">// 10 11 12
+</span><span class="d_comment">// 13 14 15
+</span><span class="d_keyword">auto</span> b = iota([2, 3], 10);
+
+size_t[2] bi = <span class="d_psymbol">find</span>!((a, b) =&gt; a * b == 39)(a, b);
+<span class="d_keyword">assert</span>(a.backward(bi) == 3);
+<span class="d_keyword">assert</span>(b.backward(bi) == 13);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Zipped slices
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota, zip;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> a = iota(2, 3);
+<span class="d_comment">// 10 11 12
+</span><span class="d_comment">// 13 14 15
+</span><span class="d_keyword">auto</span> b = iota([2, 3], 10);
+
+size_t[2] bi = zip!<span class="d_keyword">true</span>(a, b).<span class="d_psymbol">find</span>!<span class="d_string">"a.a * a.b == 39"</span>;
+
+<span class="d_keyword">assert</span>(a.backward(bi) == 3);
+<span class="d_keyword">assert</span>(b.backward(bi) == 13);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Mutation on-the-fly
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.allocation : slice;
+<span class="d_keyword">import</span> mir.ndslice.topology : as, iota;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> sl = iota(2, 3).as!<span class="d_keyword">double</span>.slice;
+
+<span class="d_keyword">static</span> <span class="d_keyword">bool</span> pred(T)(<span class="d_keyword">ref</span> T a)
+{
+    <span class="d_keyword">if</span> (a == 5)
+        <span class="d_keyword">return</span> <span class="d_keyword">true</span>;
+    a = 8;
+    <span class="d_keyword">return</span> <span class="d_keyword">false</span>;
+}
+
+size_t[2] bi = sl.<span class="d_psymbol">find</span>!pred;
+
+<span class="d_keyword">assert</span>(bi == [1, 1]);
+<span class="d_keyword">assert</span>(sl.backward(bi) == 5);
+
+<span class="d_comment">// sl was changed
+</span><span class="d_keyword">assert</span>(sl == [[8, 8, 8],
+              [8, 8, 5]]);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".find.find"></span><div class="quickindex" id="quickindex.find.find"></div>size_t[isSlice!(Slices[0])[0]] <span class="def-anchor" id="find"></span><code class="ddoc_psymbol">find</code><span class="template_param_list" title="Template parameter list">(Slices...)</span>(Slices <code class="ddoc_param">slices</code>)<br><span class="constraint">if (Slices.length &amp;&amp; allSatisfy!(isSlice, Slices))</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Slices <code class="ddoc_param">slices</code></td>
+<td class="param_desc">One or more <code class="ddoc_param">slices</code>.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">The variable passing by reference to be filled with the multidimensional backward index for which the predicate is <code class="ddoc_keyword">true</code>.
+        Backward index equals zeros, if the predicate evaluates <span class="d_inlinecode donthyphenate notranslate">false</span> for all indexes.
+</div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Constraints:</span>
+All <code class="ddoc_param">slices</code> must have the same shape.</p></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".any"></span><div class="quickindex" id="quickindex.any"></div>template <span class="def-anchor" id="any"></span><code class="ddoc_psymbol">any</code>(alias pred)<br></div></dt>
+<dd><div class="summary">Like <a href="#find"><span class="d_inlinecode donthyphenate notranslate">find</span></a>, but only returns whether or not the search was successful.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">pred</td>
+<td class="param_desc">The predicate.</td></tr>
+</table></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota;
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> sl = iota(2, 3);
+
+<span class="d_keyword">assert</span>(sl.<span class="d_psymbol">any</span>!<span class="d_string">"a == 3"</span>);
+<span class="d_keyword">assert</span>(!sl.<span class="d_psymbol">any</span>!<span class="d_string">"a == 6"</span>);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Multiple slices
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> a = iota(2, 3);
+<span class="d_comment">// 10 11 12
+</span><span class="d_comment">// 13 14 15
+</span><span class="d_keyword">auto</span> b = iota([2, 3], 10);
+
+<span class="d_keyword">assert</span>(<span class="d_psymbol">any</span>!((a, b) =&gt; a * b == 39)(a, b));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Zipped slices
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota, zip;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> a = iota(2, 3);
+<span class="d_comment">// 10 11 12
+</span><span class="d_comment">// 13 14 15
+</span><span class="d_keyword">auto</span> b = iota([2, 3], 10);
+
+<span class="d_comment">// slices must have the same strides
+</span>
+<span class="d_keyword">assert</span>(zip!<span class="d_keyword">true</span>(a, b).<span class="d_psymbol">any</span>!<span class="d_string">"a.a * a.b == 39"</span>);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Mutation on-the-fly
+<pre class="d_code notranslate"><span class="d_keyword">import</span> std.conv : to;
+<span class="d_keyword">import</span> mir.ndslice.allocation : slice;
+<span class="d_keyword">import</span> mir.ndslice.topology : as, iota;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> sl = iota(2, 3).as!<span class="d_keyword">double</span>.slice;
+
+<span class="d_keyword">static</span> <span class="d_keyword">bool</span> pred(T)(<span class="d_keyword">ref</span> T a)
+{
+    <span class="d_keyword">if</span> (a == 5)
+        <span class="d_keyword">return</span> <span class="d_keyword">true</span>;
+    a = 8;
+    <span class="d_keyword">return</span> <span class="d_keyword">false</span>;
+}
+
+<span class="d_keyword">assert</span>(sl.<span class="d_psymbol">any</span>!pred);
+
+<span class="d_comment">// sl was changed
+</span><span class="d_keyword">assert</span>(sl == [[8, 8, 8],
+              [8, 8, 5]]);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".any.any"></span><div class="quickindex" id="quickindex.any.any"></div>bool <span class="def-anchor" id="any"></span><code class="ddoc_psymbol">any</code><span class="template_param_list" title="Template parameter list">(Slices...)</span>(Slices <code class="ddoc_param">slices</code>)<br><span class="constraint">if (Slices.length &amp;&amp; allSatisfy!(isSlice, Slices))</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Slices <code class="ddoc_param">slices</code></td>
+<td class="param_desc">One or more <code class="ddoc_param">slices</code>.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">true</span> if the search was successful and <span class="d_inlinecode donthyphenate notranslate">false</span> otherwise.
+</div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Constraints:</span>
+All <code class="ddoc_param">slices</code> must have the same shape.</p></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".all"></span><div class="quickindex" id="quickindex.all"></div>template <span class="def-anchor" id="all"></span><code class="ddoc_psymbol">all</code>(alias pred)<br></div></dt>
+<dd><div class="summary">Checks if <span class="def-anchor" id="all"></span><code class="ddoc_psymbol">all</code> of the elements verify <span class="d_inlinecode donthyphenate notranslate">pred</span>.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">pred</td>
+<td class="param_desc">The predicate.</td></tr>
+</table></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> sl = iota(2, 3);
+
+<span class="d_keyword">assert</span>(sl.<span class="d_psymbol">all</span>!<span class="d_string">"a &lt; 6"</span>);
+<span class="d_keyword">assert</span>(!sl.<span class="d_psymbol">all</span>!<span class="d_string">"a &lt; 5"</span>);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Multiple slices
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> sl = iota(2, 3);
+
+<span class="d_keyword">assert</span>(<span class="d_psymbol">all</span>!<span class="d_string">"a - b == 0"</span>(sl, sl));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Zipped slices
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota, zip;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> sl = iota(2, 3);
+
+
+<span class="d_keyword">assert</span>(zip!<span class="d_keyword">true</span>(sl, sl).<span class="d_psymbol">all</span>!<span class="d_string">"a.a - a.b == 0"</span>);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Mutation on-the-fly
+<pre class="d_code notranslate"><span class="d_keyword">import</span> std.conv : to;
+<span class="d_keyword">import</span> mir.ndslice.allocation : slice;
+<span class="d_keyword">import</span> mir.ndslice.topology : as, iota;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> sl = iota(2, 3).as!<span class="d_keyword">double</span>.slice;
+
+<span class="d_keyword">static</span> <span class="d_keyword">bool</span> pred(T)(<span class="d_keyword">ref</span> T a)
+{
+    <span class="d_keyword">if</span> (a &lt; 4)
+    {
+        a = 8;
+        <span class="d_keyword">return</span> <span class="d_keyword">true</span>;
+    }
+    <span class="d_keyword">return</span> <span class="d_keyword">false</span>;
+}
+
+<span class="d_keyword">assert</span>(!sl.<span class="d_psymbol">all</span>!pred);
+
+<span class="d_comment">// sl was changed
+</span><span class="d_keyword">assert</span>(sl == [[8, 8, 8],
+              [8, 4, 5]]);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".all.all"></span><div class="quickindex" id="quickindex.all.all"></div>bool <span class="def-anchor" id="all"></span><code class="ddoc_psymbol">all</code><span class="template_param_list" title="Template parameter list">(Slices...)</span>(Slices <code class="ddoc_param">slices</code>)<br><span class="constraint">if (Slices.length &amp;&amp; allSatisfy!(isSlice, Slices))</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Slices <code class="ddoc_param">slices</code></td>
+<td class="param_desc">One or more <code class="ddoc_param">slices</code>.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">true</span> <span class="def-anchor" id="all"></span><code class="ddoc_psymbol">all</code> of the elements verify <span class="d_inlinecode donthyphenate notranslate">pred</span> and <span class="d_inlinecode donthyphenate notranslate">false</span> otherwise.
+</div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Constraints:</span>
+All <code class="ddoc_param">slices</code> must have the same shape.</p></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".count"></span><div class="quickindex" id="quickindex.count"></div>template <span class="def-anchor" id="count"></span><code class="ddoc_psymbol">count</code>(alias fun)<br></div></dt>
+<dd><div class="summary">Counts elements in slices according to the <span class="d_inlinecode donthyphenate notranslate">fun</span>.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">fun</td>
+<td class="param_desc">A predicate.</td></tr>
+</table></div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Optimization:</span>
+<span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="count"></span><code class="ddoc_psymbol">count</code>!"a"</span> has accelerated specialization for slices created with <a href="mir_ndslice_topology.html#.bitwise"><span class="d_inlinecode donthyphenate notranslate">mir.ndslice.topology.bitwise</span></a>.</p></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Single slice
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota;
+
+<span class="d_comment">//| 0 1 2 |
+</span><span class="d_comment">//| 3 4 5 |
+</span><span class="d_keyword">auto</span> sl = iota(2, 3);
+
+<span class="d_keyword">assert</span>(sl.<span class="d_psymbol">count</span>!<span class="d_string">"true"</span> == 6);
+<span class="d_keyword">assert</span>(sl.<span class="d_psymbol">count</span>!<span class="d_string">"a"</span> == 5);
+<span class="d_keyword">assert</span>(sl.<span class="d_psymbol">count</span>!<span class="d_string">"a % 2"</span> == 3);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Accelerated set bit <span class="def-anchor" id="count"></span><code class="ddoc_psymbol">count</code>
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology: iota, bitwise;
+<span class="d_keyword">import</span> mir.ndslice.allocation: slice;
+
+<span class="d_comment">//| 0 1 2 |
+</span><span class="d_comment">//| 3 4 5 |
+</span><span class="d_keyword">auto</span> sl = iota(2, 3).bitwise;
+
+<span class="d_keyword">assert</span>(sl.<span class="d_psymbol">count</span>!<span class="d_string">"true"</span> == 6 * size_t.sizeof * 8);
+
+<span class="d_comment">// accelerated
+</span><span class="d_keyword">assert</span>(sl.<span class="d_psymbol">count</span>!<span class="d_string">"a"</span> == 7);
+<span class="d_keyword">assert</span>(sl.slice.<span class="d_psymbol">count</span>!<span class="d_string">"a"</span> == 7);
+
+<span class="d_keyword">auto</span> sl2 = iota!<span class="d_keyword">ubyte</span>([6], 128).bitwise;
+<span class="d_keyword">assert</span>(sl2.<span class="d_psymbol">count</span>!<span class="d_string">"a"</span> == 13);
+<span class="d_keyword">assert</span>(sl2[4 .. $].<span class="d_psymbol">count</span>!<span class="d_string">"a"</span> == 13);
+<span class="d_keyword">assert</span>(sl2[4 .. $ - 1].<span class="d_psymbol">count</span>!<span class="d_string">"a"</span> == 12);
+<span class="d_keyword">assert</span>(sl2[4 .. $ - 1].<span class="d_psymbol">count</span>!<span class="d_string">"a"</span> == 12);
+<span class="d_keyword">assert</span>(sl2[41 .. $ - 1].<span class="d_psymbol">count</span>!<span class="d_string">"a"</span> == 1);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".count.count"></span><div class="quickindex" id="quickindex.count.count"></div>size_t <span class="def-anchor" id="count"></span><code class="ddoc_psymbol">count</code><span class="template_param_list" title="Template parameter list">(Slices...)</span>(Slices <code class="ddoc_param">slices</code>)<br><span class="constraint">if (Slices.length &amp;&amp; allSatisfy!(isSlice, Slices))</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Slices <code class="ddoc_param">slices</code></td>
+<td class="param_desc">One or more <code class="ddoc_param">slices</code>.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">The number elements according to the <span class="d_inlinecode donthyphenate notranslate">fun</span>.
+
+</div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Constraints:</span>
+All <code class="ddoc_param">slices</code> must have the same shape.</p></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".equal"></span><div class="quickindex" id="quickindex.equal"></div>template <span class="def-anchor" id="equal"></span><code class="ddoc_psymbol">equal</code>(alias pred)<br></div></dt>
+<dd><div class="summary">Compares two or more slices for equality, as defined by predicate <span class="d_inlinecode donthyphenate notranslate">pred</span>.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">pred</td>
+<td class="param_desc">The predicate.</td></tr>
+</table></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.allocation : slice;
+<span class="d_keyword">import</span> mir.ndslice.topology : iota;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> sl1 = iota(2, 3);
+<span class="d_comment">// 1 2 3
+</span><span class="d_comment">// 4 5 6
+</span><span class="d_keyword">auto</span> sl2 = iota([2, 3], 1);
+
+<span class="d_keyword">assert</span>(<span class="d_psymbol">equal</span>!<span class="d_string">"a == b"</span>(sl1, sl1));
+<span class="d_keyword">assert</span>(<span class="d_psymbol">equal</span>!<span class="d_string">"a &lt; b"</span>(sl1, sl2));
+
+<span class="d_keyword">assert</span>(!<span class="d_psymbol">equal</span>!<span class="d_string">"a == b"</span>(sl1[0 .. $ - 1], sl1));
+<span class="d_keyword">assert</span>(!<span class="d_psymbol">equal</span>!<span class="d_string">"a == b"</span>(sl1[0 .. $, 0 .. $ - 1], sl1));
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".equal.equal"></span><div class="quickindex" id="quickindex.equal.equal"></div>bool <span class="def-anchor" id="equal"></span><code class="ddoc_psymbol">equal</code><span class="template_param_list" title="Template parameter list">(Slices...)</span>(Slices <code class="ddoc_param">slices</code>)<br><span class="constraint">if (Slices.length &gt;= 2)</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Slices <code class="ddoc_param">slices</code></td>
+<td class="param_desc">Two or more <code class="ddoc_param">slices</code>.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">true</span> any of the elements verify <span class="d_inlinecode donthyphenate notranslate">pred</span> and <span class="d_inlinecode donthyphenate notranslate">false</span> otherwise.</div></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cmp"></span><div class="quickindex" id="quickindex.cmp"></div>template <span class="def-anchor" id="cmp"></span><code class="ddoc_psymbol">cmp</code>(alias pred = "a &lt; b")<br></div></dt>
+<dd><div class="summary">Performs three-way recursive lexicographical comparison on two slices according to predicate <span class="d_inlinecode donthyphenate notranslate">pred</span>.
+Iterating <span class="d_inlinecode donthyphenate notranslate">sl1</span> and <span class="d_inlinecode donthyphenate notranslate">sl2</span> in lockstep, <span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="cmp"></span><code class="ddoc_psymbol">cmp</code></span> compares each <span class="d_inlinecode donthyphenate notranslate">N-1</span> dimensional element <span class="d_inlinecode donthyphenate notranslate">e1</span> of <span class="d_inlinecode donthyphenate notranslate">sl1</span>
+with the corresponding element <span class="d_inlinecode donthyphenate notranslate">e2</span> in <span class="d_inlinecode donthyphenate notranslate">sl2</span> recursively.
+If one of the slices has been finished,<span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="cmp"></span><code class="ddoc_psymbol">cmp</code></span> returns a negative value if <span class="d_inlinecode donthyphenate notranslate">sl1</span> has fewer elements than <span class="d_inlinecode donthyphenate notranslate">sl2</span>,
+a positive value if <span class="d_inlinecode donthyphenate notranslate">sl1</span> has more elements than <span class="d_inlinecode donthyphenate notranslate">sl2</span>,
+and <span class="d_inlinecode donthyphenate notranslate">0</span> if the ranges have the same number of elements.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">pred</td>
+<td class="param_desc">The predicate.</td></tr>
+</table></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota;
+
+<span class="d_comment">// 0 1 2
+</span><span class="d_comment">// 3 4 5
+</span><span class="d_keyword">auto</span> sl1 = iota(2, 3);
+<span class="d_comment">// 1 2 3
+</span><span class="d_comment">// 4 5 6
+</span><span class="d_keyword">auto</span> sl2 = iota([2, 3], 1);
+
+<span class="d_keyword">assert</span>(<span class="d_psymbol">cmp</span>(sl1, sl1) == 0);
+<span class="d_keyword">assert</span>(<span class="d_psymbol">cmp</span>(sl1, sl2) &lt; 0);
+<span class="d_keyword">assert</span>(<span class="d_psymbol">cmp</span>!<span class="d_string">"a &gt;= b"</span>(sl1, sl2) &gt; 0);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".cmp.cmp"></span><div class="quickindex" id="quickindex.cmp.cmp"></div>ptrdiff_t <span class="def-anchor" id="cmp"></span><code class="ddoc_psymbol">cmp</code><span class="template_param_list" title="Template parameter list">(SliceKind kindA, SliceKind kindB, size_t[] packsA, size_t[] packsB, IteratorA, IteratorB)</span>(Slice!(kindA, packsA, IteratorA) <code class="ddoc_param">sl1</code>, Slice!(kindB, packsB, IteratorB) <code class="ddoc_param">sl2</code>)<br><span class="constraint">if (packsA[0] == packsB[0])</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Slice!(kindA, packsA, IteratorA) <code class="ddoc_param">sl1</code></td>
+<td class="param_desc">First slice.</td></tr>
+<tr class="param"><td class="param_id">Slice!(kindB, packsB, IteratorB) <code class="ddoc_param">sl2</code></td>
+<td class="param_desc">Second slice.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">0</span> if both ranges compare equal.
+        Negative value if the first differing element of <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">sl1</code></span> is less than the corresponding
+        element of <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">sl2</code></span> according to <span class="d_inlinecode donthyphenate notranslate">pred</span>.
+        Positive value if the first differing element of <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">sl2</code></span> is less than the corresponding
+        element of <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">sl1</code></span> according to <span class="d_inlinecode donthyphenate notranslate">pred</span>.</div></div>
+
+</dd>
+</dl>
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright © 2016-, Ilya Yaroshenko
+ | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:13 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

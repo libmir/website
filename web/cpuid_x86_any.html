@@ -1,0 +1,1400 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>cpuid.x86_any - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='cpuid.x86_any' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/cpuid/x86_any.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">cpuid.x86_any</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary"><h2>Common information for all x86 and x86_64 vendors.</h2>
+</div>
+<div class="description"><span class="green">This module is compatible with betterC compilation mode.</span>
+
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+<span class="d_inlinecode donthyphenate notranslate">T.max</span> value value is used to represent fully-associative Cache/TLB.
+
+</p></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">References:</span>
+<a href="https://en.wikipedia.org/wiki/CPUID">wikipedia:CPUID</a>
+
+</p></div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko</div></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".cpuid_x86_any_init"></span><div class="quickindex" id="quickindex.cpuid_x86_any_init"></div>export nothrow @nogc void <span class="def-anchor" id="cpuid_x86_any_init"></span><code class="ddoc_psymbol">cpuid_x86_any_init</code>();
+<br></div></dt>
+<dd><div class="summary">Initialize basic x86 CPU information.
+It is safe to call this function multiple times.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information"></span><div class="quickindex" id="quickindex.Leaf1Information"></div>union <span class="def-anchor" id="Leaf1Information"></span><code class="ddoc_psymbol">Leaf1Information</code>;
+<br></div></dt>
+<dd><div class="summary">Basic information about CPU.</div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.info"></span><div class="quickindex" id="quickindex.Leaf1Information.info"></div>CpuInfo <span class="def-anchor" id="info"></span><code class="ddoc_psymbol">info</code>;
+<br></div></dt>
+<dd><div class="summary">CPUID payload</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.stepping"></span><div class="quickindex" id="quickindex.Leaf1Information.stepping"></div>pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="stepping"></span><code class="ddoc_psymbol">stepping</code>();
+<br></div></dt>
+<dd><div class="summary">Stepping ID</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.model"></span><div class="quickindex" id="quickindex.Leaf1Information.model"></div>pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="model"></span><code class="ddoc_psymbol">model</code>();
+<br></div></dt>
+<dd><div class="summary">Model</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.family"></span><div class="quickindex" id="quickindex.Leaf1Information.family"></div>pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="family"></span><code class="ddoc_psymbol">family</code>();
+<br></div></dt>
+<dd><div class="summary">Family ID</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.type"></span><div class="quickindex" id="quickindex.Leaf1Information.type"></div>pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="type"></span><code class="ddoc_psymbol">type</code>();
+<br></div></dt>
+<dd><div class="summary">Processor Type, Specification: Intel</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.extendedModel"></span><div class="quickindex" id="quickindex.Leaf1Information.extendedModel"></div>pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="extendedModel"></span><code class="ddoc_psymbol">extendedModel</code>();
+<br></div></dt>
+<dd><div class="summary">Extended Model ID</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.extendedFamily"></span><div class="quickindex" id="quickindex.Leaf1Information.extendedFamily"></div>pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="extendedFamily"></span><code class="ddoc_psymbol">extendedFamily</code>();
+<br></div></dt>
+<dd><div class="summary">Extended Family ID</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.brandIndex"></span><div class="quickindex" id="quickindex.Leaf1Information.brandIndex"></div>ubyte <span class="def-anchor" id="brandIndex"></span><code class="ddoc_psymbol">brandIndex</code>;
+<br></div></dt>
+<dd><div class="summary">Brand Index</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.clflushLineSize"></span><div class="quickindex" id="quickindex.Leaf1Information.clflushLineSize"></div>ubyte <span class="def-anchor" id="clflushLineSize"></span><code class="ddoc_psymbol">clflushLineSize</code>;
+<br></div></dt>
+<dd><div class="summary"><span class="d_inlinecode donthyphenate notranslate">clflush</span> line size</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.maxLogicalProcessors"></span><div class="quickindex" id="quickindex.Leaf1Information.maxLogicalProcessors"></div>ubyte <span class="def-anchor" id="maxLogicalProcessors"></span><code class="ddoc_psymbol">maxLogicalProcessors</code>;
+<br></div></dt>
+<dd><div class="summary">maximal number of logical processors</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.initialAPIC"></span><div class="quickindex" id="quickindex.Leaf1Information.initialAPIC"></div>ubyte <span class="def-anchor" id="initialAPIC"></span><code class="ddoc_psymbol">initialAPIC</code>;
+<br></div></dt>
+<dd><div class="summary">initial APIC</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.sse3"></span><div class="quickindex" id="quickindex.Leaf1Information.sse3"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="sse3"></span><code class="ddoc_psymbol">sse3</code>();
+<br></div></dt>
+<dd><div class="summary">SSE3 Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.pclmulqdq"></span><div class="quickindex" id="quickindex.Leaf1Information.pclmulqdq"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="pclmulqdq"></span><code class="ddoc_psymbol">pclmulqdq</code>();
+<br></div></dt>
+<dd><div class="summary">Carryless Multiplication</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.dtes64"></span><div class="quickindex" id="quickindex.Leaf1Information.dtes64"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="dtes64"></span><code class="ddoc_psymbol">dtes64</code>();
+<br></div></dt>
+<dd><div class="summary">64-bit DS Area</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.monitor"></span><div class="quickindex" id="quickindex.Leaf1Information.monitor"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="monitor"></span><code class="ddoc_psymbol">monitor</code>();
+<br></div></dt>
+<dd><div class="summary">MONITOR/MWAIT</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.ds_cpl"></span><div class="quickindex" id="quickindex.Leaf1Information.ds_cpl"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="ds_cpl"></span><code class="ddoc_psymbol">ds_cpl</code>();
+<br></div></dt>
+<dd><div class="summary">(); /// CPL Qualified Debug Store</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.vmx"></span><div class="quickindex" id="quickindex.Leaf1Information.vmx"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="vmx"></span><code class="ddoc_psymbol">vmx</code>();
+<br></div></dt>
+<dd><div class="summary">Virtual Machine Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.smx"></span><div class="quickindex" id="quickindex.Leaf1Information.smx"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="smx"></span><code class="ddoc_psymbol">smx</code>();
+<br></div></dt>
+<dd><div class="summary">Safer Mode Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.eist"></span><div class="quickindex" id="quickindex.Leaf1Information.eist"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="eist"></span><code class="ddoc_psymbol">eist</code>();
+<br></div></dt>
+<dd><div class="summary">Enhanced Intel SpeedStep® Technology</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.therm_monitor2"></span><div class="quickindex" id="quickindex.Leaf1Information.therm_monitor2"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="therm_monitor2"></span><code class="ddoc_psymbol">therm_monitor2</code>();
+<br></div></dt>
+<dd><div class="summary">Thermal Monitor 2</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.ssse3"></span><div class="quickindex" id="quickindex.Leaf1Information.ssse3"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="ssse3"></span><code class="ddoc_psymbol">ssse3</code>();
+<br></div></dt>
+<dd><div class="summary">SSSE3 Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.cnxt_id"></span><div class="quickindex" id="quickindex.Leaf1Information.cnxt_id"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="cnxt_id"></span><code class="ddoc_psymbol">cnxt_id</code>();
+<br></div></dt>
+<dd><div class="summary">L1 Context ID</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.sdbg"></span><div class="quickindex" id="quickindex.Leaf1Information.sdbg"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="sdbg"></span><code class="ddoc_psymbol">sdbg</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.fma"></span><div class="quickindex" id="quickindex.Leaf1Information.fma"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="fma"></span><code class="ddoc_psymbol">fma</code>();
+<br></div></dt>
+<dd><div class="summary">Fused Multiply Add</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.cmpxchg16b"></span><div class="quickindex" id="quickindex.Leaf1Information.cmpxchg16b"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="cmpxchg16b"></span><code class="ddoc_psymbol">cmpxchg16b</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.xtpr"></span><div class="quickindex" id="quickindex.Leaf1Information.xtpr"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="xtpr"></span><code class="ddoc_psymbol">xtpr</code>();
+<br></div></dt>
+<dd><div class="summary">TPR Update Control</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.pdcm"></span><div class="quickindex" id="quickindex.Leaf1Information.pdcm"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="pdcm"></span><code class="ddoc_psymbol">pdcm</code>();
+<br></div></dt>
+<dd><div class="summary">Perf/Debug Capability MSR xTPR Update Control</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.pcid"></span><div class="quickindex" id="quickindex.Leaf1Information.pcid"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="pcid"></span><code class="ddoc_psymbol">pcid</code>();
+<br></div></dt>
+<dd><div class="summary">Process-context Identifiers</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.dca"></span><div class="quickindex" id="quickindex.Leaf1Information.dca"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="dca"></span><code class="ddoc_psymbol">dca</code>();
+<br></div></dt>
+<dd><div class="summary">Direct Cache Access</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.sse41"></span><div class="quickindex" id="quickindex.Leaf1Information.sse41"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="sse41"></span><code class="ddoc_psymbol">sse41</code>();
+<br></div></dt>
+<dd><div class="summary">SSE4.1</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.sse42"></span><div class="quickindex" id="quickindex.Leaf1Information.sse42"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="sse42"></span><code class="ddoc_psymbol">sse42</code>();
+<br></div></dt>
+<dd><div class="summary">SSE4.2</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.x2apic"></span><div class="quickindex" id="quickindex.Leaf1Information.x2apic"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="x2apic"></span><code class="ddoc_psymbol">x2apic</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.movbe"></span><div class="quickindex" id="quickindex.Leaf1Information.movbe"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="movbe"></span><code class="ddoc_psymbol">movbe</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.popcnt"></span><div class="quickindex" id="quickindex.Leaf1Information.popcnt"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="popcnt"></span><code class="ddoc_psymbol">popcnt</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.tsc_deadline"></span><div class="quickindex" id="quickindex.Leaf1Information.tsc_deadline"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="tsc_deadline"></span><code class="ddoc_psymbol">tsc_deadline</code>();
+<br></div></dt>
+<dd><div class="summary">(</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.aes"></span><div class="quickindex" id="quickindex.Leaf1Information.aes"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="aes"></span><code class="ddoc_psymbol">aes</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.xsave"></span><div class="quickindex" id="quickindex.Leaf1Information.xsave"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="xsave"></span><code class="ddoc_psymbol">xsave</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.osxsave"></span><div class="quickindex" id="quickindex.Leaf1Information.osxsave"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="osxsave"></span><code class="ddoc_psymbol">osxsave</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.avx"></span><div class="quickindex" id="quickindex.Leaf1Information.avx"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="avx"></span><code class="ddoc_psymbol">avx</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.f16c"></span><div class="quickindex" id="quickindex.Leaf1Information.f16c"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="f16c"></span><code class="ddoc_psymbol">f16c</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.rdrand"></span><div class="quickindex" id="quickindex.Leaf1Information.rdrand"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="rdrand"></span><code class="ddoc_psymbol">rdrand</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.virtual"></span><div class="quickindex" id="quickindex.Leaf1Information.virtual"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="virtual"></span><code class="ddoc_psymbol">virtual</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.fpu"></span><div class="quickindex" id="quickindex.Leaf1Information.fpu"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="fpu"></span><code class="ddoc_psymbol">fpu</code>();
+<br></div></dt>
+<dd><div class="summary">x87 FPU on Chip</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.vme"></span><div class="quickindex" id="quickindex.Leaf1Information.vme"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="vme"></span><code class="ddoc_psymbol">vme</code>();
+<br></div></dt>
+<dd><div class="summary">Virtual-8086 Mode Enhancement</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.de"></span><div class="quickindex" id="quickindex.Leaf1Information.de"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="de"></span><code class="ddoc_psymbol">de</code>();
+<br></div></dt>
+<dd><div class="summary">Debugging Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.pse"></span><div class="quickindex" id="quickindex.Leaf1Information.pse"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="pse"></span><code class="ddoc_psymbol">pse</code>();
+<br></div></dt>
+<dd><div class="summary">Page Size Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.tsc"></span><div class="quickindex" id="quickindex.Leaf1Information.tsc"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="tsc"></span><code class="ddoc_psymbol">tsc</code>();
+<br></div></dt>
+<dd><div class="summary">Time Stamp Counter</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.msr"></span><div class="quickindex" id="quickindex.Leaf1Information.msr"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="msr"></span><code class="ddoc_psymbol">msr</code>();
+<br></div></dt>
+<dd><div class="summary">RDMSR and WRMSR Support</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.pae"></span><div class="quickindex" id="quickindex.Leaf1Information.pae"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="pae"></span><code class="ddoc_psymbol">pae</code>();
+<br></div></dt>
+<dd><div class="summary">Physical Address Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.mce"></span><div class="quickindex" id="quickindex.Leaf1Information.mce"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="mce"></span><code class="ddoc_psymbol">mce</code>();
+<br></div></dt>
+<dd><div class="summary">Machine Check Exception</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.cx8"></span><div class="quickindex" id="quickindex.Leaf1Information.cx8"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="cx8"></span><code class="ddoc_psymbol">cx8</code>();
+<br></div></dt>
+<dd><div class="summary">CMPXCHG8B Inst.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.apic"></span><div class="quickindex" id="quickindex.Leaf1Information.apic"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="apic"></span><code class="ddoc_psymbol">apic</code>();
+<br></div></dt>
+<dd><div class="summary">APIC on Chip</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.sep"></span><div class="quickindex" id="quickindex.Leaf1Information.sep"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="sep"></span><code class="ddoc_psymbol">sep</code>();
+<br></div></dt>
+<dd><div class="summary">SYSENTER and SYSEXIT</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.mtrr"></span><div class="quickindex" id="quickindex.Leaf1Information.mtrr"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="mtrr"></span><code class="ddoc_psymbol">mtrr</code>();
+<br></div></dt>
+<dd><div class="summary">Memory Type Range Registers</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.pge"></span><div class="quickindex" id="quickindex.Leaf1Information.pge"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="pge"></span><code class="ddoc_psymbol">pge</code>();
+<br></div></dt>
+<dd><div class="summary">PTE Global Bit</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.mca"></span><div class="quickindex" id="quickindex.Leaf1Information.mca"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="mca"></span><code class="ddoc_psymbol">mca</code>();
+<br></div></dt>
+<dd><div class="summary">Machine Check Architecture</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.cmov"></span><div class="quickindex" id="quickindex.Leaf1Information.cmov"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="cmov"></span><code class="ddoc_psymbol">cmov</code>();
+<br></div></dt>
+<dd><div class="summary">Conditional Move/Compare Instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.pat"></span><div class="quickindex" id="quickindex.Leaf1Information.pat"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="pat"></span><code class="ddoc_psymbol">pat</code>();
+<br></div></dt>
+<dd><div class="summary">Page Attribute Table</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.pse36"></span><div class="quickindex" id="quickindex.Leaf1Information.pse36"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="pse36"></span><code class="ddoc_psymbol">pse36</code>();
+<br></div></dt>
+<dd><div class="summary">Page Size Extension</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.psn"></span><div class="quickindex" id="quickindex.Leaf1Information.psn"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="psn"></span><code class="ddoc_psymbol">psn</code>();
+<br></div></dt>
+<dd><div class="summary">Processor Serial Number</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.clfsh"></span><div class="quickindex" id="quickindex.Leaf1Information.clfsh"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="clfsh"></span><code class="ddoc_psymbol">clfsh</code>();
+<br></div></dt>
+<dd><div class="summary">CLFLUSH instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.ds"></span><div class="quickindex" id="quickindex.Leaf1Information.ds"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="ds"></span><code class="ddoc_psymbol">ds</code>();
+<br></div></dt>
+<dd><div class="summary">Debug Store</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.acpi"></span><div class="quickindex" id="quickindex.Leaf1Information.acpi"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="acpi"></span><code class="ddoc_psymbol">acpi</code>();
+<br></div></dt>
+<dd><div class="summary">Thermal Monitor and Clock Ctrl</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.mmx"></span><div class="quickindex" id="quickindex.Leaf1Information.mmx"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="mmx"></span><code class="ddoc_psymbol">mmx</code>();
+<br></div></dt>
+<dd><div class="summary">MMX Technology</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.fxsr"></span><div class="quickindex" id="quickindex.Leaf1Information.fxsr"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="fxsr"></span><code class="ddoc_psymbol">fxsr</code>();
+<br></div></dt>
+<dd><div class="summary">FXSAVE/FXRSTOR</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.sse"></span><div class="quickindex" id="quickindex.Leaf1Information.sse"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="sse"></span><code class="ddoc_psymbol">sse</code>();
+<br></div></dt>
+<dd><div class="summary">SSE Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.sse2"></span><div class="quickindex" id="quickindex.Leaf1Information.sse2"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="sse2"></span><code class="ddoc_psymbol">sse2</code>();
+<br></div></dt>
+<dd><div class="summary">SSE2 Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.self_snoop"></span><div class="quickindex" id="quickindex.Leaf1Information.self_snoop"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="self_snoop"></span><code class="ddoc_psymbol">self_snoop</code>();
+<br></div></dt>
+<dd><div class="summary">Self Snoop</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.htt"></span><div class="quickindex" id="quickindex.Leaf1Information.htt"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="htt"></span><code class="ddoc_psymbol">htt</code>();
+<br></div></dt>
+<dd><div class="summary">Multi-threading</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.therm_monitor"></span><div class="quickindex" id="quickindex.Leaf1Information.therm_monitor"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="therm_monitor"></span><code class="ddoc_psymbol">therm_monitor</code>();
+<br></div></dt>
+<dd><div class="summary">Therm. Monitor</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf1Information.pbe"></span><div class="quickindex" id="quickindex.Leaf1Information.pbe"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="pbe"></span><code class="ddoc_psymbol">pbe</code>();
+<br></div></dt>
+<dd><div class="summary">Pend. Brk. EN.</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information"></span><div class="quickindex" id="quickindex.Leaf7Information"></div>union <span class="def-anchor" id="Leaf7Information"></span><code class="ddoc_psymbol">Leaf7Information</code>;
+<br></div></dt>
+<dd><div class="summary">Extended information about CPU.</div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.info"></span><div class="quickindex" id="quickindex.Leaf7Information.info"></div>CpuInfo <span class="def-anchor" id="info"></span><code class="ddoc_psymbol">info</code>;
+<br></div></dt>
+<dd><div class="summary">CPUID payload</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.max7SubLeafs"></span><div class="quickindex" id="quickindex.Leaf7Information.max7SubLeafs"></div>uint <span class="def-anchor" id="max7SubLeafs"></span><code class="ddoc_psymbol">max7SubLeafs</code>;
+<br></div></dt>
+<dd><div class="summary">Reports the maximum input value for supported leaf 7 sub-leaves</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.fsgsbase"></span><div class="quickindex" id="quickindex.Leaf7Information.fsgsbase"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="fsgsbase"></span><code class="ddoc_psymbol">fsgsbase</code>();
+<br></div></dt>
+<dd><div class="summary">Supports RDFSBASE/RDGSBASE/WRFSBASE/WRGSBASE if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.ia32_tsc_adjust"></span><div class="quickindex" id="quickindex.Leaf7Information.ia32_tsc_adjust"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="ia32_tsc_adjust"></span><code class="ddoc_psymbol">ia32_tsc_adjust</code>();
+<br></div></dt>
+<dd><div class="summary">MSR is supported if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.sgx"></span><div class="quickindex" id="quickindex.Leaf7Information.sgx"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="sgx"></span><code class="ddoc_psymbol">sgx</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Intel® Software Guard Extensions (Intel® SGX Extensions) if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.bmi1"></span><div class="quickindex" id="quickindex.Leaf7Information.bmi1"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="bmi1"></span><code class="ddoc_psymbol">bmi1</code>();
+<br></div></dt>
+<dd><div class="summary">Bit Manipulation Instruction Set 1</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.hle"></span><div class="quickindex" id="quickindex.Leaf7Information.hle"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="hle"></span><code class="ddoc_psymbol">hle</code>();
+<br></div></dt>
+<dd><div class="summary">Transactional Synchronization Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.avx2"></span><div class="quickindex" id="quickindex.Leaf7Information.avx2"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="avx2"></span><code class="ddoc_psymbol">avx2</code>();
+<br></div></dt>
+<dd><div class="summary">Advanced Vector Extensions 2</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.fdp_excptn_only"></span><div class="quickindex" id="quickindex.Leaf7Information.fdp_excptn_only"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="fdp_excptn_only"></span><code class="ddoc_psymbol">fdp_excptn_only</code>();
+<br></div></dt>
+<dd><div class="summary">x87 FPU Data Pointer updated only on x87 exceptions if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.smep"></span><div class="quickindex" id="quickindex.Leaf7Information.smep"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="smep"></span><code class="ddoc_psymbol">smep</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Supervisor-Mode Execution Prevention if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.bmi2"></span><div class="quickindex" id="quickindex.Leaf7Information.bmi2"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="bmi2"></span><code class="ddoc_psymbol">bmi2</code>();
+<br></div></dt>
+<dd><div class="summary">Bit Manipulation Instruction Set 2</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.supports"></span><div class="quickindex" id="quickindex.Leaf7Information.supports"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="supports"></span><code class="ddoc_psymbol">supports</code>();
+<br></div></dt>
+<dd><div class="summary">Enhanced REP MOVSB/STOSB if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.invpcid"></span><div class="quickindex" id="quickindex.Leaf7Information.invpcid"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="invpcid"></span><code class="ddoc_psymbol">invpcid</code>();
+<br></div></dt>
+<dd><div class="summary">If 1, supports INVPCID instruction for system software that manages process-context identifiers.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.rtm"></span><div class="quickindex" id="quickindex.Leaf7Information.rtm"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="rtm"></span><code class="ddoc_psymbol">rtm</code>();
+<br></div></dt>
+<dd><div class="summary">Transactional Synchronization Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.rdt_m"></span><div class="quickindex" id="quickindex.Leaf7Information.rdt_m"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="rdt_m"></span><code class="ddoc_psymbol">rdt_m</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Intel® Resource Director Technology (Intel® RDT) Monitoring capability if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.deprecates"></span><div class="quickindex" id="quickindex.Leaf7Information.deprecates"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="deprecates"></span><code class="ddoc_psymbol">deprecates</code>();
+<br></div></dt>
+<dd><div class="summary">FPU CS and FPU DS values if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.mpx"></span><div class="quickindex" id="quickindex.Leaf7Information.mpx"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="mpx"></span><code class="ddoc_psymbol">mpx</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Intel® Memory Protection Extensions if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.rdt_a"></span><div class="quickindex" id="quickindex.Leaf7Information.rdt_a"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="rdt_a"></span><code class="ddoc_psymbol">rdt_a</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Intel® Resource Director Technology (Intel® RDT) Allocation capability if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.avx512f"></span><div class="quickindex" id="quickindex.Leaf7Information.avx512f"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="avx512f"></span><code class="ddoc_psymbol">avx512f</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Foundation</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.avx512dq"></span><div class="quickindex" id="quickindex.Leaf7Information.avx512dq"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="avx512dq"></span><code class="ddoc_psymbol">avx512dq</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Doubleword and Quadword Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.rdseed"></span><div class="quickindex" id="quickindex.Leaf7Information.rdseed"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="rdseed"></span><code class="ddoc_psymbol">rdseed</code>();
+<br></div></dt>
+<dd><div class="summary">RDSEED instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.adx"></span><div class="quickindex" id="quickindex.Leaf7Information.adx"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="adx"></span><code class="ddoc_psymbol">adx</code>();
+<br></div></dt>
+<dd><div class="summary">Intel ADX (Multi-Precision Add-Carry Instruction Extensions)</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.smap"></span><div class="quickindex" id="quickindex.Leaf7Information.smap"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="smap"></span><code class="ddoc_psymbol">smap</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Supervisor-Mode Access Prevention (and the CLAC/STAC instructions) if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.avx512ifma"></span><div class="quickindex" id="quickindex.Leaf7Information.avx512ifma"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="avx512ifma"></span><code class="ddoc_psymbol">avx512ifma</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Integer Fused Multiply-Add Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.pcommit"></span><div class="quickindex" id="quickindex.Leaf7Information.pcommit"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="pcommit"></span><code class="ddoc_psymbol">pcommit</code>();
+<br></div></dt>
+<dd><div class="summary">PCOMMIT instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.clflushopt"></span><div class="quickindex" id="quickindex.Leaf7Information.clflushopt"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="clflushopt"></span><code class="ddoc_psymbol">clflushopt</code>();
+<br></div></dt>
+<dd><div class="summary">CLFLUSHOPT instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.clwb"></span><div class="quickindex" id="quickindex.Leaf7Information.clwb"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="clwb"></span><code class="ddoc_psymbol">clwb</code>();
+<br></div></dt>
+<dd><div class="summary">CLWB instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.intel_pt"></span><div class="quickindex" id="quickindex.Leaf7Information.intel_pt"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="intel_pt"></span><code class="ddoc_psymbol">intel_pt</code>();
+<br></div></dt>
+<dd><div class="summary">Intel Processor Trace.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.avx512pf"></span><div class="quickindex" id="quickindex.Leaf7Information.avx512pf"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="avx512pf"></span><code class="ddoc_psymbol">avx512pf</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Prefetch Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.avx512er"></span><div class="quickindex" id="quickindex.Leaf7Information.avx512er"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="avx512er"></span><code class="ddoc_psymbol">avx512er</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Exponential and Reciprocal Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.avx512cd"></span><div class="quickindex" id="quickindex.Leaf7Information.avx512cd"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="avx512cd"></span><code class="ddoc_psymbol">avx512cd</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Conflict Detection Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.sha"></span><div class="quickindex" id="quickindex.Leaf7Information.sha"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="sha"></span><code class="ddoc_psymbol">sha</code>();
+<br></div></dt>
+<dd><div class="summary">supports Intel® Secure Hash Algorithm Extens</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.avx512bw"></span><div class="quickindex" id="quickindex.Leaf7Information.avx512bw"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="avx512bw"></span><code class="ddoc_psymbol">avx512bw</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Byte and Word Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.avx512vl"></span><div class="quickindex" id="quickindex.Leaf7Information.avx512vl"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="avx512vl"></span><code class="ddoc_psymbol">avx512vl</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Vector Length Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.prefetchwt1"></span><div class="quickindex" id="quickindex.Leaf7Information.prefetchwt1"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="prefetchwt1"></span><code class="ddoc_psymbol">prefetchwt1</code>();
+<br></div></dt>
+<dd><div class="summary">PREFETCHWT1 instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.avx512vbmi"></span><div class="quickindex" id="quickindex.Leaf7Information.avx512vbmi"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="avx512vbmi"></span><code class="ddoc_psymbol">avx512vbmi</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Vector Bit Manipulation Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.pku"></span><div class="quickindex" id="quickindex.Leaf7Information.pku"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="pku"></span><code class="ddoc_psymbol">pku</code>();
+<br></div></dt>
+<dd><div class="summary">Memory Protection Keys for User-mode pages</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Leaf7Information.ospke"></span><div class="quickindex" id="quickindex.Leaf7Information.ospke"></div>pure nothrow @nogc @property @trusted bool <span class="def-anchor" id="ospke"></span><code class="ddoc_psymbol">ospke</code>();
+<br></div></dt>
+<dd><div class="summary">PKU enabled by OS</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".CpuInfo"></span><div class="quickindex" id="quickindex.CpuInfo"></div>struct <span class="def-anchor" id="CpuInfo"></span><code class="ddoc_psymbol">CpuInfo</code>;
+<br></div></dt>
+<dd><div class="summary">x86 CPU information</div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".CpuInfo.a"></span><div class="quickindex" id="quickindex.CpuInfo.a"></div>uint <span class="def-anchor" id="a"></span><code class="ddoc_psymbol">a</code>;
+<br></div></dt>
+<dd><div class="summary">EAX</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".CpuInfo.b"></span><div class="quickindex" id="quickindex.CpuInfo.b"></div>uint <span class="def-anchor" id="b"></span><code class="ddoc_psymbol">b</code>;
+<br></div></dt>
+<dd><div class="summary">EBX</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".CpuInfo.c"></span><div class="quickindex" id="quickindex.CpuInfo.c"></div>uint <span class="def-anchor" id="c"></span><code class="ddoc_psymbol">c</code>;
+<br></div></dt>
+<dd><div class="summary">ECX</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".CpuInfo.d"></span><div class="quickindex" id="quickindex.CpuInfo.d"></div>uint <span class="def-anchor" id="d"></span><code class="ddoc_psymbol">d</code>;
+<br></div></dt>
+<dd><div class="summary">EDX</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id="._cpuid"></span><div class="quickindex" id="quickindex._cpuid"></div>pure nothrow @nogc CpuInfo <span class="def-anchor" id="_cpuid"></span><code class="ddoc_psymbol">_cpuid</code>(uint <code class="ddoc_param">eax</code>, uint <code class="ddoc_param">ecx</code> = 0);
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">info</td>
+<td class="param_desc">information received from CPUID instruction</td></tr>
+<tr class="param"><td class="param_id">uint <code class="ddoc_param">eax</code></td>
+<td class="param_desc">function id</td></tr>
+<tr class="param"><td class="param_id">uint <code class="ddoc_param">ecx</code></td>
+<td class="param_desc">sub-function id</td></tr>
+</table></div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".vendors"></span><div class="quickindex" id="quickindex.vendors"></div>nothrow @nogc @property immutable(char)[12][] <span class="def-anchor" id="vendors"></span><code class="ddoc_psymbol">vendors</code>();
+<br></div></dt>
+<dd><div class="summary">VendorIndex name</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">assert</span>(<span class="d_psymbol">vendors</span>[VendorIndex.intel] == <span class="d_string">"GenuineIntel"</span>);
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".vendorIndex"></span><div class="quickindex" id="quickindex.vendorIndex"></div>nothrow @nogc @property VendorIndex <span class="def-anchor" id="vendorIndex"></span><code class="ddoc_psymbol">vendorIndex</code>();
+<br></div></dt>
+<dd><div class="summary">VendorIndex encoded value.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".virtualVendorIndex"></span><div class="quickindex" id="quickindex.virtualVendorIndex"></div>nothrow @nogc @property VendorIndex <span class="def-anchor" id="virtualVendorIndex"></span><code class="ddoc_psymbol">virtualVendorIndex</code>();
+<br></div></dt>
+<dd><div class="summary">VendorIndex encoded value for virtual machine.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".maxBasicLeaf"></span><div class="quickindex" id="quickindex.maxBasicLeaf"></div>nothrow @nogc @property uint <span class="def-anchor" id="maxBasicLeaf"></span><code class="ddoc_psymbol">maxBasicLeaf</code>();
+<br></div></dt>
+<dd><div class="summary">Maximum Input Value for Basic CPUID Information</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".maxExtendedLeaf"></span><div class="quickindex" id="quickindex.maxExtendedLeaf"></div>nothrow @nogc @property uint <span class="def-anchor" id="maxExtendedLeaf"></span><code class="ddoc_psymbol">maxExtendedLeaf</code>();
+<br></div></dt>
+<dd><div class="summary">Maximum Input Value for Extended CPUID Information</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".max7SubLeafs"></span><div class="quickindex" id="quickindex.max7SubLeafs"></div>nothrow @nogc @property uint <span class="def-anchor" id="max7SubLeafs"></span><code class="ddoc_psymbol">max7SubLeafs</code>();
+<br></div></dt>
+<dd><div class="summary">Reports the maximum input value for supported leaf 7 sub-leaves.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex"></span><div class="quickindex" id="quickindex.VendorIndex"></div>enum <span class="def-anchor" id="VendorIndex"></span><code class="ddoc_psymbol">VendorIndex</code>: int;
+<br></div></dt>
+<dd><div class="summary">Encoded vendors</div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.intel"></span><div class="quickindex" id="quickindex.VendorIndex.intel"></div><span class="def-anchor" id="intel"></span><code class="ddoc_psymbol">intel</code><br></div></dt>
+<dd><div class="summary">Intel</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.amd"></span><div class="quickindex" id="quickindex.VendorIndex.amd"></div><span class="def-anchor" id="amd"></span><code class="ddoc_psymbol">amd</code><br></div></dt>
+<dd><div class="summary">AMD</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.sis"></span><div class="quickindex" id="quickindex.VendorIndex.sis"></div><span class="def-anchor" id="sis"></span><code class="ddoc_psymbol">sis</code><br></div></dt>
+<dd><div class="summary">SiS</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.umc"></span><div class="quickindex" id="quickindex.VendorIndex.umc"></div><span class="def-anchor" id="umc"></span><code class="ddoc_psymbol">umc</code><br></div></dt>
+<dd><div class="summary">UMC</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.via"></span><div class="quickindex" id="quickindex.VendorIndex.via"></div><span class="def-anchor" id="via"></span><code class="ddoc_psymbol">via</code><br></div></dt>
+<dd><div class="summary">VIA</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.amd_old"></span><div class="quickindex" id="quickindex.VendorIndex.amd_old"></div><span class="def-anchor" id="amd_old"></span><code class="ddoc_psymbol">amd_old</code><br></div></dt>
+<dd><div class="summary">early engineering samples of AMD K5 processor</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.centaur"></span><div class="quickindex" id="quickindex.VendorIndex.centaur"></div><span class="def-anchor" id="centaur"></span><code class="ddoc_psymbol">centaur</code><br></div></dt>
+<dd><div class="summary">Centaur (Including some VIA CPU)</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.cyrix"></span><div class="quickindex" id="quickindex.VendorIndex.cyrix"></div><span class="def-anchor" id="cyrix"></span><code class="ddoc_psymbol">cyrix</code><br></div></dt>
+<dd><div class="summary">Cyrix</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.transmeta"></span><div class="quickindex" id="quickindex.VendorIndex.transmeta"></div><span class="def-anchor" id="transmeta"></span><code class="ddoc_psymbol">transmeta</code><br></div></dt>
+<dd><div class="summary">Transmeta</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.nsc"></span><div class="quickindex" id="quickindex.VendorIndex.nsc"></div><span class="def-anchor" id="nsc"></span><code class="ddoc_psymbol">nsc</code><br></div></dt>
+<dd><div class="summary">National Semiconductor</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.nexgen"></span><div class="quickindex" id="quickindex.VendorIndex.nexgen"></div><span class="def-anchor" id="nexgen"></span><code class="ddoc_psymbol">nexgen</code><br></div></dt>
+<dd><div class="summary">NexGen</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.rise"></span><div class="quickindex" id="quickindex.VendorIndex.rise"></div><span class="def-anchor" id="rise"></span><code class="ddoc_psymbol">rise</code><br></div></dt>
+<dd><div class="summary">Rise</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.transmeta_old"></span><div class="quickindex" id="quickindex.VendorIndex.transmeta_old"></div><span class="def-anchor" id="transmeta_old"></span><code class="ddoc_psymbol">transmeta_old</code><br></div></dt>
+<dd><div class="summary">Transmeta</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.vortex"></span><div class="quickindex" id="quickindex.VendorIndex.vortex"></div><span class="def-anchor" id="vortex"></span><code class="ddoc_psymbol">vortex</code><br></div></dt>
+<dd><div class="summary">Vortex</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.undefined"></span><div class="quickindex" id="quickindex.VendorIndex.undefined"></div><span class="def-anchor" id="undefined"></span><code class="ddoc_psymbol">undefined</code><br></div></dt>
+<dd><div class="summary"><span class="def-anchor" id="undefined"></span><code class="ddoc_psymbol">undefined</code></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.kvm"></span><div class="quickindex" id="quickindex.VendorIndex.kvm"></div><span class="def-anchor" id="kvm"></span><code class="ddoc_psymbol">kvm</code><br></div></dt>
+<dd><div class="summary">KVM</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.parallels"></span><div class="quickindex" id="quickindex.VendorIndex.parallels"></div><span class="def-anchor" id="parallels"></span><code class="ddoc_psymbol">parallels</code><br></div></dt>
+<dd><div class="summary">Parallels</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.microsoft"></span><div class="quickindex" id="quickindex.VendorIndex.microsoft"></div><span class="def-anchor" id="microsoft"></span><code class="ddoc_psymbol">microsoft</code><br></div></dt>
+<dd><div class="summary">Microsoft Hyper-V or Windows Virtual PC</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.vmware"></span><div class="quickindex" id="quickindex.VendorIndex.vmware"></div><span class="def-anchor" id="vmware"></span><code class="ddoc_psymbol">vmware</code><br></div></dt>
+<dd><div class="summary">VMware</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.xen"></span><div class="quickindex" id="quickindex.VendorIndex.xen"></div><span class="def-anchor" id="xen"></span><code class="ddoc_psymbol">xen</code><br></div></dt>
+<dd><div class="summary">Xen HVM</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VendorIndex.undefinedvm"></span><div class="quickindex" id="quickindex.VendorIndex.undefinedvm"></div><span class="def-anchor" id="undefinedvm"></span><code class="ddoc_psymbol">undefinedvm</code><br></div></dt>
+<dd><div class="summary">undefined virtual machine</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".brand"></span><div class="quickindex" id="quickindex.brand"></div>nothrow @nogc @property size_t <span class="def-anchor" id="brand"></span><code class="ddoc_psymbol">brand</code>(ref char[48] <span class="def-anchor" id="brand"></span><code class="ddoc_psymbol">brand</code>);
+<br></div></dt>
+<dd><div class="summary">Brand, e.g. <span class="d_inlinecode donthyphenate notranslate">Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz</span>.
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="def-anchor" id="brand"></span><code class="ddoc_psymbol">brand</code> length
+</div></div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">char[48] <span class="def-anchor" id="brand"></span><code class="ddoc_psymbol">brand</code></td>
+<td class="param_desc">fixed length string to initiate</td></tr>
+</table></div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".vendor"></span><div class="quickindex" id="quickindex.vendor"></div>nothrow @nogc @property string <span class="def-anchor" id="vendor"></span><code class="ddoc_psymbol">vendor</code>();
+<br></div></dt>
+<dd><div class="summary">Vendor, e.g. <span class="d_inlinecode donthyphenate notranslate">GenuineIntel</span>.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".virtualVendor"></span><div class="quickindex" id="quickindex.virtualVendor"></div>nothrow @nogc @property string <span class="def-anchor" id="virtualVendor"></span><code class="ddoc_psymbol">virtualVendor</code>();
+<br></div></dt>
+<dd><div class="summary">Virtual vendor, e.g. <span class="d_inlinecode donthyphenate notranslate">GenuineIntel</span> or <span class="d_inlinecode donthyphenate notranslate">VMwareVMware</span>.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".brandIndex"></span><div class="quickindex" id="quickindex.brandIndex"></div>nothrow @nogc @property ubyte <span class="def-anchor" id="brandIndex"></span><code class="ddoc_psymbol">brandIndex</code>();
+<br></div></dt>
+<dd><div class="summary">Brand Index</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".clflushLineSize"></span><div class="quickindex" id="quickindex.clflushLineSize"></div>nothrow @nogc @property ubyte <span class="def-anchor" id="clflushLineSize"></span><code class="ddoc_psymbol">clflushLineSize</code>();
+<br></div></dt>
+<dd><div class="summary">CLFLUSH line size
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+Value ∗ 8 = cache line size in bytes; used also by CLFLUSHOPT.</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".maxLogicalProcessors"></span><div class="quickindex" id="quickindex.maxLogicalProcessors"></div>nothrow @nogc @property ubyte <span class="def-anchor" id="maxLogicalProcessors"></span><code class="ddoc_psymbol">maxLogicalProcessors</code>();
+<br></div></dt>
+<dd><div class="summary">Maximum number of addressable IDs for logical processors in this physical package.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".initialAPIC"></span><div class="quickindex" id="quickindex.initialAPIC"></div>nothrow @nogc @property ubyte <span class="def-anchor" id="initialAPIC"></span><code class="ddoc_psymbol">initialAPIC</code>();
+<br></div></dt>
+<dd><div class="summary">Initial APIC ID</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".stepping"></span><div class="quickindex" id="quickindex.stepping"></div>nothrow @nogc @property uint <span class="def-anchor" id="stepping"></span><code class="ddoc_psymbol">stepping</code>();
+<br></div></dt>
+<dd><div class="summary">Stepping ID</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".model"></span><div class="quickindex" id="quickindex.model"></div>nothrow @nogc @property uint <span class="def-anchor" id="model"></span><code class="ddoc_psymbol">model</code>();
+<br></div></dt>
+<dd><div class="summary">Model</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".family"></span><div class="quickindex" id="quickindex.family"></div>nothrow @nogc @property uint <span class="def-anchor" id="family"></span><code class="ddoc_psymbol">family</code>();
+<br></div></dt>
+<dd><div class="summary">Family ID</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".type"></span><div class="quickindex" id="quickindex.type"></div>nothrow @nogc @property uint <span class="def-anchor" id="type"></span><code class="ddoc_psymbol">type</code>();
+<br></div></dt>
+<dd><div class="summary">Processor Type, Specification: Intel</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".extendedModel"></span><div class="quickindex" id="quickindex.extendedModel"></div>nothrow @nogc @property uint <span class="def-anchor" id="extendedModel"></span><code class="ddoc_psymbol">extendedModel</code>();
+<br></div></dt>
+<dd><div class="summary">Extended Model ID</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".extendedFamily"></span><div class="quickindex" id="quickindex.extendedFamily"></div>nothrow @nogc @property uint <span class="def-anchor" id="extendedFamily"></span><code class="ddoc_psymbol">extendedFamily</code>();
+<br></div></dt>
+<dd><div class="summary">Extended Family ID</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sse3"></span><div class="quickindex" id="quickindex.sse3"></div>nothrow @nogc @property bool <span class="def-anchor" id="sse3"></span><code class="ddoc_psymbol">sse3</code>();
+<br></div></dt>
+<dd><div class="summary">SSE3 Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pclmulqdq"></span><div class="quickindex" id="quickindex.pclmulqdq"></div>nothrow @nogc @property bool <span class="def-anchor" id="pclmulqdq"></span><code class="ddoc_psymbol">pclmulqdq</code>();
+<br></div></dt>
+<dd><div class="summary">Carryless Multiplication</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".dtes64"></span><div class="quickindex" id="quickindex.dtes64"></div>nothrow @nogc @property bool <span class="def-anchor" id="dtes64"></span><code class="ddoc_psymbol">dtes64</code>();
+<br></div></dt>
+<dd><div class="summary">64-bit DS Area</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".monitor"></span><div class="quickindex" id="quickindex.monitor"></div>nothrow @nogc @property bool <span class="def-anchor" id="monitor"></span><code class="ddoc_psymbol">monitor</code>();
+<br></div></dt>
+<dd><div class="summary">MONITOR/MWAIT</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ds_cpl"></span><div class="quickindex" id="quickindex.ds_cpl"></div>nothrow @nogc @property bool <span class="def-anchor" id="ds_cpl"></span><code class="ddoc_psymbol">ds_cpl</code>();
+<br></div></dt>
+<dd><div class="summary">CPL Qualified Debug Store</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".vmx"></span><div class="quickindex" id="quickindex.vmx"></div>nothrow @nogc @property bool <span class="def-anchor" id="vmx"></span><code class="ddoc_psymbol">vmx</code>();
+<br></div></dt>
+<dd><div class="summary">Virtual Machine Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".smx"></span><div class="quickindex" id="quickindex.smx"></div>nothrow @nogc @property bool <span class="def-anchor" id="smx"></span><code class="ddoc_psymbol">smx</code>();
+<br></div></dt>
+<dd><div class="summary">Safer Mode Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".eist"></span><div class="quickindex" id="quickindex.eist"></div>nothrow @nogc @property bool <span class="def-anchor" id="eist"></span><code class="ddoc_psymbol">eist</code>();
+<br></div></dt>
+<dd><div class="summary">Enhanced Intel SpeedStep® Technology</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".therm_monitor2"></span><div class="quickindex" id="quickindex.therm_monitor2"></div>nothrow @nogc @property bool <span class="def-anchor" id="therm_monitor2"></span><code class="ddoc_psymbol">therm_monitor2</code>();
+<br></div></dt>
+<dd><div class="summary">Thermal Monitor 2</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ssse3"></span><div class="quickindex" id="quickindex.ssse3"></div>nothrow @nogc @property bool <span class="def-anchor" id="ssse3"></span><code class="ddoc_psymbol">ssse3</code>();
+<br></div></dt>
+<dd><div class="summary">SSSE3 Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cnxt_id"></span><div class="quickindex" id="quickindex.cnxt_id"></div>nothrow @nogc @property bool <span class="def-anchor" id="cnxt_id"></span><code class="ddoc_psymbol">cnxt_id</code>();
+<br></div></dt>
+<dd><div class="summary">L1 Context ID</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sdbg"></span><div class="quickindex" id="quickindex.sdbg"></div>nothrow @nogc @property bool <span class="def-anchor" id="sdbg"></span><code class="ddoc_psymbol">sdbg</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".fma"></span><div class="quickindex" id="quickindex.fma"></div>nothrow @nogc @property bool <span class="def-anchor" id="fma"></span><code class="ddoc_psymbol">fma</code>();
+<br></div></dt>
+<dd><div class="summary">Fused Multiply Add</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cmpxchg16b"></span><div class="quickindex" id="quickindex.cmpxchg16b"></div>nothrow @nogc @property bool <span class="def-anchor" id="cmpxchg16b"></span><code class="ddoc_psymbol">cmpxchg16b</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".xtpr"></span><div class="quickindex" id="quickindex.xtpr"></div>nothrow @nogc @property bool <span class="def-anchor" id="xtpr"></span><code class="ddoc_psymbol">xtpr</code>();
+<br></div></dt>
+<dd><div class="summary">TPR Update Control</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pdcm"></span><div class="quickindex" id="quickindex.pdcm"></div>nothrow @nogc @property bool <span class="def-anchor" id="pdcm"></span><code class="ddoc_psymbol">pdcm</code>();
+<br></div></dt>
+<dd><div class="summary">Perf/Debug Capability MSR xTPR Update Control</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pcid"></span><div class="quickindex" id="quickindex.pcid"></div>nothrow @nogc @property bool <span class="def-anchor" id="pcid"></span><code class="ddoc_psymbol">pcid</code>();
+<br></div></dt>
+<dd><div class="summary">Process-context Identifiers</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".dca"></span><div class="quickindex" id="quickindex.dca"></div>nothrow @nogc @property bool <span class="def-anchor" id="dca"></span><code class="ddoc_psymbol">dca</code>();
+<br></div></dt>
+<dd><div class="summary">Direct Cache Access</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sse41"></span><div class="quickindex" id="quickindex.sse41"></div>nothrow @nogc @property bool <span class="def-anchor" id="sse41"></span><code class="ddoc_psymbol">sse41</code>();
+<br></div></dt>
+<dd><div class="summary">SSE4.1</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sse42"></span><div class="quickindex" id="quickindex.sse42"></div>nothrow @nogc @property bool <span class="def-anchor" id="sse42"></span><code class="ddoc_psymbol">sse42</code>();
+<br></div></dt>
+<dd><div class="summary">SSE4.2</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".x2apic"></span><div class="quickindex" id="quickindex.x2apic"></div>nothrow @nogc @property bool <span class="def-anchor" id="x2apic"></span><code class="ddoc_psymbol">x2apic</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".movbe"></span><div class="quickindex" id="quickindex.movbe"></div>nothrow @nogc @property bool <span class="def-anchor" id="movbe"></span><code class="ddoc_psymbol">movbe</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".popcnt"></span><div class="quickindex" id="quickindex.popcnt"></div>nothrow @nogc @property bool <span class="def-anchor" id="popcnt"></span><code class="ddoc_psymbol">popcnt</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".tsc_deadline"></span><div class="quickindex" id="quickindex.tsc_deadline"></div>nothrow @nogc @property bool <span class="def-anchor" id="tsc_deadline"></span><code class="ddoc_psymbol">tsc_deadline</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".aes"></span><div class="quickindex" id="quickindex.aes"></div>nothrow @nogc @property bool <span class="def-anchor" id="aes"></span><code class="ddoc_psymbol">aes</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".xsave"></span><div class="quickindex" id="quickindex.xsave"></div>nothrow @nogc @property bool <span class="def-anchor" id="xsave"></span><code class="ddoc_psymbol">xsave</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".osxsave"></span><div class="quickindex" id="quickindex.osxsave"></div>nothrow @nogc @property bool <span class="def-anchor" id="osxsave"></span><code class="ddoc_psymbol">osxsave</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".avx"></span><div class="quickindex" id="quickindex.avx"></div>nothrow @nogc @property bool <span class="def-anchor" id="avx"></span><code class="ddoc_psymbol">avx</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".f16c"></span><div class="quickindex" id="quickindex.f16c"></div>nothrow @nogc @property bool <span class="def-anchor" id="f16c"></span><code class="ddoc_psymbol">f16c</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".rdrand"></span><div class="quickindex" id="quickindex.rdrand"></div>nothrow @nogc @property bool <span class="def-anchor" id="rdrand"></span><code class="ddoc_psymbol">rdrand</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".virtual"></span><div class="quickindex" id="quickindex.virtual"></div>nothrow @nogc @property bool <span class="def-anchor" id="virtual"></span><code class="ddoc_psymbol">virtual</code>();
+<br></div></dt>
+<dd><div class="summary">Virtual machine</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".fpu"></span><div class="quickindex" id="quickindex.fpu"></div>nothrow @nogc @property bool <span class="def-anchor" id="fpu"></span><code class="ddoc_psymbol">fpu</code>();
+<br></div></dt>
+<dd><div class="summary">x87 FPU on Chip</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".vme"></span><div class="quickindex" id="quickindex.vme"></div>nothrow @nogc @property bool <span class="def-anchor" id="vme"></span><code class="ddoc_psymbol">vme</code>();
+<br></div></dt>
+<dd><div class="summary">Virtual-8086 Mode Enhancement</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".de"></span><div class="quickindex" id="quickindex.de"></div>nothrow @nogc @property bool <span class="def-anchor" id="de"></span><code class="ddoc_psymbol">de</code>();
+<br></div></dt>
+<dd><div class="summary">Debugging Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pse"></span><div class="quickindex" id="quickindex.pse"></div>nothrow @nogc @property bool <span class="def-anchor" id="pse"></span><code class="ddoc_psymbol">pse</code>();
+<br></div></dt>
+<dd><div class="summary">Page Size Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".tsc"></span><div class="quickindex" id="quickindex.tsc"></div>nothrow @nogc @property bool <span class="def-anchor" id="tsc"></span><code class="ddoc_psymbol">tsc</code>();
+<br></div></dt>
+<dd><div class="summary">Time Stamp Counter</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".msr"></span><div class="quickindex" id="quickindex.msr"></div>nothrow @nogc @property bool <span class="def-anchor" id="msr"></span><code class="ddoc_psymbol">msr</code>();
+<br></div></dt>
+<dd><div class="summary">RDMSR and WRMSR Support</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pae"></span><div class="quickindex" id="quickindex.pae"></div>nothrow @nogc @property bool <span class="def-anchor" id="pae"></span><code class="ddoc_psymbol">pae</code>();
+<br></div></dt>
+<dd><div class="summary">Physical Address Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".mce"></span><div class="quickindex" id="quickindex.mce"></div>nothrow @nogc @property bool <span class="def-anchor" id="mce"></span><code class="ddoc_psymbol">mce</code>();
+<br></div></dt>
+<dd><div class="summary">Machine Check Exception</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cx8"></span><div class="quickindex" id="quickindex.cx8"></div>nothrow @nogc @property bool <span class="def-anchor" id="cx8"></span><code class="ddoc_psymbol">cx8</code>();
+<br></div></dt>
+<dd><div class="summary">CMPXCHG8B Inst.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".apic"></span><div class="quickindex" id="quickindex.apic"></div>nothrow @nogc @property bool <span class="def-anchor" id="apic"></span><code class="ddoc_psymbol">apic</code>();
+<br></div></dt>
+<dd><div class="summary">APIC on Chip</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sep"></span><div class="quickindex" id="quickindex.sep"></div>nothrow @nogc @property bool <span class="def-anchor" id="sep"></span><code class="ddoc_psymbol">sep</code>();
+<br></div></dt>
+<dd><div class="summary">SYSENTER and SYSEXIT</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".mtrr"></span><div class="quickindex" id="quickindex.mtrr"></div>nothrow @nogc @property bool <span class="def-anchor" id="mtrr"></span><code class="ddoc_psymbol">mtrr</code>();
+<br></div></dt>
+<dd><div class="summary">Memory Type Range Registers</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pge"></span><div class="quickindex" id="quickindex.pge"></div>nothrow @nogc @property bool <span class="def-anchor" id="pge"></span><code class="ddoc_psymbol">pge</code>();
+<br></div></dt>
+<dd><div class="summary">PTE Global Bit</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".mca"></span><div class="quickindex" id="quickindex.mca"></div>nothrow @nogc @property bool <span class="def-anchor" id="mca"></span><code class="ddoc_psymbol">mca</code>();
+<br></div></dt>
+<dd><div class="summary">Machine Check Architecture</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cmov"></span><div class="quickindex" id="quickindex.cmov"></div>nothrow @nogc @property bool <span class="def-anchor" id="cmov"></span><code class="ddoc_psymbol">cmov</code>();
+<br></div></dt>
+<dd><div class="summary">Conditional Move/Compare Instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pat"></span><div class="quickindex" id="quickindex.pat"></div>nothrow @nogc @property bool <span class="def-anchor" id="pat"></span><code class="ddoc_psymbol">pat</code>();
+<br></div></dt>
+<dd><div class="summary">Page Attribute Table</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pse36"></span><div class="quickindex" id="quickindex.pse36"></div>nothrow @nogc @property bool <span class="def-anchor" id="pse36"></span><code class="ddoc_psymbol">pse36</code>();
+<br></div></dt>
+<dd><div class="summary">Page Size Extension</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".psn"></span><div class="quickindex" id="quickindex.psn"></div>nothrow @nogc @property bool <span class="def-anchor" id="psn"></span><code class="ddoc_psymbol">psn</code>();
+<br></div></dt>
+<dd><div class="summary">Processor Serial Number</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".clfsh"></span><div class="quickindex" id="quickindex.clfsh"></div>nothrow @nogc @property bool <span class="def-anchor" id="clfsh"></span><code class="ddoc_psymbol">clfsh</code>();
+<br></div></dt>
+<dd><div class="summary">CLFLUSH instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ds"></span><div class="quickindex" id="quickindex.ds"></div>nothrow @nogc @property bool <span class="def-anchor" id="ds"></span><code class="ddoc_psymbol">ds</code>();
+<br></div></dt>
+<dd><div class="summary">Debug Store</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".acpi"></span><div class="quickindex" id="quickindex.acpi"></div>nothrow @nogc @property bool <span class="def-anchor" id="acpi"></span><code class="ddoc_psymbol">acpi</code>();
+<br></div></dt>
+<dd><div class="summary">Thermal Monitor and Clock Ctrl</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".mmx"></span><div class="quickindex" id="quickindex.mmx"></div>nothrow @nogc @property bool <span class="def-anchor" id="mmx"></span><code class="ddoc_psymbol">mmx</code>();
+<br></div></dt>
+<dd><div class="summary">MMX Technology</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".fxsr"></span><div class="quickindex" id="quickindex.fxsr"></div>nothrow @nogc @property bool <span class="def-anchor" id="fxsr"></span><code class="ddoc_psymbol">fxsr</code>();
+<br></div></dt>
+<dd><div class="summary">FXSAVE/FXRSTOR</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sse"></span><div class="quickindex" id="quickindex.sse"></div>nothrow @nogc @property bool <span class="def-anchor" id="sse"></span><code class="ddoc_psymbol">sse</code>();
+<br></div></dt>
+<dd><div class="summary">SSE Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sse2"></span><div class="quickindex" id="quickindex.sse2"></div>nothrow @nogc @property bool <span class="def-anchor" id="sse2"></span><code class="ddoc_psymbol">sse2</code>();
+<br></div></dt>
+<dd><div class="summary">SSE2 Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".self_snoop"></span><div class="quickindex" id="quickindex.self_snoop"></div>nothrow @nogc @property bool <span class="def-anchor" id="self_snoop"></span><code class="ddoc_psymbol">self_snoop</code>();
+<br></div></dt>
+<dd><div class="summary">Self Snoop</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".htt"></span><div class="quickindex" id="quickindex.htt"></div>nothrow @nogc @property bool <span class="def-anchor" id="htt"></span><code class="ddoc_psymbol">htt</code>();
+<br></div></dt>
+<dd><div class="summary">Multi-threading</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".therm_monitor"></span><div class="quickindex" id="quickindex.therm_monitor"></div>nothrow @nogc @property bool <span class="def-anchor" id="therm_monitor"></span><code class="ddoc_psymbol">therm_monitor</code>();
+<br></div></dt>
+<dd><div class="summary">Therm. Monitor</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pbe"></span><div class="quickindex" id="quickindex.pbe"></div>nothrow @nogc @property bool <span class="def-anchor" id="pbe"></span><code class="ddoc_psymbol">pbe</code>();
+<br></div></dt>
+<dd><div class="summary">Pend. Brk. EN.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".fsgsbase"></span><div class="quickindex" id="quickindex.fsgsbase"></div>nothrow @nogc @property bool <span class="def-anchor" id="fsgsbase"></span><code class="ddoc_psymbol">fsgsbase</code>();
+<br></div></dt>
+<dd><div class="summary">Supports RDFSBASE/RDGSBASE/WRFSBASE/WRGSBASE if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ia32_tsc_adjust"></span><div class="quickindex" id="quickindex.ia32_tsc_adjust"></div>nothrow @nogc @property bool <span class="def-anchor" id="ia32_tsc_adjust"></span><code class="ddoc_psymbol">ia32_tsc_adjust</code>();
+<br></div></dt>
+<dd><div class="summary">MSR is supported if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sgx"></span><div class="quickindex" id="quickindex.sgx"></div>nothrow @nogc @property bool <span class="def-anchor" id="sgx"></span><code class="ddoc_psymbol">sgx</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Intel® Software Guard Extensions (Intel® SGX Extensions) if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".bmi1"></span><div class="quickindex" id="quickindex.bmi1"></div>nothrow @nogc @property bool <span class="def-anchor" id="bmi1"></span><code class="ddoc_psymbol">bmi1</code>();
+<br></div></dt>
+<dd><div class="summary">Bit Manipulation Instruction Set 1</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".hle"></span><div class="quickindex" id="quickindex.hle"></div>nothrow @nogc @property bool <span class="def-anchor" id="hle"></span><code class="ddoc_psymbol">hle</code>();
+<br></div></dt>
+<dd><div class="summary">Transactional Synchronization Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".avx2"></span><div class="quickindex" id="quickindex.avx2"></div>nothrow @nogc @property bool <span class="def-anchor" id="avx2"></span><code class="ddoc_psymbol">avx2</code>();
+<br></div></dt>
+<dd><div class="summary">Advanced Vector Extensions 2</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".fdp_excptn_only"></span><div class="quickindex" id="quickindex.fdp_excptn_only"></div>nothrow @nogc @property bool <span class="def-anchor" id="fdp_excptn_only"></span><code class="ddoc_psymbol">fdp_excptn_only</code>();
+<br></div></dt>
+<dd><div class="summary">x87 FPU Data Pointer updated only on x87 exceptions if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".smep"></span><div class="quickindex" id="quickindex.smep"></div>nothrow @nogc @property bool <span class="def-anchor" id="smep"></span><code class="ddoc_psymbol">smep</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Supervisor-Mode Execution Prevention if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".bmi2"></span><div class="quickindex" id="quickindex.bmi2"></div>nothrow @nogc @property bool <span class="def-anchor" id="bmi2"></span><code class="ddoc_psymbol">bmi2</code>();
+<br></div></dt>
+<dd><div class="summary">Bit Manipulation Instruction Set 2</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".supports"></span><div class="quickindex" id="quickindex.supports"></div>nothrow @nogc @property bool <span class="def-anchor" id="supports"></span><code class="ddoc_psymbol">supports</code>();
+<br></div></dt>
+<dd><div class="summary">Enhanced REP MOVSB/STOSB if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".invpcid"></span><div class="quickindex" id="quickindex.invpcid"></div>nothrow @nogc @property bool <span class="def-anchor" id="invpcid"></span><code class="ddoc_psymbol">invpcid</code>();
+<br></div></dt>
+<dd><div class="summary">If 1, supports INVPCID instruction for system software that manages process-context identifiers.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".rtm"></span><div class="quickindex" id="quickindex.rtm"></div>nothrow @nogc @property bool <span class="def-anchor" id="rtm"></span><code class="ddoc_psymbol">rtm</code>();
+<br></div></dt>
+<dd><div class="summary">Transactional Synchronization Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".rdt_m"></span><div class="quickindex" id="quickindex.rdt_m"></div>nothrow @nogc @property bool <span class="def-anchor" id="rdt_m"></span><code class="ddoc_psymbol">rdt_m</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Intel® Resource Director Technology (Intel® RDT) Monitoring capability if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".deprecates"></span><div class="quickindex" id="quickindex.deprecates"></div>nothrow @nogc @property bool <span class="def-anchor" id="deprecates"></span><code class="ddoc_psymbol">deprecates</code>();
+<br></div></dt>
+<dd><div class="summary">FPU CS and FPU DS values if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".mpx"></span><div class="quickindex" id="quickindex.mpx"></div>nothrow @nogc @property bool <span class="def-anchor" id="mpx"></span><code class="ddoc_psymbol">mpx</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Intel® Memory Protection Extensions if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".rdt_a"></span><div class="quickindex" id="quickindex.rdt_a"></div>nothrow @nogc @property bool <span class="def-anchor" id="rdt_a"></span><code class="ddoc_psymbol">rdt_a</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Intel® Resource Director Technology (Intel® RDT) Allocation capability if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".avx512f"></span><div class="quickindex" id="quickindex.avx512f"></div>nothrow @nogc @property bool <span class="def-anchor" id="avx512f"></span><code class="ddoc_psymbol">avx512f</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Foundation</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".avx512dq"></span><div class="quickindex" id="quickindex.avx512dq"></div>nothrow @nogc @property bool <span class="def-anchor" id="avx512dq"></span><code class="ddoc_psymbol">avx512dq</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Doubleword and Quadword Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".rdseed"></span><div class="quickindex" id="quickindex.rdseed"></div>nothrow @nogc @property bool <span class="def-anchor" id="rdseed"></span><code class="ddoc_psymbol">rdseed</code>();
+<br></div></dt>
+<dd><div class="summary">RDSEED instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".adx"></span><div class="quickindex" id="quickindex.adx"></div>nothrow @nogc @property bool <span class="def-anchor" id="adx"></span><code class="ddoc_psymbol">adx</code>();
+<br></div></dt>
+<dd><div class="summary">Intel ADX (Multi-Precision Add-Carry Instruction Extensions)</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".smap"></span><div class="quickindex" id="quickindex.smap"></div>nothrow @nogc @property bool <span class="def-anchor" id="smap"></span><code class="ddoc_psymbol">smap</code>();
+<br></div></dt>
+<dd><div class="summary">Supports Supervisor-Mode Access Prevention (and the CLAC/STAC instructions) if 1.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".avx512ifma"></span><div class="quickindex" id="quickindex.avx512ifma"></div>nothrow @nogc @property bool <span class="def-anchor" id="avx512ifma"></span><code class="ddoc_psymbol">avx512ifma</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Integer Fused Multiply-Add Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pcommit"></span><div class="quickindex" id="quickindex.pcommit"></div>nothrow @nogc @property bool <span class="def-anchor" id="pcommit"></span><code class="ddoc_psymbol">pcommit</code>();
+<br></div></dt>
+<dd><div class="summary">PCOMMIT instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".clflushopt"></span><div class="quickindex" id="quickindex.clflushopt"></div>nothrow @nogc @property bool <span class="def-anchor" id="clflushopt"></span><code class="ddoc_psymbol">clflushopt</code>();
+<br></div></dt>
+<dd><div class="summary">CLFLUSHOPT instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".clwb"></span><div class="quickindex" id="quickindex.clwb"></div>nothrow @nogc @property bool <span class="def-anchor" id="clwb"></span><code class="ddoc_psymbol">clwb</code>();
+<br></div></dt>
+<dd><div class="summary">CLWB instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".intel_pt"></span><div class="quickindex" id="quickindex.intel_pt"></div>nothrow @nogc @property bool <span class="def-anchor" id="intel_pt"></span><code class="ddoc_psymbol">intel_pt</code>();
+<br></div></dt>
+<dd><div class="summary">Intel Processor Trace.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".avx512pf"></span><div class="quickindex" id="quickindex.avx512pf"></div>nothrow @nogc @property bool <span class="def-anchor" id="avx512pf"></span><code class="ddoc_psymbol">avx512pf</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Prefetch Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".avx512er"></span><div class="quickindex" id="quickindex.avx512er"></div>nothrow @nogc @property bool <span class="def-anchor" id="avx512er"></span><code class="ddoc_psymbol">avx512er</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Exponential and Reciprocal Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".avx512cd"></span><div class="quickindex" id="quickindex.avx512cd"></div>nothrow @nogc @property bool <span class="def-anchor" id="avx512cd"></span><code class="ddoc_psymbol">avx512cd</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Conflict Detection Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sha"></span><div class="quickindex" id="quickindex.sha"></div>nothrow @nogc @property bool <span class="def-anchor" id="sha"></span><code class="ddoc_psymbol">sha</code>();
+<br></div></dt>
+<dd><div class="summary">supports Intel® Secure Hash Algorithm Extens</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".avx512bw"></span><div class="quickindex" id="quickindex.avx512bw"></div>nothrow @nogc @property bool <span class="def-anchor" id="avx512bw"></span><code class="ddoc_psymbol">avx512bw</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Byte and Word Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".avx512vl"></span><div class="quickindex" id="quickindex.avx512vl"></div>nothrow @nogc @property bool <span class="def-anchor" id="avx512vl"></span><code class="ddoc_psymbol">avx512vl</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Vector Length Extensions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".prefetchwt1"></span><div class="quickindex" id="quickindex.prefetchwt1"></div>nothrow @nogc @property bool <span class="def-anchor" id="prefetchwt1"></span><code class="ddoc_psymbol">prefetchwt1</code>();
+<br></div></dt>
+<dd><div class="summary">PREFETCHWT1 instruction</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".avx512vbmi"></span><div class="quickindex" id="quickindex.avx512vbmi"></div>nothrow @nogc @property bool <span class="def-anchor" id="avx512vbmi"></span><code class="ddoc_psymbol">avx512vbmi</code>();
+<br></div></dt>
+<dd><div class="summary">AVX-512 Vector Bit Manipulation Instructions</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pku"></span><div class="quickindex" id="quickindex.pku"></div>nothrow @nogc @property bool <span class="def-anchor" id="pku"></span><code class="ddoc_psymbol">pku</code>();
+<br></div></dt>
+<dd><div class="summary">Memory Protection Keys for User-mode pages</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ospke"></span><div class="quickindex" id="quickindex.ospke"></div>nothrow @nogc @property bool <span class="def-anchor" id="ospke"></span><code class="ddoc_psymbol">ospke</code>();
+<br></div></dt>
+<dd><div class="summary">PKU enabled by OS</div>
+
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright &copy; 1999-2017 by the <a href="../foundation.html">D Language Foundation</a> | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:13 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

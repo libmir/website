@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>cpuid.amd - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='cpuid.amd' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/cpuid/amd.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">cpuid.amd</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary"><h2>AMD CPUID Information</h2>
+</div>
+<div class="description"><span class="green">This module is compatible with betterC compilation mode.</span>
+
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">References:</span>
+AMD CPUID Specification. Publication # 25481 / Revision: 2.34 / Issue Date: September 2010
+
+</p></div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko</div></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information"></span><div class="quickindex" id="quickindex.LeafExt5Information"></div>union <span class="def-anchor" id="LeafExt5Information"></span><code class="ddoc_psymbol">LeafExt5Information</code>;
+<br></div></dt>
+<dd><div class="summary">L1 Cache and TLB Identifiers.
+</div>
+<div class="description">The associativity fields are encoded as follows:
+
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Specification:</span>
+AMD</p></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.info"></span><div class="quickindex" id="quickindex.LeafExt5Information.info"></div>CpuInfo <span class="def-anchor" id="info"></span><code class="ddoc_psymbol">info</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1ITlb2and4MSize"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1ITlb2and4MSize"></div>ubyte <span class="def-anchor" id="L1ITlb2and4MSize"></span><code class="ddoc_psymbol">L1ITlb2and4MSize</code>;
+<br></div></dt>
+<dd><div class="summary">Instruction TLB number of entries for 2 MB and 4 MB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1ITlb2and4MAssoc"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1ITlb2and4MAssoc"></div>ubyte <span class="def-anchor" id="L1ITlb2and4MAssoc"></span><code class="ddoc_psymbol">L1ITlb2and4MAssoc</code>;
+<br></div></dt>
+<dd><div class="summary">Instruction TLB associativity for 2 MB and 4 MB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1DTlb2and4MSize"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1DTlb2and4MSize"></div>ubyte <span class="def-anchor" id="L1DTlb2and4MSize"></span><code class="ddoc_psymbol">L1DTlb2and4MSize</code>;
+<br></div></dt>
+<dd><div class="summary">Data TLB number of entries for 2 MB and 4 MB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1DTlb2and4MAssoc"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1DTlb2and4MAssoc"></div>ubyte <span class="def-anchor" id="L1DTlb2and4MAssoc"></span><code class="ddoc_psymbol">L1DTlb2and4MAssoc</code>;
+<br></div></dt>
+<dd><div class="summary">Data TLB associativity for 2 MB and 4 MB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1ITlb4KSize"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1ITlb4KSize"></div>ubyte <span class="def-anchor" id="L1ITlb4KSize"></span><code class="ddoc_psymbol">L1ITlb4KSize</code>;
+<br></div></dt>
+<dd><div class="summary">Instruction TLB number of entries for 4 KB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1ITlb4KAssoc"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1ITlb4KAssoc"></div>ubyte <span class="def-anchor" id="L1ITlb4KAssoc"></span><code class="ddoc_psymbol">L1ITlb4KAssoc</code>;
+<br></div></dt>
+<dd><div class="summary">Instruction TLB associativity for 4 KB pages.
+</div>
+<div class="keyval SeeAlso"><span class="key keySeeAlso">See Also:</span> <div class="val valSeeAlso">CPUID Fn8000_0005_EDX[L1IcAssoc].</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1DTlb4KSize"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1DTlb4KSize"></div>ubyte <span class="def-anchor" id="L1DTlb4KSize"></span><code class="ddoc_psymbol">L1DTlb4KSize</code>;
+<br></div></dt>
+<dd><div class="summary">Data TLB number of entries for 4 KB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1DTlb4KAssoc"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1DTlb4KAssoc"></div>ubyte <span class="def-anchor" id="L1DTlb4KAssoc"></span><code class="ddoc_psymbol">L1DTlb4KAssoc</code>;
+<br></div></dt>
+<dd><div class="summary">Data TLB associativity for 4 KB pages.
+</div>
+<div class="keyval SeeAlso"><span class="key keySeeAlso">See Also:</span> <div class="val valSeeAlso">CPUID Fn8000_0005_EDX[L1IcAssoc].</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1DcLineSize"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1DcLineSize"></div>ubyte <span class="def-anchor" id="L1DcLineSize"></span><code class="ddoc_psymbol">L1DcLineSize</code>;
+<br></div></dt>
+<dd><div class="summary">L1 data cache line size in bytes.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1DcLinesPerTag"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1DcLinesPerTag"></div>ubyte <span class="def-anchor" id="L1DcLinesPerTag"></span><code class="ddoc_psymbol">L1DcLinesPerTag</code>;
+<br></div></dt>
+<dd><div class="summary">L1 data cache lines per tag.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1DcAssoc"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1DcAssoc"></div>ubyte <span class="def-anchor" id="L1DcAssoc"></span><code class="ddoc_psymbol">L1DcAssoc</code>;
+<br></div></dt>
+<dd><div class="summary">L1 data cache associativity.
+</div>
+<div class="keyval SeeAlso"><span class="key keySeeAlso">See Also:</span> <div class="val valSeeAlso">CPUID Fn8000_0005_EDX[L1IcAssoc].</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1DcSize"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1DcSize"></div>ubyte <span class="def-anchor" id="L1DcSize"></span><code class="ddoc_psymbol">L1DcSize</code>;
+<br></div></dt>
+<dd><div class="summary">L1 data cache size in KB.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1IcLineSize"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1IcLineSize"></div>ubyte <span class="def-anchor" id="L1IcLineSize"></span><code class="ddoc_psymbol">L1IcLineSize</code>;
+<br></div></dt>
+<dd><div class="summary">L1 instruction cache line size in bytes.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1IcLinesPerTag"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1IcLinesPerTag"></div>ubyte <span class="def-anchor" id="L1IcLinesPerTag"></span><code class="ddoc_psymbol">L1IcLinesPerTag</code>;
+<br></div></dt>
+<dd><div class="summary">L1 instruction cache lines per tag.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1IcAssoc"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1IcAssoc"></div>ubyte <span class="def-anchor" id="L1IcAssoc"></span><code class="ddoc_psymbol">L1IcAssoc</code>;
+<br></div></dt>
+<dd><div class="summary">L1 instruction cache associativity.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt5Information.L1IcSize"></span><div class="quickindex" id="quickindex.LeafExt5Information.L1IcSize"></div>ubyte <span class="def-anchor" id="L1IcSize"></span><code class="ddoc_psymbol">L1IcSize</code>;
+<br></div></dt>
+<dd><div class="summary">L1 instruction cache size KB.
+</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information"></span><div class="quickindex" id="quickindex.LeafExt6Information"></div>union <span class="def-anchor" id="LeafExt6Information"></span><code class="ddoc_psymbol">LeafExt6Information</code>;
+<br></div></dt>
+<dd><div class="summary">L2/L3 Cache and TLB Identifiers.
+</div>
+<div class="description">This function contains the processor’s second level cache and TLB characteristics for each core.
+The EDX register contains the processor’s third level cache characteristics that are shared by all cores of the processor.
+
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+Use <a href="decodeL2orL3Assoc_.html"><span class="d_inlinecode donthyphenate notranslate">decodeL2orL3Assoc.</span></a> to get final result for any <span class="d_inlinecode donthyphenate notranslate">*Assoc</span> field.
+
+</p></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Specification:</span>
+AMD</p></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.info"></span><div class="quickindex" id="quickindex.LeafExt6Information.info"></div>CpuInfo <span class="def-anchor" id="info"></span><code class="ddoc_psymbol">info</code>;
+<br></div></dt>
+<dd><div class="summary">CPUID payload</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2ITlb4KSize"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2ITlb4KSize"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2ITlb4KSize"></span><code class="ddoc_psymbol">L2ITlb4KSize</code>();
+<br></div></dt>
+<dd><div class="summary">L2 instruction TLB number of entries for 4 KB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2ITlb4KAssoc"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2ITlb4KAssoc"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2ITlb4KAssoc"></span><code class="ddoc_psymbol">L2ITlb4KAssoc</code>();
+<br></div></dt>
+<dd><div class="summary">L2 instruction TLB associativity for 4 KB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2DTlb4KSize"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2DTlb4KSize"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2DTlb4KSize"></span><code class="ddoc_psymbol">L2DTlb4KSize</code>();
+<br></div></dt>
+<dd><div class="summary">L2 data TLB number of entries for 4 KB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2DTlb4KAssoc"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2DTlb4KAssoc"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2DTlb4KAssoc"></span><code class="ddoc_psymbol">L2DTlb4KAssoc</code>();
+<br></div></dt>
+<dd><div class="summary">L2 data TLB associativity for 4 KB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2ITlb2and4MSize"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2ITlb2and4MSize"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2ITlb2and4MSize"></span><code class="ddoc_psymbol">L2ITlb2and4MSize</code>();
+<br></div></dt>
+<dd><div class="summary">L2 instruction TLB number of entries for 2 MB and 4 MB pages.
+</div>
+<div class="description">The value returned is for the number of entries available for the 2 MB page size; 4 MB pages require two 2 MB entries, so the number of entries available for the 4 MB page size is one-half the returned value.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2ITlb2and4MAssoc"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2ITlb2and4MAssoc"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2ITlb2and4MAssoc"></span><code class="ddoc_psymbol">L2ITlb2and4MAssoc</code>();
+<br></div></dt>
+<dd><div class="summary">L2 instruction TLB associativity for 2 MB and 4 MB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2DTlb2and4MSize"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2DTlb2and4MSize"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2DTlb2and4MSize"></span><code class="ddoc_psymbol">L2DTlb2and4MSize</code>();
+<br></div></dt>
+<dd><div class="summary">L2 data TLB number of entries for 2 MB and 4 MB pages.
+</div>
+<div class="description">The value returned is for the number of entries available for the 2 MB page size; 4 MB pages require two 2 MB entries, so the number of entries available for the 4 MB page size is one-half the returned value.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2DTlb2and4MAssoc"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2DTlb2and4MAssoc"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2DTlb2and4MAssoc"></span><code class="ddoc_psymbol">L2DTlb2and4MAssoc</code>();
+<br></div></dt>
+<dd><div class="summary">L2 data TLB associativity for 2 MB and 4 MB pages.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2LineSize"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2LineSize"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2LineSize"></span><code class="ddoc_psymbol">L2LineSize</code>();
+<br></div></dt>
+<dd><div class="summary">L2 cache line size in bytes.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2LinesPerTag"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2LinesPerTag"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2LinesPerTag"></span><code class="ddoc_psymbol">L2LinesPerTag</code>();
+<br></div></dt>
+<dd><div class="summary">L2 cache lines per tag.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2Assoc"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2Assoc"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2Assoc"></span><code class="ddoc_psymbol">L2Assoc</code>();
+<br></div></dt>
+<dd><div class="summary">L2 cache associativity.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L2Size"></span><div class="quickindex" id="quickindex.LeafExt6Information.L2Size"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L2Size"></span><code class="ddoc_psymbol">L2Size</code>();
+<br></div></dt>
+<dd><div class="summary">L2 cache size in KB.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L3LineSize"></span><div class="quickindex" id="quickindex.LeafExt6Information.L3LineSize"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L3LineSize"></span><code class="ddoc_psymbol">L3LineSize</code>();
+<br></div></dt>
+<dd><div class="summary">L3 cache line size in bytes.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L3LinesPerTag"></span><div class="quickindex" id="quickindex.LeafExt6Information.L3LinesPerTag"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L3LinesPerTag"></span><code class="ddoc_psymbol">L3LinesPerTag</code>();
+<br></div></dt>
+<dd><div class="summary">L3 cache lines per tag.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L3Assoc"></span><div class="quickindex" id="quickindex.LeafExt6Information.L3Assoc"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L3Assoc"></span><code class="ddoc_psymbol">L3Assoc</code>();
+<br></div></dt>
+<dd><div class="summary">L3 cache associativity. L3 cache associativity.
+</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LeafExt6Information.L3Size"></span><div class="quickindex" id="quickindex.LeafExt6Information.L3Size"></div>const pure nothrow @nogc @property @trusted uint <span class="def-anchor" id="L3Size"></span><code class="ddoc_psymbol">L3Size</code>();
+<br></div></dt>
+<dd><div class="summary">L3 cache size. Specifies the L3 cache size is within the following range: <span class="d_inlinecode donthyphenate notranslate">(<span class="def-anchor" id="L3Size"></span><code class="ddoc_psymbol">L3Size</code> * 512KB) &lt;= L3 cache size &lt; ((<span class="def-anchor" id="L3Size"></span><code class="ddoc_psymbol">L3Size</code>+1) * 512KB)</span>.
+</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".decodeL2or3Assoc"></span><div class="quickindex" id="quickindex.decodeL2or3Assoc"></div>pure nothrow @nogc @safe T <span class="def-anchor" id="decodeL2or3Assoc"></span><code class="ddoc_psymbol">decodeL2or3Assoc</code><span class="template_param_list" title="Template parameter list">(T = uint)</span>(uint <code class="ddoc_param">assoc</code>);
+<br></div></dt>
+<dd><div class="summary">Decodes Associativity Fields for L2/L3 Cache or TLB.
+<span class="d_inlinecode donthyphenate notranslate">T.max</span> is used to represent full-associative Cache/TLB.</div>
+
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright &copy; 1999-2017 by the <a href="../foundation.html">D Language Foundation</a> | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:13 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

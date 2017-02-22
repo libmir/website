@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>mir.math.sum - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='mir.math.sum' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/mir/math/sum.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">mir.math.sum</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary">This module contains summation algorithms.
+</div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko
+
+</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.algorithm.iteration: map;
+<span class="d_keyword">auto</span> ar = [1, 1e100, 1, -1e100].map!(a =&gt; a*10_000);
+<span class="d_keyword">const</span> r = 20_000;
+<span class="d_keyword">assert</span>(r == ar.<span class="d_psymbol">sum</span>!(Summation.kbn));
+<span class="d_keyword">assert</span>(r == ar.<span class="d_psymbol">sum</span>!(Summation.kb2));
+<span class="d_keyword">assert</span>(r == ar.<span class="d_psymbol">sum</span>!(Summation.precise));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.algorithm.iteration: map;
+<span class="d_keyword">import</span> std.math, std.range;
+<span class="d_keyword">auto</span> ar = 1000
+    .iota
+    .map!(n =&gt; 1.7L.pow(n+1) - 1.7L.pow(n))
+    .array
+    ;
+<span class="d_keyword">real</span> d = 1.7L.pow(1000);
+<span class="d_keyword">assert</span>(<span class="d_psymbol">sum</span>!(Summation.precise)(ar.chain([-d])) == -1);
+<span class="d_keyword">assert</span>(<span class="d_psymbol">sum</span>!(Summation.precise)(ar.retro, -d) == -1);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><span class="d_inlinecode donthyphenate notranslate">Naive</span>, <span class="d_inlinecode donthyphenate notranslate">Pairwise</span> and <span class="d_inlinecode donthyphenate notranslate">Kahan</span> algorithms can be used for user defined types.
+<pre class="d_code notranslate"><span class="d_keyword">static</span> <span class="d_keyword">struct</span> Quaternion(F)
+    <span class="d_keyword">if</span> (isFloatingPoint!F)
+{
+    F[4] rijk;
+
+    <span class="d_comment">/// + and - operator overloading
+</span>    Quaternion opBinary(string op)(<span class="d_keyword">auto</span> <span class="d_keyword">ref</span> <span class="d_keyword">const</span> Quaternion rhs) <span class="d_keyword">const</span>
+        <span class="d_keyword">if</span> (op == <span class="d_string">"+"</span> || op == <span class="d_string">"-"</span>)
+    {
+        Quaternion ret = <span class="d_keyword">void</span>;
+        <span class="d_keyword">foreach</span> (i, <span class="d_keyword">ref</span> e; ret.rijk)
+            <span class="d_keyword">mixin</span>(<span class="d_string">"e = rijk[i] "</span>~op~<span class="d_string">" rhs.rijk[i];"</span>);
+        <span class="d_keyword">return</span> ret;
+    }
+
+    <span class="d_comment">/// += and -= operator overloading
+</span>    Quaternion opOpAssign(string op)(<span class="d_keyword">auto</span> <span class="d_keyword">ref</span> <span class="d_keyword">const</span> Quaternion rhs)
+        <span class="d_keyword">if</span> (op == <span class="d_string">"+"</span> || op == <span class="d_string">"-"</span>)
+    {
+        <span class="d_keyword">foreach</span> (i, <span class="d_keyword">ref</span> e; rijk)
+            <span class="d_keyword">mixin</span>(<span class="d_string">"e "</span>~op~<span class="d_string">"= rhs.rijk[i];"</span>);
+        <span class="d_keyword">return</span> <span class="d_keyword">this</span>;
+    }
+
+    <span class="d_comment">///constructor with single FP argument
+</span>    <span class="d_keyword">this</span>(F f)
+    {
+        rijk[] = f;
+    }
+
+    <span class="d_comment">///assigment with single FP argument
+</span>    <span class="d_keyword">void</span> opAssign(F f)
+    {
+        rijk[] = f;
+    }
+}
+
+Quaternion!<span class="d_keyword">double</span> q, p, r;
+q.rijk = [0, 1, 2, 4];
+p.rijk = [3, 4, 5, 9];
+r.rijk = [3, 5, 7, 13];
+
+<span class="d_keyword">assert</span>(r == [p, q].<span class="d_psymbol">sum</span>!(Summation.naive));
+<span class="d_keyword">assert</span>(r == [p, q].<span class="d_psymbol">sum</span>!(Summation.pairwise));
+<span class="d_keyword">assert</span>(r == [p, q].<span class="d_psymbol">sum</span>!(Summation.kahan));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">All summation algorithms available for complex numbers.
+<pre class="d_code notranslate"><span class="d_keyword">cdouble</span>[] ar = [1.0 + 2i, 2 + 3i, 3 + 4i, 4 + 5i];
+<span class="d_keyword">cdouble</span> r = 10 + 14i;
+<span class="d_keyword">assert</span>(r == ar.<span class="d_psymbol">sum</span>!(Summation.fast));
+<span class="d_keyword">assert</span>(r == ar.<span class="d_psymbol">sum</span>!(Summation.naive));
+<span class="d_keyword">assert</span>(r == ar.<span class="d_psymbol">sum</span>!(Summation.pairwise));
+<span class="d_keyword">assert</span>(r == ar.<span class="d_psymbol">sum</span>!(Summation.kahan));
+<span class="d_keyword">version</span>(LDC) <span class="d_comment">// DMD Internal error: backend/cgxmm.c 628
+</span>{
+    <span class="d_keyword">assert</span>(r == ar.<span class="d_psymbol">sum</span>!(Summation.kbn));
+    <span class="d_keyword">assert</span>(r == ar.<span class="d_psymbol">sum</span>!(Summation.kb2));
+}
+<span class="d_keyword">assert</span>(r == ar.<span class="d_psymbol">sum</span>!(Summation.precise));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.range: repeat, iota;
+
+<span class="d_comment">//simple integral summation
+</span><span class="d_keyword">assert</span>(<span class="d_psymbol">sum</span>([ 1, 2, 3, 4]) == 10);
+
+<span class="d_comment">//with initial value
+</span><span class="d_keyword">assert</span>(<span class="d_psymbol">sum</span>([ 1, 2, 3, 4], 5) == 15);
+
+<span class="d_comment">//with integral promotion
+</span><span class="d_keyword">assert</span>(<span class="d_psymbol">sum</span>([<span class="d_keyword">false</span>, <span class="d_keyword">true</span>, <span class="d_keyword">true</span>, <span class="d_keyword">false</span>, <span class="d_keyword">true</span>]) == 3);
+<span class="d_keyword">assert</span>(<span class="d_psymbol">sum</span>(<span class="d_keyword">ubyte</span>.max.repeat(100)) == 25_500);
+
+<span class="d_comment">//The result may overflow
+</span><span class="d_keyword">assert</span>(<span class="d_keyword">uint</span>.max.repeat(3).<span class="d_psymbol">sum</span>()           ==  4_294_967_293U );
+<span class="d_comment">//But a seed can be used to change the summation primitive
+</span><span class="d_keyword">assert</span>(<span class="d_keyword">uint</span>.max.repeat(3).<span class="d_psymbol">sum</span>(<span class="d_keyword">ulong</span>.init) == 12_884_901_885UL);
+
+<span class="d_comment">//Floating point summation
+</span><span class="d_keyword">assert</span>(<span class="d_psymbol">sum</span>([1.0, 2.0, 3.0, 4.0]) == 10);
+
+<span class="d_comment">//Type overriding
+</span><span class="d_keyword">static</span> <span class="d_keyword">assert</span>(<span class="d_keyword">is</span>(<span class="d_keyword">typeof</span>(<span class="d_psymbol">sum</span>!<span class="d_keyword">double</span>([1F, 2F, 3F, 4F])) == <span class="d_keyword">double</span>));
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(<span class="d_keyword">is</span>(<span class="d_keyword">typeof</span>(<span class="d_psymbol">sum</span>!<span class="d_keyword">double</span>([1F, 2F, 3F, 4F], 5F)) == <span class="d_keyword">double</span>));
+<span class="d_keyword">assert</span>(<span class="d_psymbol">sum</span>([1F, 2, 3, 4]) == 10);
+<span class="d_keyword">assert</span>(<span class="d_psymbol">sum</span>([1F, 2, 3, 4], 5F) == 15);
+
+<span class="d_comment">//Force pair-wise floating point summation on large integers
+</span><span class="d_keyword">import</span> std.math : approxEqual;
+<span class="d_keyword">assert</span>(iota(<span class="d_keyword">uint</span>.max / 2, <span class="d_keyword">uint</span>.max / 2 + 4096).<span class="d_psymbol">sum</span>(0.0)
+           .approxEqual((<span class="d_keyword">uint</span>.max / 2) * 4096.0 + 4096^^2 / 2));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Precise summation
+<pre class="d_code notranslate"><span class="d_keyword">import</span> std.range: iota;
+<span class="d_keyword">import</span> std.algorithm.iteration: map;
+<span class="d_keyword">import</span> core.stdc.tgmath: pow;
+<span class="d_keyword">assert</span>(iota(1000).map!(n =&gt; 1.7L.pow(<span class="d_keyword">real</span>(n)+1) - 1.7L.pow(<span class="d_keyword">real</span>(n)))
+                 .<span class="d_psymbol">sum</span>!(Summation.precise) == -1 + 1.7L.pow(1000.0L));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Precise summation with output range
+<pre class="d_code notranslate"><span class="d_keyword">import</span> std.range: iota;
+<span class="d_keyword">import</span> std.algorithm.iteration: map;
+<span class="d_keyword">import</span> std.math;
+<span class="d_keyword">auto</span> r = iota(1000).map!(n =&gt; 1.7L.pow(n+1) - 1.7L.pow(n));
+Summator!(<span class="d_keyword">real</span>, Summation.precise) s = 0.0;
+s.put(r);
+s -= 1.7L.pow(1000);
+<span class="d_keyword">assert</span>(s.<span class="d_psymbol">sum</span>() == -1);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Precise summation with output range
+<pre class="d_code notranslate"><span class="d_keyword">import</span> std.math;
+<span class="d_keyword">float</span>  M = 2.0f ^^ (<span class="d_keyword">float</span>.max_exp-1);
+<span class="d_keyword">double</span> N = 2.0  ^^ (<span class="d_keyword">float</span>.max_exp-1);
+<span class="d_keyword">auto</span> s = Summator!(<span class="d_keyword">float</span>, Summation.precise)(0);
+s += M;
+s += M;
+<span class="d_keyword">assert</span>(<span class="d_keyword">float</span>.infinity == s.<span class="d_psymbol">sum</span>()); <span class="d_comment">//infinity
+</span><span class="d_keyword">auto</span> e = <span class="d_keyword">cast</span>(Summator!(<span class="d_keyword">double</span>, Summation.precise)) s;
+<span class="d_keyword">assert</span>(isFinite(e.<span class="d_psymbol">sum</span>()));
+<span class="d_keyword">assert</span>(N+N == e.<span class="d_psymbol">sum</span>()); <span class="d_comment">//finite number
+</span></pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Moving mean
+<pre class="d_code notranslate"><span class="d_keyword">import</span> std.range;
+<span class="d_keyword">import</span> mir.math.<span class="d_psymbol">sum</span>;
+
+<span class="d_keyword">class</span> MovingAverage
+{
+    Summator!(<span class="d_keyword">double</span>, Summation.precise) summator;
+    <span class="d_keyword">double</span>[] circularBuffer;
+    size_t frontIndex;
+
+    <span class="d_keyword">double</span> avg() @property <span class="d_keyword">const</span>
+    {
+        <span class="d_keyword">return</span> summator.<span class="d_psymbol">sum</span>() / circularBuffer.length;
+    }
+
+    <span class="d_keyword">this</span>(<span class="d_keyword">double</span>[] buffer)
+    {
+        <span class="d_keyword">assert</span>(!buffer.empty);
+        circularBuffer = buffer;
+        summator = 0;
+        summator.put(buffer);
+    }
+
+    <span class="d_comment">///operation without rounding
+</span>    <span class="d_keyword">void</span> put(<span class="d_keyword">double</span> x)
+    {
+        <span class="d_keyword">import</span> std.algorithm.mutation : swap;
+        summator += x;
+        swap(circularBuffer[frontIndex++], x);
+        summator -= x;
+        frontIndex %= circularBuffer.length;
+    }
+}
+
+<span class="d_comment">/// ma always keeps precise average of last 1000 elements
+</span><span class="d_keyword">auto</span> ma = <span class="d_keyword">new</span> MovingAverage(iota(0.0, 1000.0).array);
+<span class="d_keyword">assert</span>(ma.avg == (1000 * 999 / 2) / 1000.0);
+<span class="d_comment">/// move by 10 elements
+</span>put(ma, iota(1000.0, 1010.0));
+<span class="d_keyword">assert</span>(ma.avg == (1010 * 1009 / 2 - 10 * 9 / 2) / 1000.0);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".Summation"></span><div class="quickindex" id="quickindex.Summation"></div>enum <span class="def-anchor" id="Summation"></span><code class="ddoc_psymbol">Summation</code>: int;
+<br></div></dt>
+<dd><div class="summary"><span class="def-anchor" id="Summation"></span><code class="ddoc_psymbol">Summation</code> algorithms.</div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".Summation.appropriate"></span><div class="quickindex" id="quickindex.Summation.appropriate"></div><span class="def-anchor" id="appropriate"></span><code class="ddoc_psymbol">appropriate</code><br></div></dt>
+<dd><div class="summary">Performs <span class="d_inlinecode donthyphenate notranslate">pairwise</span> summation for floating point based types and <span class="d_inlinecode donthyphenate notranslate">fast</span> summation for integral based types.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summation.pairwise"></span><div class="quickindex" id="quickindex.Summation.pairwise"></div><span class="def-anchor" id="pairwise"></span><code class="ddoc_psymbol">pairwise</code><br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Pairwise_summation">Pairwise summation</a> algorithm.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summation.precise"></span><div class="quickindex" id="quickindex.Summation.precise"></div><span class="def-anchor" id="precise"></span><code class="ddoc_psymbol">precise</code><br></div></dt>
+<dd><div class="summary">Precise summation algorithm.
+    The value of the sum is rounded to the nearest representable
+    floating-point number using the <a href="https://google.com/search?btnI=I%27m+Feeling+Lucky&amp;ie=UTF-8&amp;oe=UTF-8&amp;q=round-half-to-even rule">round-half-to-even rule</a>.
+    The result can differ from the exact value on <span class="d_inlinecode donthyphenate notranslate">X86</span>, <span class="d_inlinecode donthyphenate notranslate">nextDown(proir) &lt;= result &amp;&amp;  result &lt;= nextUp(proir)</span>.
+    The current implementation re-establish special value semantics across iterations (i.e. handling -inf + inf).
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">References:</span>
+<a href="http://www.cs.cmu.edu/afs/cs/project/quake/public/papers/robust-arithmetic.ps">        "Adaptive Precision Floating-Point Arithmetic and Fast Robust Geometric Predicates", Jonathan Richard Shewchuk</a>,
+        <a href="http://bugs.python.org/file10357/msum4.py">Mark Dickinson's post at bugs.python.org</a>.</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summation.kahan"></span><div class="quickindex" id="quickindex.Summation.kahan"></div><span class="def-anchor" id="kahan"></span><code class="ddoc_psymbol">kahan</code><br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Kahan_summation">Kahan summation</a> algorithm.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summation.kbn"></span><div class="quickindex" id="quickindex.Summation.kbn"></div><span class="def-anchor" id="kbn"></span><code class="ddoc_psymbol">kbn</code><br></div></dt>
+<dd><div class="summary"><a href="https://google.com/search?btnI=I%27m+Feeling+Lucky&amp;ie=UTF-8&amp;oe=UTF-8&amp;q=Kahan-Babuška-Neumaier summation algorithm">Kahan-Babuška-Neumaier summation algorithm</a>. <span class="d_inlinecode donthyphenate notranslate">KBN</span> gives more accurate results then <span class="d_inlinecode donthyphenate notranslate">Kahan</span>.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summation.kb2"></span><div class="quickindex" id="quickindex.Summation.kb2"></div><span class="def-anchor" id="kb2"></span><code class="ddoc_psymbol">kb2</code><br></div></dt>
+<dd><div class="summary"><a href="https://google.com/search?btnI=I%27m+Feeling+Lucky&amp;ie=UTF-8&amp;oe=UTF-8&amp;q=Generalized Kahan-Babuška summation algorithm">Generalized Kahan-Babuška summation algorithm</a>, order 2. <span class="d_inlinecode donthyphenate notranslate">KB2</span> gives more accurate results then <span class="d_inlinecode donthyphenate notranslate">Kahan</span> and <span class="d_inlinecode donthyphenate notranslate">KBN</span>.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summation.naive"></span><div class="quickindex" id="quickindex.Summation.naive"></div><span class="def-anchor" id="naive"></span><code class="ddoc_psymbol">naive</code><br></div></dt>
+<dd><div class="summary">Naive algorithm (one by one).</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summation.fast"></span><div class="quickindex" id="quickindex.Summation.fast"></div><span class="def-anchor" id="fast"></span><code class="ddoc_psymbol">fast</code><br></div></dt>
+<dd><div class="summary">SIMD optimized summation algorithm.</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summator"></span><div class="quickindex" id="quickindex.Summator"></div>struct <span class="def-anchor" id="Summator"></span><code class="ddoc_psymbol">Summator</code>(T, Summation summation) if (isMutable!T);
+<br></div></dt>
+<dd><div class="summary">Output range for summation.</div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".Summator.this"></span><div class="quickindex" id="quickindex.Summator.this"></div>this(T <code class="ddoc_param">n</code>);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summator.put"></span><div class="quickindex" id="quickindex.Summator.put"></div>void <span class="def-anchor" id="put"></span><code class="ddoc_psymbol">put</code><span class="template_param_list" title="Template parameter list">(N)</span>(N <code class="ddoc_param">n</code>)<br><span class="constraint">if (__traits(compiles, ()
+{
+T a = <code class="ddoc_param">n</code>;
+a = <code class="ddoc_param">n</code>;
+a += <code class="ddoc_param">n</code>;
+}
+))</span>;
+<br><br>void <span class="def-anchor" id="put"></span><code class="ddoc_psymbol">put</code><span class="template_param_list" title="Template parameter list">(Range)</span>(Range <code class="ddoc_param">r</code>)<br><span class="constraint">if (isInputRange!Range)</span>;
+<br></div></dt>
+<dd><div class="summary">Adds <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">n</code></span> to the internal partial sums.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summator.unsafePut"></span><div class="quickindex" id="quickindex.Summator.unsafePut"></div>void <span class="def-anchor" id="unsafePut"></span><code class="ddoc_psymbol">unsafePut</code>(F <code class="ddoc_param">x</code>);
+<br></div></dt>
+<dd><div class="summary">Adds <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">x</code></span> to the internal partial sums.
+    This operation doesn't re-establish special
+    value semantics across iterations (i.e. handling -inf + inf).
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Preconditions:</span>
+<span class="d_inlinecode donthyphenate notranslate">isFinite(<code class="ddoc_param">x</code>)</span>.</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summator.sum"></span><div class="quickindex" id="quickindex.Summator.sum"></div>const T <span class="def-anchor" id="sum"></span><code class="ddoc_psymbol">sum</code>();
+<br></div></dt>
+<dd><div class="summary">Returns the value of the <span class="def-anchor" id="sum"></span><code class="ddoc_psymbol">sum</code>.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summator.opCast"></span><div class="quickindex" id="quickindex.Summator.opCast"></div>const C <span class="def-anchor" id="opCast"></span><code class="ddoc_psymbol">opCast</code><span class="template_param_list" title="Template parameter list">(C : Summator!(P, _summation), P, Summation _summation)</span>()<br><span class="constraint">if (_summation == summation &amp;&amp; isMutable!C &amp;&amp; P.max_exp &gt;= T.max_exp &amp;&amp; P.mant_dig &gt;= T.mant_dig)</span>;
+<br></div></dt>
+<dd><div class="summary">Returns <span class="d_inlinecode donthyphenate notranslate">Summator</span> with extended internal partial sums.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summator.opCast.2"></span><div class="quickindex" id="quickindex.Summator.opCast.2"></div>const C <span class="def-anchor" id="opCast"></span><code class="ddoc_psymbol">opCast</code><span class="template_param_list" title="Template parameter list">(C)</span>()<br><span class="constraint">if (is(Unqual!C == T))</span>;
+<br></div></dt>
+<dd><div class="summary"><span class="d_inlinecode donthyphenate notranslate">cast(C)</span> operator overloading. Returns <span class="d_inlinecode donthyphenate notranslate">cast(C)sum()</span>.
+    See also: <span class="d_inlinecode donthyphenate notranslate">cast</span></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summator.opAssign"></span><div class="quickindex" id="quickindex.Summator.opAssign"></div>void <span class="def-anchor" id="opAssign"></span><code class="ddoc_psymbol">opAssign</code>(T <code class="ddoc_param">rhs</code>);
+<br><br><span class="def-anchor" id=".Summator.opOpAssign"></span><div class="quickindex" id="quickindex.Summator.opOpAssign"></div>void <span class="def-anchor" id="opOpAssign"></span><code class="ddoc_psymbol">opOpAssign</code><span class="template_param_list" title="Template parameter list">(string op : "+")</span>(T <code class="ddoc_param">rhs</code>);
+<br><br>void <span class="def-anchor" id="opOpAssign"></span><code class="ddoc_psymbol">opOpAssign</code><span class="template_param_list" title="Template parameter list">(string op : "+")</span>(ref const Summator <code class="ddoc_param">rhs</code>);
+<br><br>void <span class="def-anchor" id="opOpAssign"></span><code class="ddoc_psymbol">opOpAssign</code><span class="template_param_list" title="Template parameter list">(string op : "-")</span>(T <code class="ddoc_param">rhs</code>);
+<br><br>void <span class="def-anchor" id="opOpAssign"></span><code class="ddoc_psymbol">opOpAssign</code><span class="template_param_list" title="Template parameter list">(string op : "-")</span>(ref const Summator <code class="ddoc_param">rhs</code>);
+<br></div></dt>
+<dd><div class="summary">Operator overloading.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.math, std.range;
+<span class="d_keyword">import</span> std.algorithm.iteration: map;
+<span class="d_keyword">auto</span> r1 = iota(500).map!(a =&gt; 1.7L.pow(a+1) - 1.7L.pow(a));
+<span class="d_keyword">auto</span> r2 = iota(500, 1000).map!(a =&gt; 1.7L.pow(a+1) - 1.7L.pow(a));
+Summator!(<span class="d_keyword">real</span>, Summation.precise) s1 = 0, s2 = 0.0;
+<span class="d_keyword">foreach</span> (e; r1) s1 += e;
+<span class="d_keyword">foreach</span> (e; r2) s2 -= e;
+s1 -= s2;
+s1 -= 1.7L.pow(1000);
+<span class="d_keyword">assert</span>(s1.sum() == -1);
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summator.isNaN"></span><div class="quickindex" id="quickindex.Summator.isNaN"></div>const bool <span class="def-anchor" id="isNaN"></span><code class="ddoc_psymbol">isNaN</code>();
+<br></div></dt>
+<dd><div class="summary">Returns <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_keyword">true</code></span> if current sum is a NaN.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summator.isFinite"></span><div class="quickindex" id="quickindex.Summator.isFinite"></div>const bool <span class="def-anchor" id="isFinite"></span><code class="ddoc_psymbol">isFinite</code>();
+<br></div></dt>
+<dd><div class="summary">Returns <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_keyword">true</code></span> if current sum is finite (not infinite or NaN).</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Summator.isInfinity"></span><div class="quickindex" id="quickindex.Summator.isInfinity"></div>const bool <span class="def-anchor" id="isInfinity"></span><code class="ddoc_psymbol">isInfinity</code>();
+<br></div></dt>
+<dd><div class="summary">Returns <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_keyword">true</code></span> if current sum is ±∞.</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sum"></span><div class="quickindex" id="quickindex.sum"></div>template <span class="def-anchor" id="sum"></span><code class="ddoc_psymbol">sum</code>(F, Summation summation = Summation.appropriate) if (isFloatingPoint!F &amp;&amp; isMutable!F)<br><br>template <span class="def-anchor" id="sum"></span><code class="ddoc_psymbol">sum</code>(Summation summation = Summation.appropriate)<br></div></dt>
+<dd><div class="summary">Sums elements of <span class="d_inlinecode donthyphenate notranslate">r</span>, which must be a finite
+<!--UNDEFINED MACRO: "XREF_PACK_NAMED"-->. Although
+conceptually <span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="sum"></span><code class="ddoc_psymbol">sum</code>(r)</span> is equivalent to <a href="#reduce"><span class="d_inlinecode donthyphenate notranslate">reduce</span></a>!((a, b) =&gt; a +
+b)(0, r), <span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="sum"></span><code class="ddoc_psymbol">sum</code></span> uses specialized algorithms to maximize accuracy.
+</div>
+<div class="description">A seed may be passed to <span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="sum"></span><code class="ddoc_psymbol">sum</code></span>. Not only will this seed be used as an initial
+value, but its type will be used if it is not specified.
+<div class="blankline"></div>
+
+
+Note that these specialized summing algorithms execute more primitive operations
+than vanilla summation. Therefore, if in certain cases maximum speed is required
+at expense of precision, one can use <!--UNDEFINED MACRO: "XREF"-->.
+
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">The <span class="def-anchor" id="sum"></span><code class="ddoc_psymbol">sum</code> of all the elements in the range r.
+
+</div></div>
+<div class="keyval SeeAlso"><span class="key keySeeAlso">See Also:</span> <div class="val valSeeAlso"><!--UNDEFINED MACRO: "XREFMODULE"--> contains detailed documentation and examples about available summation algorithms.</div></div>
+
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright © 2015-, Ilya Yaroshenko | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:14 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>glas.fortran - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='glas.fortran' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/glas/fortran.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">glas.fortran</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary"><h2>BLAS API for GLAS</h2>
+</div>
+<div class="description">Please read <a href="http://www.netlib.org/blas/ ">Netlib BLAS</a> for more details.
+
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+Standard (<span class="def-anchor" id="fortran"></span><code class="ddoc_psymbol">fortran</code>) BLAS API is column major.
+
+</p></div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko</div></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".FortranInt"></span><div class="quickindex" id="quickindex.FortranInt"></div>alias <span class="def-anchor" id="FortranInt"></span><code class="ddoc_psymbol">FortranInt</code> = int;
+<br></div></dt>
+<dd><div class="summary">Alias for Fortran77 integer.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sgemm_"></span><div class="quickindex" id="quickindex.sgemm_"></div>nothrow @nogc @system int <span class="def-anchor" id="sgemm_"></span><code class="ddoc_psymbol">sgemm_</code>(ref const char <code class="ddoc_param">transa</code>, ref const char <code class="ddoc_param">transb</code>, ref const FortranInt <code class="ddoc_param">m</code>, ref const FortranInt <code class="ddoc_param">n</code>, ref const FortranInt <code class="ddoc_param">k</code>, ref const float <code class="ddoc_param">alpha</code>, const(float)* <code class="ddoc_param">a</code>, ref const FortranInt <code class="ddoc_param">lda</code>, const(float)* <code class="ddoc_param">b</code>, ref const FortranInt <code class="ddoc_param">ldb</code>, ref const float <code class="ddoc_param">beta</code>, float* <code class="ddoc_param">c</code>, ref const FortranInt <code class="ddoc_param">ldc</code>);
+<br><br><span class="def-anchor" id=".dgemm_"></span><div class="quickindex" id="quickindex.dgemm_"></div>nothrow @nogc @system int <span class="def-anchor" id="dgemm_"></span><code class="ddoc_psymbol">dgemm_</code>(ref const char <code class="ddoc_param">transa</code>, ref const char <code class="ddoc_param">transb</code>, ref const FortranInt <code class="ddoc_param">m</code>, ref const FortranInt <code class="ddoc_param">n</code>, ref const FortranInt <code class="ddoc_param">k</code>, ref const double <code class="ddoc_param">alpha</code>, const(double)* <code class="ddoc_param">a</code>, ref const FortranInt <code class="ddoc_param">lda</code>, const(double)* <code class="ddoc_param">b</code>, ref const FortranInt <code class="ddoc_param">ldb</code>, ref const double <code class="ddoc_param">beta</code>, double* <code class="ddoc_param">c</code>, ref const FortranInt <code class="ddoc_param">ldc</code>);
+<br><br><span class="def-anchor" id=".cgemm_"></span><div class="quickindex" id="quickindex.cgemm_"></div>nothrow @nogc @system int <span class="def-anchor" id="cgemm_"></span><code class="ddoc_psymbol">cgemm_</code>(ref const char <code class="ddoc_param">transa</code>, ref const char <code class="ddoc_param">transb</code>, ref const FortranInt <code class="ddoc_param">m</code>, ref const FortranInt <code class="ddoc_param">n</code>, ref const FortranInt <code class="ddoc_param">k</code>, ref const cfloat <code class="ddoc_param">alpha</code>, const(cfloat)* <code class="ddoc_param">a</code>, ref const FortranInt <code class="ddoc_param">lda</code>, const(cfloat)* <code class="ddoc_param">b</code>, ref const FortranInt <code class="ddoc_param">ldb</code>, ref const cfloat <code class="ddoc_param">beta</code>, cfloat* <code class="ddoc_param">c</code>, ref const FortranInt <code class="ddoc_param">ldc</code>);
+<br><br><span class="def-anchor" id=".zgemm_"></span><div class="quickindex" id="quickindex.zgemm_"></div>nothrow @nogc @system int <span class="def-anchor" id="zgemm_"></span><code class="ddoc_psymbol">zgemm_</code>(ref const char <code class="ddoc_param">transa</code>, ref const char <code class="ddoc_param">transb</code>, ref const FortranInt <code class="ddoc_param">m</code>, ref const FortranInt <code class="ddoc_param">n</code>, ref const FortranInt <code class="ddoc_param">k</code>, ref const cdouble <code class="ddoc_param">alpha</code>, const(cdouble)* <code class="ddoc_param">a</code>, ref const FortranInt <code class="ddoc_param">lda</code>, const(cdouble)* <code class="ddoc_param">b</code>, ref const FortranInt <code class="ddoc_param">ldb</code>, ref const cdouble <code class="ddoc_param">beta</code>, cdouble* <code class="ddoc_param">c</code>, ref const FortranInt <code class="ddoc_param">ldc</code>);
+<br></div></dt>
+<dd><div class="summary"><span class="d_inlinecode donthyphenate notranslate">gemm_</span>  performs one of the matrix-matrix operations
+</div>
+<div class="description"><span class="d_inlinecode donthyphenate notranslate">C := <code class="ddoc_param">alpha</code>*op( A )*op( B ) + <code class="ddoc_param">beta</code>*C</span>,
+<div class="blankline"></div>
+
+
+ where  <span class="d_inlinecode donthyphenate notranslate">op( X )</span> is one of
+<div class="blankline"></div>
+
+
+    <span class="d_inlinecode donthyphenate notranslate">op( X ) = X   or   op( X ) = X**T or op( X ) = X**H</span>,
+<div class="blankline"></div>
+
+
+ <code class="ddoc_param">alpha</code> and <code class="ddoc_param">beta</code> are scalars, and <span class="d_inlinecode donthyphenate notranslate">A</span>, <span class="d_inlinecode donthyphenate notranslate">B</span> and <span class="d_inlinecode donthyphenate notranslate">C</span> are matrices, with <span class="d_inlinecode donthyphenate notranslate">op( A )</span>
+ an <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">m</code> ⨉ <code class="ddoc_param">k</code></span> matrix,  <span class="d_inlinecode donthyphenate notranslate">op( B )</span>  <code class="ddoc_param">a</code>  <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">k</code> ⨉ <code class="ddoc_param">n</code></span> matrix and  <span class="d_inlinecode donthyphenate notranslate">C</span> an <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">m</code> ⨉ <code class="ddoc_param">n</code></span> matrix.
+
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Unified alias:</span>
+<span class="d_inlinecode donthyphenate notranslate">gemm_</span></p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ssymm_"></span><div class="quickindex" id="quickindex.ssymm_"></div>nothrow @nogc @system int <span class="def-anchor" id="ssymm_"></span><code class="ddoc_psymbol">ssymm_</code>(ref const char <code class="ddoc_param">side</code>, ref const char <code class="ddoc_param">uplo</code>, ref const FortranInt <code class="ddoc_param">m</code>, ref const FortranInt <code class="ddoc_param">n</code>, ref const float <code class="ddoc_param">alpha</code>, const(float)* <code class="ddoc_param">a</code>, ref const FortranInt <code class="ddoc_param">lda</code>, const(float)* <code class="ddoc_param">b</code>, ref const FortranInt <code class="ddoc_param">ldb</code>, ref const float <code class="ddoc_param">beta</code>, float* <code class="ddoc_param">c</code>, ref const FortranInt <code class="ddoc_param">ldc</code>);
+<br><br><span class="def-anchor" id=".dsymm_"></span><div class="quickindex" id="quickindex.dsymm_"></div>nothrow @nogc @system int <span class="def-anchor" id="dsymm_"></span><code class="ddoc_psymbol">dsymm_</code>(ref const char <code class="ddoc_param">side</code>, ref const char <code class="ddoc_param">uplo</code>, ref const FortranInt <code class="ddoc_param">m</code>, ref const FortranInt <code class="ddoc_param">n</code>, ref const double <code class="ddoc_param">alpha</code>, const(double)* <code class="ddoc_param">a</code>, ref const FortranInt <code class="ddoc_param">lda</code>, const(double)* <code class="ddoc_param">b</code>, ref const FortranInt <code class="ddoc_param">ldb</code>, ref const double <code class="ddoc_param">beta</code>, double* <code class="ddoc_param">c</code>, ref const FortranInt <code class="ddoc_param">ldc</code>);
+<br><br><span class="def-anchor" id=".csymm_"></span><div class="quickindex" id="quickindex.csymm_"></div>nothrow @nogc @system int <span class="def-anchor" id="csymm_"></span><code class="ddoc_psymbol">csymm_</code>(ref const char <code class="ddoc_param">side</code>, ref const char <code class="ddoc_param">uplo</code>, ref const FortranInt <code class="ddoc_param">m</code>, ref const FortranInt <code class="ddoc_param">n</code>, ref const cfloat <code class="ddoc_param">alpha</code>, const(cfloat)* <code class="ddoc_param">a</code>, ref const FortranInt <code class="ddoc_param">lda</code>, const(cfloat)* <code class="ddoc_param">b</code>, ref const FortranInt <code class="ddoc_param">ldb</code>, ref const cfloat <code class="ddoc_param">beta</code>, cfloat* <code class="ddoc_param">c</code>, ref const FortranInt <code class="ddoc_param">ldc</code>);
+<br><br><span class="def-anchor" id=".zsymm_"></span><div class="quickindex" id="quickindex.zsymm_"></div>nothrow @nogc @system int <span class="def-anchor" id="zsymm_"></span><code class="ddoc_psymbol">zsymm_</code>(ref const char <code class="ddoc_param">side</code>, ref const char <code class="ddoc_param">uplo</code>, ref const FortranInt <code class="ddoc_param">m</code>, ref const FortranInt <code class="ddoc_param">n</code>, ref const cdouble <code class="ddoc_param">alpha</code>, const(cdouble)* <code class="ddoc_param">a</code>, ref const FortranInt <code class="ddoc_param">lda</code>, const(cdouble)* <code class="ddoc_param">b</code>, ref const FortranInt <code class="ddoc_param">ldb</code>, ref const cdouble <code class="ddoc_param">beta</code>, cdouble* <code class="ddoc_param">c</code>, ref const FortranInt <code class="ddoc_param">ldc</code>);
+<br></div></dt>
+<dd><div class="summary"><span class="d_inlinecode donthyphenate notranslate">symm_</span>  performs one of the matrix-matrix operations
+</div>
+<div class="description"><span class="d_inlinecode donthyphenate notranslate">C := <code class="ddoc_param">alpha</code>*A*B + <code class="ddoc_param">beta</code>*C</span>,
+<div class="blankline"></div>
+
+
+ where  <span class="d_inlinecode donthyphenate notranslate">op( X )</span> is one of
+<div class="blankline"></div>
+
+
+    <span class="d_inlinecode donthyphenate notranslate">C := <code class="ddoc_param">alpha</code>*B*A + <code class="ddoc_param">beta</code>*C</span>,
+<div class="blankline"></div>
+
+
+ <code class="ddoc_param">alpha</code> and <code class="ddoc_param">beta</code> are scalars, <span class="d_inlinecode donthyphenate notranslate">A</span> is <code class="ddoc_param">a</code> symmetric matrix and <span class="d_inlinecode donthyphenate notranslate">B</span> and
+ <span class="d_inlinecode donthyphenate notranslate">C</span> are <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">m</code> ⨉ <code class="ddoc_param">n</code></span> matrices..
+
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Unified alias:</span>
+<span class="d_inlinecode donthyphenate notranslate">symm_</span></p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".chemm_"></span><div class="quickindex" id="quickindex.chemm_"></div>nothrow @nogc @system int <span class="def-anchor" id="chemm_"></span><code class="ddoc_psymbol">chemm_</code>(ref const char <code class="ddoc_param">side</code>, ref const char <code class="ddoc_param">uplo</code>, ref const FortranInt <code class="ddoc_param">m</code>, ref const FortranInt <code class="ddoc_param">n</code>, ref const cfloat <code class="ddoc_param">alpha</code>, const(cfloat)* <code class="ddoc_param">a</code>, ref const FortranInt <code class="ddoc_param">lda</code>, const(cfloat)* <code class="ddoc_param">b</code>, ref const FortranInt <code class="ddoc_param">ldb</code>, ref const cfloat <code class="ddoc_param">beta</code>, cfloat* <code class="ddoc_param">c</code>, ref const FortranInt <code class="ddoc_param">ldc</code>);
+<br><br><span class="def-anchor" id=".zhemm_"></span><div class="quickindex" id="quickindex.zhemm_"></div>nothrow @nogc @system int <span class="def-anchor" id="zhemm_"></span><code class="ddoc_psymbol">zhemm_</code>(ref const char <code class="ddoc_param">side</code>, ref const char <code class="ddoc_param">uplo</code>, ref const FortranInt <code class="ddoc_param">m</code>, ref const FortranInt <code class="ddoc_param">n</code>, ref const cdouble <code class="ddoc_param">alpha</code>, const(cdouble)* <code class="ddoc_param">a</code>, ref const FortranInt <code class="ddoc_param">lda</code>, const(cdouble)* <code class="ddoc_param">b</code>, ref const FortranInt <code class="ddoc_param">ldb</code>, ref const cdouble <code class="ddoc_param">beta</code>, cdouble* <code class="ddoc_param">c</code>, ref const FortranInt <code class="ddoc_param">ldc</code>);
+<br></div></dt>
+<dd><div class="summary"><span class="d_inlinecode donthyphenate notranslate">hemm_</span>  performs one of the matrix-matrix operations
+</div>
+<div class="description"><span class="d_inlinecode donthyphenate notranslate">C := <code class="ddoc_param">alpha</code>*A*B + <code class="ddoc_param">beta</code>*C</span>,
+<div class="blankline"></div>
+
+
+ where  <span class="d_inlinecode donthyphenate notranslate">op( X )</span> is one of
+<div class="blankline"></div>
+
+
+    <span class="d_inlinecode donthyphenate notranslate">C := <code class="ddoc_param">alpha</code>*B*A + <code class="ddoc_param">beta</code>*C</span>,
+<div class="blankline"></div>
+
+
+ <code class="ddoc_param">alpha</code> and <code class="ddoc_param">beta</code> are scalars, <span class="d_inlinecode donthyphenate notranslate">A</span> is <code class="ddoc_param">a</code> hermitian matrix and <span class="d_inlinecode donthyphenate notranslate">B</span> and
+ <span class="d_inlinecode donthyphenate notranslate">C</span> are <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">m</code> ⨉ <code class="ddoc_param">n</code></span> matrices..
+
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Unified alias:</span>
+<span class="d_inlinecode donthyphenate notranslate">hemm_</span></p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sscal_"></span><div class="quickindex" id="quickindex.sscal_"></div>nothrow @nogc @system int <span class="def-anchor" id="sscal_"></span><code class="ddoc_psymbol">sscal_</code>(ref const FortranInt <code class="ddoc_param">n</code>, ref const float <code class="ddoc_param">a</code>, float* <code class="ddoc_param">x</code>, ref const FortranInt <code class="ddoc_param">incx</code>);
+<br><br><span class="def-anchor" id=".dscal_"></span><div class="quickindex" id="quickindex.dscal_"></div>nothrow @nogc @system int <span class="def-anchor" id="dscal_"></span><code class="ddoc_psymbol">dscal_</code>(ref const FortranInt <code class="ddoc_param">n</code>, ref const double <code class="ddoc_param">a</code>, double* <code class="ddoc_param">x</code>, ref const FortranInt <code class="ddoc_param">incx</code>);
+<br><br><span class="def-anchor" id=".csscal_"></span><div class="quickindex" id="quickindex.csscal_"></div>nothrow @nogc @system int <span class="def-anchor" id="csscal_"></span><code class="ddoc_psymbol">csscal_</code>(ref const FortranInt <code class="ddoc_param">n</code>, ref const float <code class="ddoc_param">a</code>, cfloat* <code class="ddoc_param">x</code>, ref const FortranInt <code class="ddoc_param">incx</code>);
+<br><br><span class="def-anchor" id=".cscal_"></span><div class="quickindex" id="quickindex.cscal_"></div>nothrow @nogc @system int <span class="def-anchor" id="cscal_"></span><code class="ddoc_psymbol">cscal_</code>(ref const FortranInt <code class="ddoc_param">n</code>, ref const cfloat <code class="ddoc_param">a</code>, cfloat* <code class="ddoc_param">x</code>, ref const FortranInt <code class="ddoc_param">incx</code>);
+<br><br><span class="def-anchor" id=".csIscal_"></span><div class="quickindex" id="quickindex.csIscal_"></div>nothrow @nogc @system int <span class="def-anchor" id="csIscal_"></span><code class="ddoc_psymbol">csIscal_</code>(ref const FortranInt <code class="ddoc_param">n</code>, ref const ifloat <code class="ddoc_param">a</code>, cfloat* <code class="ddoc_param">x</code>, ref const FortranInt <code class="ddoc_param">incx</code>);
+<br><br><span class="def-anchor" id=".zdscal_"></span><div class="quickindex" id="quickindex.zdscal_"></div>nothrow @nogc @system int <span class="def-anchor" id="zdscal_"></span><code class="ddoc_psymbol">zdscal_</code>(ref const FortranInt <code class="ddoc_param">n</code>, ref const double <code class="ddoc_param">a</code>, cdouble* <code class="ddoc_param">x</code>, ref const FortranInt <code class="ddoc_param">incx</code>);
+<br><br><span class="def-anchor" id=".zscal_"></span><div class="quickindex" id="quickindex.zscal_"></div>nothrow @nogc @system int <span class="def-anchor" id="zscal_"></span><code class="ddoc_psymbol">zscal_</code>(ref const FortranInt <code class="ddoc_param">n</code>, ref const cdouble <code class="ddoc_param">a</code>, cdouble* <code class="ddoc_param">x</code>, ref const FortranInt <code class="ddoc_param">incx</code>);
+<br><br><span class="def-anchor" id=".zdIscal_"></span><div class="quickindex" id="quickindex.zdIscal_"></div>nothrow @nogc @system int <span class="def-anchor" id="zdIscal_"></span><code class="ddoc_psymbol">zdIscal_</code>(ref const FortranInt <code class="ddoc_param">n</code>, ref const idouble <code class="ddoc_param">a</code>, cdouble* <code class="ddoc_param">x</code>, ref const FortranInt <code class="ddoc_param">incx</code>);
+<br></div></dt>
+<dd><div class="summary"><span class="d_inlinecode donthyphenate notranslate">scal_</span> scales <code class="ddoc_param">a</code> vector by <code class="ddoc_param">a</code> constant.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Unified alias:</span>
+<span class="d_inlinecode donthyphenate notranslate">scal_</span></p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".xerbla_"></span><div class="quickindex" id="quickindex.xerbla_"></div>nothrow @nogc @system int <span class="def-anchor" id="xerbla_"></span><code class="ddoc_psymbol">xerbla_</code>(in char* <code class="ddoc_param">srname</code>, ref FortranInt <code class="ddoc_param">info</code>);
+<br></div></dt>
+<dd><div class="summary">XERBLA  is an error handler for the LAPACK routines.
+ It is called by an LAPACK routine if an input parameter has an
+ invalid value.  A message is printed and execution stops.
+</div>
+<div class="description">Installers may consider modifying the STOP statement in order to
+ call system-specific exception-handling facilities.</div>
+
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright © 2016-, Ilya Yaroshenko.
+ | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:13 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

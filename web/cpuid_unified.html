@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>cpuid.unified - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='cpuid.unified' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/cpuid/unified.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">cpuid.unified</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary"><h2>High level abstraction on top of all architectures.</h2>
+</div>
+<div class="description"><span class="green">This module is compatible with betterC compilation mode.</span>
+<div class="blankline"></div>
+
+
+
+</div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">void</span> smallReport()
+{
+    <span class="d_keyword">import</span> std.stdio;
+    <span class="d_keyword">import</span> cpuid.<span class="d_psymbol">unified</span>;
+
+    cpuid_init();
+
+    <span class="d_keyword">enum</span> fmt = <span class="d_string">"%14s: %s"</span>;
+
+    fmt.writefln(<span class="d_string">"cores"</span>, cores);
+    fmt.writefln(<span class="d_string">"threads"</span>, threads);
+
+    fmt.writefln(<span class="d_string">"data caches"</span>, dCache.length);
+    fmt.writefln(<span class="d_string">"code caches"</span>, iCache.length);
+    fmt.writefln(<span class="d_string">"unified caches"</span>, uCache.length);
+
+    fmt.writefln(<span class="d_string">"data TLBs"</span>, dTlb.length);
+    fmt.writefln(<span class="d_string">"code TLBs"</span>, iTlb.length);
+    fmt.writefln(<span class="d_string">"unified TLBs"</span>, uTlb.length);
+}
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".cpuid_init"></span><div class="quickindex" id="quickindex.cpuid_init"></div>export nothrow @nogc void <span class="def-anchor" id="cpuid_init"></span><code class="ddoc_psymbol">cpuid_init</code>();
+<br></div></dt>
+<dd><div class="summary">Initialize basic CPU information including basic architecture.
+It is safe to call this function multiple times.
+It calls appropriate basic initialization for each module (<span class="d_inlinecode donthyphenate notranslate">cpuid_x86_any_init</span> for X86 machines).</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cpuid_cpus"></span><div class="quickindex" id="quickindex.cpuid_cpus"></div>export nothrow @nogc @trusted uint <span class="def-anchor" id="cpuid_cpus"></span><code class="ddoc_psymbol">cpuid_cpus</code>();
+<br><br><span class="def-anchor" id=".cpus"></span><div class="quickindex" id="quickindex.cpus"></div>export alias <span class="def-anchor" id="cpus"></span><code class="ddoc_psymbol">cpus</code> = cpuid_cpus;
+<br></div></dt>
+<dd><div class="summary">Total number of CPU packages.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+not implemented</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cpuid_cores"></span><div class="quickindex" id="quickindex.cpuid_cores"></div>export nothrow @nogc @trusted uint <span class="def-anchor" id="cpuid_cores"></span><code class="ddoc_psymbol">cpuid_cores</code>();
+<br><br><span class="def-anchor" id=".cores"></span><div class="quickindex" id="quickindex.cores"></div>export alias <span class="def-anchor" id="cores"></span><code class="ddoc_psymbol">cores</code> = cpuid_cores;
+<br></div></dt>
+<dd><div class="summary">Total number of <span class="def-anchor" id="cores"></span><code class="ddoc_psymbol">cores</code> per CPU.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cpuid_threads"></span><div class="quickindex" id="quickindex.cpuid_threads"></div>export nothrow @nogc @trusted uint <span class="def-anchor" id="cpuid_threads"></span><code class="ddoc_psymbol">cpuid_threads</code>();
+<br><br><span class="def-anchor" id=".threads"></span><div class="quickindex" id="quickindex.threads"></div>export alias <span class="def-anchor" id="threads"></span><code class="ddoc_psymbol">threads</code> = cpuid_threads;
+<br></div></dt>
+<dd><div class="summary">Total number of <span class="def-anchor" id="threads"></span><code class="ddoc_psymbol">threads</code> per CPU.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cpuid_dCache"></span><div class="quickindex" id="quickindex.cpuid_dCache"></div>export nothrow @nogc @trusted const(Cache)[] <span class="def-anchor" id="cpuid_dCache"></span><code class="ddoc_psymbol">cpuid_dCache</code>();
+<br><br><span class="def-anchor" id=".dCache"></span><div class="quickindex" id="quickindex.dCache"></div>export alias <span class="def-anchor" id="dCache"></span><code class="ddoc_psymbol">dCache</code> = cpuid_dCache;
+<br></div></dt>
+<dd><div class="summary">Data Caches
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Array composed of detected data caches. Array is sorted in ascending order.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cpuid_iCache"></span><div class="quickindex" id="quickindex.cpuid_iCache"></div>export nothrow @nogc @trusted const(Cache)[] <span class="def-anchor" id="cpuid_iCache"></span><code class="ddoc_psymbol">cpuid_iCache</code>();
+<br><br><span class="def-anchor" id=".iCache"></span><div class="quickindex" id="quickindex.iCache"></div>export alias <span class="def-anchor" id="iCache"></span><code class="ddoc_psymbol">iCache</code> = cpuid_iCache;
+<br></div></dt>
+<dd><div class="summary">Instruction Caches
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Array composed of detected instruction caches. Array is sorted in ascending order.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cpuid_uCache"></span><div class="quickindex" id="quickindex.cpuid_uCache"></div>export nothrow @nogc @trusted const(Cache)[] <span class="def-anchor" id="cpuid_uCache"></span><code class="ddoc_psymbol">cpuid_uCache</code>();
+<br><br><span class="def-anchor" id=".uCache"></span><div class="quickindex" id="quickindex.uCache"></div>export alias <span class="def-anchor" id="uCache"></span><code class="ddoc_psymbol">uCache</code> = cpuid_uCache;
+<br></div></dt>
+<dd><div class="summary">Unified Caches
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Array composed of detected unified caches. Array is sorted in ascending order.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cpuid_dTlb"></span><div class="quickindex" id="quickindex.cpuid_dTlb"></div>export nothrow @nogc @trusted const(Tlb)[] <span class="def-anchor" id="cpuid_dTlb"></span><code class="ddoc_psymbol">cpuid_dTlb</code>();
+<br><br><span class="def-anchor" id=".dTlb"></span><div class="quickindex" id="quickindex.dTlb"></div>export alias <span class="def-anchor" id="dTlb"></span><code class="ddoc_psymbol">dTlb</code> = cpuid_dTlb;
+<br></div></dt>
+<dd><div class="summary">Data Translation Lookaside Buffers
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Array composed of detected data translation lookaside buffers. Array is sorted in ascending order.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cpuid_iTlb"></span><div class="quickindex" id="quickindex.cpuid_iTlb"></div>export nothrow @nogc @trusted const(Tlb)[] <span class="def-anchor" id="cpuid_iTlb"></span><code class="ddoc_psymbol">cpuid_iTlb</code>();
+<br><br><span class="def-anchor" id=".iTlb"></span><div class="quickindex" id="quickindex.iTlb"></div>export alias <span class="def-anchor" id="iTlb"></span><code class="ddoc_psymbol">iTlb</code> = cpuid_iTlb;
+<br></div></dt>
+<dd><div class="summary">Instruction Translation Lookaside Buffers
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Array composed of detected instruction translation lookaside buffers. Array is sorted in ascending order.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".cpuid_uTlb"></span><div class="quickindex" id="quickindex.cpuid_uTlb"></div>export nothrow @nogc @trusted const(Tlb)[] <span class="def-anchor" id="cpuid_uTlb"></span><code class="ddoc_psymbol">cpuid_uTlb</code>();
+<br><br><span class="def-anchor" id=".uTlb"></span><div class="quickindex" id="quickindex.uTlb"></div>export alias <span class="def-anchor" id="uTlb"></span><code class="ddoc_psymbol">uTlb</code> = cpuid_uTlb;
+<br></div></dt>
+<dd><div class="summary">Unified Translation Lookaside Buffers
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Array composed of detected unified translation lookaside buffers. Array is sorted in ascending order.</div></div>
+
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright &copy; 1999-2017 by the <a href="../foundation.html">D Language Foundation</a> | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:13 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

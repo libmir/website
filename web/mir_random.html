@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>mir.random - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='mir.random' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/mir/random/package.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">mir.random</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary"><script type="text/javascript">inhibitQuickIndex = 1;</script>
+</div>
+<div class="description">Basic API to construct non-uniform <span class="def-anchor" id="random"></span><code class="ddoc_psymbol">random</code> number generators and stochastic algorithms.
+Non-unoform and uniform <span class="def-anchor" id="random"></span><code class="ddoc_psymbol">random</code> variable can be found at <span class="d_inlinecode donthyphenate notranslate">mir.<span class="def-anchor" id="random"></span><code class="ddoc_psymbol">random</code>.variable</span>.
+<div class="blankline"></div>
+
+
+<table cellspacing="0" cellpadding="5"><caption><h2>Generation functions</h2></caption><tr><th scope="col">Function Name</th> <th scope="col">Description</th></tr>
+<tr><td class="donthyphenate nobr"><a href="#rand"><span class="d_inlinecode donthyphenate notranslate">rand</span></a></td> <td>Generates real, integral, boolean, and enumerated uniformly distributed values.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#randIndex"><span class="d_inlinecode donthyphenate notranslate">randIndex</span></a></td> <td>Generates uniformly distributed index.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#randGeometric"><span class="d_inlinecode donthyphenate notranslate">randGeometric</span></a></td> <td>Generates geometric distribution with <span class="d_inlinecode donthyphenate notranslate">p = 1/2</span>.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#randExponential2"><span class="d_inlinecode donthyphenate notranslate">randExponential2</span></a></td> <td>Generates scaled Exponential distribution.</td></tr>
+</table>
+<div class="blankline"></div>
+
+
+Publicly includes  <span class="d_inlinecode donthyphenate notranslate">mir.<span class="def-anchor" id="random"></span><code class="ddoc_psymbol">random</code>.engine</span>.
+
+</div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko
+</div></div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</div></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".rand"></span><div class="quickindex" id="quickindex.rand"></div>T <span class="def-anchor" id="rand"></span><code class="ddoc_psymbol">rand</code><span class="template_param_list" title="Template parameter list">(T, G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G &amp;&amp; isIntegral!T &amp;&amp; !is(T == enum))</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">G <code class="ddoc_param">gen</code></td>
+<td class="param_desc">saturated random number generator</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Uniformly distributed integer for interval <span class="d_inlinecode donthyphenate notranslate">[0 .. T.max]</span>.</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Xorshift(1);
+<span class="d_keyword">auto</span> s = <span class="d_param">gen</span>.<span class="d_psymbol">rand</span>!<span class="d_keyword">short</span>;
+<span class="d_keyword">auto</span> n = <span class="d_param">gen</span>.<span class="d_psymbol">rand</span>!<span class="d_keyword">ulong</span>;
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".rand.2"></span><div class="quickindex" id="quickindex.rand.2"></div>bool <span class="def-anchor" id="rand"></span><code class="ddoc_psymbol">rand</code><span class="template_param_list" title="Template parameter list">(T : bool, G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">G <code class="ddoc_param">gen</code></td>
+<td class="param_desc">saturated random number generator</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Uniformly distributed boolean.</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Xorshift(1);
+<span class="d_keyword">auto</span> s = <span class="d_param">gen</span>.<span class="d_psymbol">rand</span>!<span class="d_keyword">bool</span>;
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".rand.3"></span><div class="quickindex" id="quickindex.rand.3"></div>T <span class="def-anchor" id="rand"></span><code class="ddoc_psymbol">rand</code><span class="template_param_list" title="Template parameter list">(T, G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G &amp;&amp; is(T == enum))</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">G <code class="ddoc_param">gen</code></td>
+<td class="param_desc">saturated random number generator</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Uniformly distributed enumeration.</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Xorshift(1);
+<span class="d_keyword">enum</span> A { a, b, c }
+<span class="d_keyword">auto</span> e = <span class="d_param">gen</span>.<span class="d_psymbol">rand</span>!A;
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Xorshift(1);
+<span class="d_keyword">enum</span> A : <span class="d_keyword">dchar</span> { a, b, c }
+<span class="d_keyword">auto</span> e = <span class="d_param">gen</span>.<span class="d_psymbol">rand</span>!A;
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Xorshift(1);
+<span class="d_keyword">enum</span> A : string { a = <span class="d_string">"a"</span>, b = <span class="d_string">"b"</span>, c = <span class="d_string">"c"</span> }
+<span class="d_keyword">auto</span> e = <span class="d_param">gen</span>.<span class="d_psymbol">rand</span>!A;
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".rand.4"></span><div class="quickindex" id="quickindex.rand.4"></div>T <span class="def-anchor" id="rand"></span><code class="ddoc_psymbol">rand</code><span class="template_param_list" title="Template parameter list">(T, G)</span>(ref G <code class="ddoc_param">gen</code>, sizediff_t <code class="ddoc_param">boundExp</code> = 0)<br><span class="constraint">if (isSaturatedRandomEngine!G &amp;&amp; isFloatingPoint!T)</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">G <code class="ddoc_param">gen</code></td>
+<td class="param_desc">saturated random number generator</td></tr>
+<tr class="param"><td class="param_id">sizediff_t <code class="ddoc_param">boundExp</code></td>
+<td class="param_desc">bound exponent (optional). <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">boundExp</code></span> must be less or equal to <span class="d_inlinecode donthyphenate notranslate">T.max_exp</span>.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Uniformly distributed real for interval <span class="d_inlinecode donthyphenate notranslate">(-2^^<code class="ddoc_param">boundExp</code> , 2^^<code class="ddoc_param">boundExp</code>))</span>.
+</div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+<span class="d_inlinecode donthyphenate notranslate">fabs</span> can be used to get a value from positive interval <span class="d_inlinecode donthyphenate notranslate">[0, 2^^<code class="ddoc_param">boundExp</code>)</span>.</p></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.math: fabs;
+<span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Xorshift(1);
+
+<span class="d_keyword">auto</span> a = <span class="d_param">gen</span>.<span class="d_psymbol">rand</span>!<span class="d_keyword">float</span>;
+<span class="d_keyword">assert</span>(-1 &lt; a &amp;&amp; a &lt; +1);
+
+<span class="d_keyword">auto</span> b = <span class="d_param">gen</span>.<span class="d_psymbol">rand</span>!<span class="d_keyword">double</span>(4);
+<span class="d_keyword">assert</span>(-16 &lt; b &amp;&amp; b &lt; +16);
+
+<span class="d_keyword">auto</span> c = <span class="d_param">gen</span>.<span class="d_psymbol">rand</span>!<span class="d_keyword">double</span>(-2);
+<span class="d_keyword">assert</span>(-0.25 &lt; c &amp;&amp; c &lt; +0.25);
+
+<span class="d_keyword">auto</span> d = <span class="d_param">gen</span>.<span class="d_psymbol">rand</span>!<span class="d_keyword">real</span>.fabs;
+<span class="d_keyword">assert</span>(0.0L &lt;= d &amp;&amp; d &lt; 1.0L);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Subnormal numbers
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Xorshift(1);
+<span class="d_keyword">auto</span> x = <span class="d_param">gen</span>.<span class="d_psymbol">rand</span>!<span class="d_keyword">double</span>(<span class="d_keyword">double</span>.min_exp-1);
+<span class="d_keyword">assert</span>(-<span class="d_keyword">double</span>.min_normal &lt; x &amp;&amp; x &lt; <span class="d_keyword">double</span>.min_normal);
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".randIndex"></span><div class="quickindex" id="quickindex.randIndex"></div>T <span class="def-anchor" id="randIndex"></span><code class="ddoc_psymbol">randIndex</code><span class="template_param_list" title="Template parameter list">(T, G)</span>(ref G <code class="ddoc_param">gen</code>, T <code class="ddoc_param">m</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G &amp;&amp; isUnsigned!T)</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">G <code class="ddoc_param">gen</code></td>
+<td class="param_desc">uniform random number generator</td></tr>
+<tr class="param"><td class="param_id">T <code class="ddoc_param">m</code></td>
+<td class="param_desc">positive module</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">Uniformly distributed integer for interval <span class="d_inlinecode donthyphenate notranslate">[0 .. <code class="ddoc_param">m</code>)</span>.</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Xorshift(1);
+<span class="d_keyword">auto</span> s = <span class="d_param">gen</span>.<span class="d_psymbol">randIndex</span>!<span class="d_keyword">uint</span>(100);
+<span class="d_keyword">auto</span> n = <span class="d_param">gen</span>.<span class="d_psymbol">randIndex</span>!<span class="d_keyword">ulong</span>(-100);
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".randGeometric"></span><div class="quickindex" id="quickindex.randGeometric"></div>size_t <span class="def-anchor" id="randGeometric"></span><code class="ddoc_psymbol">randGeometric</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">n &gt;= 0</span> such that <span class="d_inlinecode donthyphenate notranslate">P(n) := 1 / (2^^(n + 1))</span>.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".randExponential2"></span><div class="quickindex" id="quickindex.randExponential2"></div>T <span class="def-anchor" id="randExponential2"></span><code class="ddoc_psymbol">randExponential2</code><span class="template_param_list" title="Template parameter list">(T, G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G &amp;&amp; isFloatingPoint!T)</span>;
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">G <code class="ddoc_param">gen</code></td>
+<td class="param_desc">saturated random number generator</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">X ~ Exp(1) / log(2)</span>.
+</div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+<span class="d_inlinecode donthyphenate notranslate">fabs</span> can be used to get a value from positive interval <span class="d_inlinecode donthyphenate notranslate">[0, 2^^boundExp)</span>.</p></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Xorshift(<span class="d_keyword">cast</span>(<span class="d_keyword">uint</span>)unpredictableSeed);
+<span class="d_keyword">auto</span> v = <span class="d_param">gen</span>.<span class="d_psymbol">randExponential2</span>!<span class="d_keyword">double</span>();
+</pre>
+</div></div>
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright, Ilya Yaroshenko 2016-.
+ | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:14 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

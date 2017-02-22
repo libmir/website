@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>mir.random.algorithm - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='mir.random.algorithm' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/mir/random/algorithm.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">mir.random.algorithm</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko, documentation is partially based on Phobos.
+</div></div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.</div></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".RandomRange"></span><div class="quickindex" id="quickindex.RandomRange"></div>struct <span class="def-anchor" id="RandomRange"></span><code class="ddoc_psymbol">RandomRange</code>(G) if (isSaturatedRandomEngine!G);
+<br><br><span class="def-anchor" id=".range"></span><div class="quickindex" id="quickindex.range"></div>RandomRange!G <span class="def-anchor" id="range"></span><code class="ddoc_psymbol">range</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="summary">Range interface for uniform random bit generators.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+The structure holds a pointer to a generator.
+    The structure must not be copied (explicitly or implicitly) outside from a function.</p></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.<span class="d_psymbol">range</span>, std.algorithm;
+<span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> rng = Xorshift(1);
+<span class="d_keyword">auto</span> bitSample = rng <span class="d_comment">// by reference
+</span>    .<span class="d_psymbol">range</span>
+    .filter!(val =&gt; val % 2 == 0)
+    .map!(val =&gt; val % 100)
+    .take(5)
+    .array;
+<span class="d_keyword">assert</span>(bitSample == [58, 30, 86, 16, 76]);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".RandomRange.max"></span><div class="quickindex" id="quickindex.RandomRange.max"></div>enum ReturnType!G <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="summary">Largest generated value.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".RandomRange.this"></span><div class="quickindex" id="quickindex.RandomRange.this"></div>this(ref G <code class="ddoc_param">gen</code>);
+<br></div></dt>
+<dd><div class="summary">Constructor. Stores the pointer to the <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">gen</code></span> engine.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".RandomRange.empty"></span><div class="quickindex" id="quickindex.RandomRange.empty"></div>enum auto <span class="def-anchor" id="empty"></span><code class="ddoc_psymbol">empty</code>;
+<br><br><span class="def-anchor" id=".RandomRange.front"></span><div class="quickindex" id="quickindex.RandomRange.front"></div>@property ReturnType!G <span class="def-anchor" id="front"></span><code class="ddoc_psymbol">front</code>();
+<br><br><span class="def-anchor" id=".RandomRange.popFront"></span><div class="quickindex" id="quickindex.RandomRange.popFront"></div>void <span class="def-anchor" id="popFront"></span><code class="ddoc_psymbol">popFront</code>();
+<br></div></dt>
+<dd><div class="summary">Infinity Input Range primitives</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".RandomRange.2"></span><div class="quickindex" id="quickindex.RandomRange.2"></div>struct <span class="def-anchor" id="RandomRange"></span><code class="ddoc_psymbol">RandomRange</code>(G, D) if (isSaturatedRandomEngine!G);
+<br><br><span class="def-anchor" id=".range.2"></span><div class="quickindex" id="quickindex.range.2"></div>RandomRange!<span class="template_param_list" title="Template parameter list">(G, D)</span> <span class="def-anchor" id="range"></span><code class="ddoc_psymbol">range</code>(G, D)(ref G <code class="ddoc_param">gen</code>, D <code class="ddoc_param">var</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="summary">Range interface for random variables.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+The structure hold a pointer to a generator.
+    The structure must not be copied (explicitly or implicitly) outside from a function.</p></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.<span class="d_psymbol">range</span> : take, array;
+
+<span class="d_keyword">import</span> mir.random;
+<span class="d_keyword">import</span> mir.random.variable: NormalVariable;
+
+<span class="d_keyword">auto</span> rng = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> sample = rng <span class="d_comment">// by reference
+</span>    .<span class="d_psymbol">range</span>(NormalVariable!<span class="d_keyword">double</span>(0, 1))
+    .take(1000)
+    .array;
+
+<span class="d_comment">//import std.stdio;
+</span><span class="d_comment">//writeln(sample);
+</span></pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".RandomRange.this.2"></span><div class="quickindex" id="quickindex.RandomRange.this.2"></div>this(ref G <code class="ddoc_param">gen</code>, D <code class="ddoc_param">var</code>);
+<br></div></dt>
+<dd><div class="summary">Constructor. Stores the pointer to the <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">gen</code></span> engine.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".RandomRange.empty.2"></span><div class="quickindex" id="quickindex.RandomRange.empty.2"></div>enum auto <span class="def-anchor" id="empty"></span><code class="ddoc_psymbol">empty</code>;
+<br><br><span class="def-anchor" id=".RandomRange.front.2"></span><div class="quickindex" id="quickindex.RandomRange.front.2"></div>@property auto <span class="def-anchor" id="front"></span><code class="ddoc_psymbol">front</code>();
+<br><br><span class="def-anchor" id=".RandomRange.popFront.2"></span><div class="quickindex" id="quickindex.RandomRange.popFront.2"></div>void <span class="def-anchor" id="popFront"></span><code class="ddoc_psymbol">popFront</code>();
+<br></div></dt>
+<dd><div class="summary">Infinity Input Range primitives</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VitterStrides"></span><div class="quickindex" id="quickindex.VitterStrides"></div>struct <span class="def-anchor" id="VitterStrides"></span><code class="ddoc_psymbol">VitterStrides</code>;
+<br></div></dt>
+<dd><div class="summary">Random sampling utility.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Complexity:</span>
+O(n)
+</p></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">References:</span>
+Jeffrey Scott Vitter, An efficient algorithm for sequential random sampling</p></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> gen = Xorshift(112);
+<span class="d_keyword">auto</span> strides = <span class="d_psymbol">VitterStrides</span>(20, 3);
+size_t s;
+<span class="d_keyword">foreach</span>(_; 0..3)
+{
+    s += strides(gen) + 1;
+    <span class="d_keyword">assert</span>(s + strides.tail == 20);
+}
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".VitterStrides.this"></span><div class="quickindex" id="quickindex.VitterStrides.this"></div>this(size_t <code class="ddoc_param">N</code>, size_t <code class="ddoc_param">n</code>);
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">size_t <code class="ddoc_param">N</code></td>
+<td class="param_desc">range length</td></tr>
+<tr class="param"><td class="param_id">size_t <code class="ddoc_param">n</code></td>
+<td class="param_desc">sample length</td></tr>
+</table></div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VitterStrides.empty"></span><div class="quickindex" id="quickindex.VitterStrides.empty"></div>@property bool <span class="def-anchor" id="empty"></span><code class="ddoc_psymbol">empty</code>();
+<br></div></dt>
+<dd><div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">true</span> if sample length equals to 0.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VitterStrides.length"></span><div class="quickindex" id="quickindex.VitterStrides.length"></div>@property size_t <span class="def-anchor" id="length"></span><code class="ddoc_psymbol">length</code>();
+<br></div></dt>
+<dd><div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">N</span> (remaining sample <span class="def-anchor" id="length"></span><code class="ddoc_psymbol">length</code>)</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VitterStrides.tail"></span><div class="quickindex" id="quickindex.VitterStrides.tail"></div>@property size_t <span class="def-anchor" id="tail"></span><code class="ddoc_psymbol">tail</code>();
+<br></div></dt>
+<dd><div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">n</span> (remaining range length)</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".VitterStrides.opCall"></span><div class="quickindex" id="quickindex.VitterStrides.opCall"></div>sizediff_t <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>);
+<br></div></dt>
+<dd><div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">random stride step (<span class="d_inlinecode donthyphenate notranslate">S</span>).
+        After each call <span class="d_inlinecode donthyphenate notranslate">N</span> decreases by <span class="d_inlinecode donthyphenate notranslate">S + 1</span> and <span class="d_inlinecode donthyphenate notranslate">n</span> decreases by <span class="d_inlinecode donthyphenate notranslate">1</span>.
+</div></div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">G <code class="ddoc_param">gen</code></td>
+<td class="param_desc">random number engine to use</td></tr>
+</table></div></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".sample"></span><div class="quickindex" id="quickindex.sample"></div>auto <span class="def-anchor" id="sample"></span><code class="ddoc_psymbol">sample</code><span class="template_param_list" title="Template parameter list">(Range, G)</span>(Range <code class="ddoc_param">range</code>, ref G <code class="ddoc_param">gen</code>, size_t <code class="ddoc_param">n</code>)<br><span class="constraint">if (isInputRange!Range &amp;&amp; hasLength!Range &amp;&amp; isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="summary">Selects a random subsample out of <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">range</code></span>, containing exactly <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">n</code></span> elements.
+The order of elements is the same as in the original <code class="ddoc_param">range</code>.
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><a href="#RandomSample"><span class="d_inlinecode donthyphenate notranslate">RandomSample</span></a> over the <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">range</code></span>.
+</div></div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Range <code class="ddoc_param">range</code></td>
+<td class="param_desc"><code class="ddoc_param">range</code> to <span class="def-anchor" id="sample"></span><code class="ddoc_psymbol">sample</code> from</td></tr>
+<tr class="param"><td class="param_id">G <code class="ddoc_param">gen</code></td>
+<td class="param_desc">random number engine to use</td></tr>
+<tr class="param"><td class="param_id">size_t <code class="ddoc_param">n</code></td>
+<td class="param_desc">number of elements to include in the <span class="def-anchor" id="sample"></span><code class="ddoc_psymbol">sample</code>; must be less than or equal to the <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">range</code>.length</span></td></tr>
+</table></div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Complexity:</span>
+O(<code class="ddoc_param">n</code>)</p></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.<span class="d_param">range</span>;
+<span class="d_keyword">import</span> mir.random.engine.xorshift;
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Xorshift(112);
+<span class="d_keyword">auto</span> <span class="d_psymbol">sample</span> = iota(100).<span class="d_psymbol">sample</span>(<span class="d_param">gen</span>, 7);
+<span class="d_keyword">foreach</span>(elem; <span class="d_psymbol">sample</span>)
+{
+    <span class="d_comment">//import std.stdio;
+</span>    <span class="d_comment">//writeln(elem);
+</span>}
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".RandomSample"></span><div class="quickindex" id="quickindex.RandomSample"></div>struct <span class="def-anchor" id="RandomSample"></span><code class="ddoc_psymbol">RandomSample</code>(Range, G);
+<br></div></dt>
+<dd><div class="summary">Lazy input or forward range containing a random sample.
+<a href="#VitterStrides"><span class="d_inlinecode donthyphenate notranslate">VitterStrides</span></a> is used to skip elements.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Complexity:</span>
+O(n)
+</p></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+The structure holds a pointer to a generator.
+    The structure must not be copied (explicitly or implicitly) outside from a function.</p></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".RandomSample.this"></span><div class="quickindex" id="quickindex.RandomSample.this"></div>this(Range <code class="ddoc_param">range</code>, ref G <code class="ddoc_param">gen</code>, size_t <code class="ddoc_param">n</code>);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".RandomSample.length"></span><div class="quickindex" id="quickindex.RandomSample.length"></div>@property size_t <span class="def-anchor" id="length"></span><code class="ddoc_psymbol">length</code>();
+<br><br><span class="def-anchor" id=".RandomSample.empty"></span><div class="quickindex" id="quickindex.RandomSample.empty"></div>@property bool <span class="def-anchor" id="empty"></span><code class="ddoc_psymbol">empty</code>();
+<br><br><span class="def-anchor" id=".RandomSample.front"></span><div class="quickindex" id="quickindex.RandomSample.front"></div>@property ref auto <span class="def-anchor" id="front"></span><code class="ddoc_psymbol">front</code>();
+<br><br><span class="def-anchor" id=".RandomSample.popFront"></span><div class="quickindex" id="quickindex.RandomSample.popFront"></div>void <span class="def-anchor" id="popFront"></span><code class="ddoc_psymbol">popFront</code>();
+<br><br><span class="def-anchor" id=".RandomSample.save"></span><div class="quickindex" id="quickindex.RandomSample.save"></div>@property auto <span class="def-anchor" id="save"></span><code class="ddoc_psymbol">save</code>();
+<br></div></dt>
+<dd><div class="summary">Range primitives</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".shuffle"></span><div class="quickindex" id="quickindex.shuffle"></div>void <span class="def-anchor" id="shuffle"></span><code class="ddoc_psymbol">shuffle</code><span class="template_param_list" title="Template parameter list">(Range, G)</span>(ref G <code class="ddoc_param">gen</code>, Range <code class="ddoc_param">range</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G &amp;&amp; isRandomAccessRange!Range &amp;&amp; hasLength!Range)</span>;
+<br></div></dt>
+<dd><div class="summary">Shuffles elements of <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">range</code></span>.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">G <code class="ddoc_param">gen</code></td>
+<td class="param_desc">random number engine to use</td></tr>
+<tr class="param"><td class="param_id">Range <code class="ddoc_param">range</code></td>
+<td class="param_desc">random-access <code class="ddoc_param">range</code> whose elements are to be shuffled</td></tr>
+</table></div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Complexity:</span>
+O(<code class="ddoc_param">range</code>.length)</p></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.experimental.ndslice;
+<span class="d_keyword">import</span> std.algorithm.sorting;
+
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> a = iotaSlice(10).slice;
+
+<span class="d_param">gen</span>.<span class="d_psymbol">shuffle</span>(a);
+
+sort(a);
+<span class="d_keyword">assert</span>(a == iotaSlice(10));
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".shuffle.2"></span><div class="quickindex" id="quickindex.shuffle.2"></div>void <span class="def-anchor" id="shuffle"></span><code class="ddoc_psymbol">shuffle</code><span class="template_param_list" title="Template parameter list">(Range, G)</span>(ref G <code class="ddoc_param">gen</code>, Range <code class="ddoc_param">range</code>, size_t <code class="ddoc_param">n</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G &amp;&amp; isRandomAccessRange!Range &amp;&amp; hasLength!Range)</span>;
+<br></div></dt>
+<dd><div class="summary">Partially shuffles the elements of <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">range</code></span> such that upon returning <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">range</code>[0..<code class="ddoc_param">n</code>]</span>
+is a random subset of <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">range</code></span> and is randomly ordered.
+<span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">range</code>[<code class="ddoc_param">n</code>..r.length]</span> will contain the elements not in <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">range</code>[0..<code class="ddoc_param">n</code>]</span>.
+These will be in an undefined order, but will not be random in the sense that their order after
+<span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="shuffle"></span><code class="ddoc_psymbol">shuffle</code></span> returns will not be independent of their order before
+<span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="shuffle"></span><code class="ddoc_psymbol">shuffle</code></span> was called.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">G <code class="ddoc_param">gen</code></td>
+<td class="param_desc">random number engine to use</td></tr>
+<tr class="param"><td class="param_id">Range <code class="ddoc_param">range</code></td>
+<td class="param_desc">random-access <code class="ddoc_param">range</code> with length whose elements are to be shuffled</td></tr>
+<tr class="param"><td class="param_id">size_t <code class="ddoc_param">n</code></td>
+<td class="param_desc">number of elements of <span class="d_inlinecode donthyphenate notranslate">r</span> to <span class="def-anchor" id="shuffle"></span><code class="ddoc_psymbol">shuffle</code> (counting from the beginning);
+        must be less than <span class="d_inlinecode donthyphenate notranslate">r.length</span></td></tr>
+</table></div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Complexity:</span>
+O(<code class="ddoc_param">n</code>)</p></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.experimental.ndslice;
+<span class="d_keyword">import</span> std.algorithm.sorting;
+
+<span class="d_keyword">auto</span> <span class="d_param">gen</span> = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> a = iotaSlice(10).slice;
+
+<span class="d_param">gen</span>.<span class="d_psymbol">shuffle</span>(a, 4);
+
+sort(a);
+<span class="d_keyword">assert</span>(a == iotaSlice(10));
+</pre>
+</div></div>
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright, Ilya Yaroshenko 2016-.
+ | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:14 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>mir.functional - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='mir.functional' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/mir/functional.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">mir.functional</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary">Functions that manipulate other functions.
+This module provides functions for compile time function composition. These
+functions are helpful when constructing predicates for the algorithms in
+<a href="mir_ndslice.html"><span class="d_inlinecode donthyphenate notranslate">mir.ndslice</span></a>.
+<table class="book"><caption><h2>Functions</h2></caption><tr><th scope="col">Function Name</th> <th scope="col">Description</th></tr>
+    <tr><td><a href="#naryFun"><span class="d_inlinecode donthyphenate notranslate">naryFun</span></a></td>
+        <td>Create a unary, binary or N-nary function from a string. Most often
+        used when defining algorithms on ranges and slices.
+    </td></tr>
+    <tr><td><a href="#pipe"><span class="d_inlinecode donthyphenate notranslate">pipe</span></a></td>
+        <td>Join a couple of functions into one that executes the original
+        functions one after the other, using one function's result for the next
+        function's argument.
+    </td></tr>
+    <tr><td><a href="#not"><span class="d_inlinecode donthyphenate notranslate">not</span></a></td>
+        <td>Creates a function that negates another.
+    </td></tr>
+    <tr><td><a href="#reverseArgs"><span class="d_inlinecode donthyphenate notranslate">reverseArgs</span></a>, <a href="#binaryReverseArgs"><span class="d_inlinecode donthyphenate notranslate">binaryReverseArgs</span></a></td>
+        <td>Predicate that reverses the order of its arguments.
+    </td></tr>
+    <tr><td><a href="#forward"><span class="d_inlinecode donthyphenate notranslate">forward</span></a></td>
+        <td>Forwards function arguments with saving ref-ness.
+    </td></tr>
+    <tr><td><a href="#tuple"><span class="d_inlinecode donthyphenate notranslate">tuple</span></a></td>
+        <td>Creates a <a href="#RefTuple"><span class="d_inlinecode donthyphenate notranslate">RefTuple</span></a> structure.
+    </td></tr>
+    <tr><td><a href="#ref"><span class="d_inlinecode donthyphenate notranslate">ref</span></a></td>
+        <td>Creates a <a href="#Ref"><span class="d_inlinecode donthyphenate notranslate">Ref</span></a> structure.
+    </td></tr>
+</table>
+</div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko, <a href="http://erdani.org">Andrei Alexandrescu (some original code from std.<span class="def-anchor" id="functional"></span><code class="ddoc_psymbol">functional</code>)</a></div></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".Ref"></span><div class="quickindex" id="quickindex.Ref"></div>struct <span class="def-anchor" id="Ref"></span><code class="ddoc_psymbol">Ref</code>(T) if (!isRef!T);
+<br></div></dt>
+<dd><div class="summary">Simple wrapper that holds a pointer.
+It is used for as workaround to return multiple auto ref values.</div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".Ref.this"></span><div class="quickindex" id="quickindex.Ref.this"></div>@trusted this(ref T <code class="ddoc_param">value</code>);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Ref.__ptr"></span><div class="quickindex" id="quickindex.Ref.__ptr"></div>T* <span class="def-anchor" id="__ptr"></span><code class="ddoc_psymbol">__ptr</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Ref.__value"></span><div class="quickindex" id="quickindex.Ref.__value"></div>@property ref T <span class="def-anchor" id="__value"></span><code class="ddoc_psymbol">__value</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id="._ref"></span><div class="quickindex" id="quickindex._ref"></div>Ref!T <span class="def-anchor" id="_ref"></span><code class="ddoc_psymbol">_ref</code><span class="template_param_list" title="Template parameter list">(T)</span>(ref T <code class="ddoc_param">value</code>);
+<br></div></dt>
+<dd><div class="summary">Creates <a href="#Ref"><span class="d_inlinecode donthyphenate notranslate">Ref</span></a> wrapper.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".RefTuple"></span><div class="quickindex" id="quickindex.RefTuple"></div>struct <span class="def-anchor" id="RefTuple"></span><code class="ddoc_psymbol">RefTuple</code>(T...);
+<br></div></dt>
+<dd><div class="summary">Simplified tuple structure. Some fields may be type of <a href="#Ref"><span class="d_inlinecode donthyphenate notranslate">Ref</span></a>.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".tuple"></span><div class="quickindex" id="quickindex.tuple"></div>RefTuple!Args <span class="def-anchor" id="tuple"></span><code class="ddoc_psymbol">tuple</code><span class="template_param_list" title="Template parameter list">(Args...)</span>(auto ref Args <code class="ddoc_param">args</code>);
+<br></div></dt>
+<dd><div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">a <a href="#RefTuple"><span class="d_inlinecode donthyphenate notranslate">RefTuple</span></a> structure.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".adjoin"></span><div class="quickindex" id="quickindex.adjoin"></div>template <span class="def-anchor" id="adjoin"></span><code class="ddoc_psymbol">adjoin</code>(fun...) if (fun.length &amp;&amp; fun.length &lt;= 26)<br></div></dt>
+<dd><div class="summary">Takes multiple functions and adjoins them together. The result is a
+<a href="#RefTuple"><span class="d_inlinecode donthyphenate notranslate">RefTuple</span></a> with one element per passed-in function. Upon
+invocation, the returned tuple is the adjoined results of all
+functions.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+In the special case where only a single function is provided
+(<span class="d_inlinecode donthyphenate notranslate">F.length == 1</span>), <span class="def-anchor" id="adjoin"></span><code class="ddoc_psymbol">adjoin</code> simply aliases to the single passed function
+(<span class="d_inlinecode donthyphenate notranslate">F[0]</span>).</p></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">static</span> <span class="d_keyword">bool</span> f1(<span class="d_keyword">int</span> a) { <span class="d_keyword">return</span> a != 0; }
+<span class="d_keyword">static</span> <span class="d_keyword">int</span> f2(<span class="d_keyword">int</span> a) { <span class="d_keyword">return</span> a / 2; }
+<span class="d_keyword">auto</span> x = <span class="d_psymbol">adjoin</span>!(f1, f2)(5);
+<span class="d_keyword">assert</span>(<span class="d_keyword">is</span>(<span class="d_keyword">typeof</span>(x) == RefTuple!(<span class="d_keyword">bool</span>, <span class="d_keyword">int</span>)));
+<span class="d_keyword">assert</span>(x.a == <span class="d_keyword">true</span> &amp;&amp; x.b == 2);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".adjoin.adjoin"></span><div class="quickindex" id="quickindex.adjoin.adjoin"></div>auto <span class="def-anchor" id="adjoin"></span><code class="ddoc_psymbol">adjoin</code><span class="template_param_list" title="Template parameter list">(Args...)</span>(auto ref Args <code class="ddoc_param">args</code>);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".naryFun"></span><div class="quickindex" id="quickindex.naryFun"></div>template <span class="def-anchor" id="naryFun"></span><code class="ddoc_psymbol">naryFun</code>(alias fun)<br></div></dt>
+<dd><div class="summary">Transforms a string representing an expression into a binary function. The
+string must use symbol names <span class="d_inlinecode donthyphenate notranslate">a</span>, <span class="d_inlinecode donthyphenate notranslate">b</span>, ..., <span class="d_inlinecode donthyphenate notranslate">z</span>  as the parameters.
+If <span class="d_inlinecode donthyphenate notranslate">fun</span> is not a string, <span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="naryFun"></span><code class="ddoc_psymbol">naryFun</code></span> aliases itself away to <span class="d_inlinecode donthyphenate notranslate">fun</span>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_comment">// Strings are compiled into functions:
+</span><span class="d_keyword">alias</span> isEven = <span class="d_psymbol">naryFun</span>!(<span class="d_string">"(a &amp; 1) == 0"</span>);
+<span class="d_keyword">assert</span>(isEven(2) &amp;&amp; !isEven(1));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">alias</span> less = <span class="d_psymbol">naryFun</span>!(<span class="d_string">"a &lt; b"</span>);
+<span class="d_keyword">assert</span>(less(1, 2) &amp;&amp; !less(2, 1));
+<span class="d_keyword">alias</span> greater = <span class="d_psymbol">naryFun</span>!(<span class="d_string">"a &gt; b"</span>);
+<span class="d_keyword">assert</span>(!greater(<span class="d_string">"1"</span>, <span class="d_string">"2"</span>) &amp;&amp; greater(<span class="d_string">"2"</span>, <span class="d_string">"1"</span>));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="naryFun"></span><code class="ddoc_psymbol">naryFun</code></span> accepts up to 26 arguments.
+<pre class="d_code notranslate"><span class="d_keyword">assert</span>(<span class="d_psymbol">naryFun</span>!(<span class="d_string">"a * b + c"</span>)(2, 3, 4) == 10);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="naryFun"></span><code class="ddoc_psymbol">naryFun</code></span> can return by reference.
+<pre class="d_code notranslate"><span class="d_keyword">int</span> a;
+<span class="d_keyword">assert</span>(&amp;<span class="d_psymbol">naryFun</span>!(<span class="d_string">"a"</span>)(a) == &amp;a);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><span class="d_inlinecode donthyphenate notranslate">args</span> paramter tuple
+<pre class="d_code notranslate"><span class="d_keyword">assert</span>(<span class="d_psymbol">naryFun</span>!(<span class="d_string">"args[0] + args[1]"</span>)(2, 3) == 5);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".naryFun.naryFun"></span><div class="quickindex" id="quickindex.naryFun.naryFun"></div>ref auto <span class="def-anchor" id="naryFun"></span><code class="ddoc_psymbol">naryFun</code><span class="template_param_list" title="Template parameter list">(Args...)</span>(auto ref Args <code class="ddoc_param">args</code>)<br><span class="constraint">if (<code class="ddoc_param">args</code>.length &lt;= 26)</span>;
+<br></div></dt>
+<dd><div class="summary">Specialization for string lambdas</div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".reverseArgs"></span><div class="quickindex" id="quickindex.reverseArgs"></div>template <span class="def-anchor" id="reverseArgs"></span><code class="ddoc_psymbol">reverseArgs</code>(alias fun)<br></div></dt>
+<dd><div class="summary">N-ary predicate that reverses the order of arguments, e.g., given
+<span class="d_inlinecode donthyphenate notranslate">pred(a, b, c)</span>, returns <span class="d_inlinecode donthyphenate notranslate">pred(c, b, a)</span>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">int</span> abc(<span class="d_keyword">int</span> a, <span class="d_keyword">int</span> b, <span class="d_keyword">int</span> c) { <span class="d_keyword">return</span> a * b + c; }
+<span class="d_keyword">alias</span> cba = <span class="d_psymbol">reverseArgs</span>!abc;
+<span class="d_keyword">assert</span>(abc(91, 17, 32) == cba(32, 17, 91));
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".reverseArgs.reverseArgs"></span><div class="quickindex" id="quickindex.reverseArgs.reverseArgs"></div>ref auto <span class="def-anchor" id="reverseArgs"></span><code class="ddoc_psymbol">reverseArgs</code><span class="template_param_list" title="Template parameter list">(Args...)</span>(auto ref Args <code class="ddoc_param">args</code>)<br><span class="constraint">if (is(typeof(fun(Reverse!<code class="ddoc_param">args</code>))))</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".not"></span><div class="quickindex" id="quickindex.not"></div>template <span class="def-anchor" id="not"></span><code class="ddoc_psymbol">not</code>(alias pred)<br></div></dt>
+<dd><div class="summary">Negates predicate <span class="d_inlinecode donthyphenate notranslate">pred</span>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.algorithm.searching : find;
+<span class="d_keyword">import</span> std.uni : isWhite;
+string a = <span class="d_string">"   Hello, world!"</span>;
+<span class="d_keyword">assert</span>(find!(<span class="d_psymbol">not</span>!isWhite)(a) == <span class="d_string">"Hello, world!"</span>);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".not.not"></span><div class="quickindex" id="quickindex.not.not"></div>bool <span class="def-anchor" id="not"></span><code class="ddoc_psymbol">not</code><span class="template_param_list" title="Template parameter list">(T...)</span>(auto ref T <code class="ddoc_param">args</code>);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".pipe"></span><div class="quickindex" id="quickindex.pipe"></div>template <span class="def-anchor" id="pipe"></span><code class="ddoc_psymbol">pipe</code>(fun...)<br></div></dt>
+<dd><div class="summary">Composes passed-in functions <span class="d_inlinecode donthyphenate notranslate">fun[0], fun[1], ...</span> returning a
+function <span class="d_inlinecode donthyphenate notranslate">f(x)</span> that in turn returns
+<span class="d_inlinecode donthyphenate notranslate">...(fun[1](fun[0](x)))...</span>. Each function can be a regular
+functions, a delegate, a lambda, or a string.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">assert</span>(<span class="d_psymbol">pipe</span>!(<span class="d_string">"a + b"</span>, a =&gt; a * 10)(2, 3) == 50);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="pipe"></span><code class="ddoc_psymbol">pipe</code></span> can return by reference.
+<pre class="d_code notranslate"><span class="d_keyword">int</span> a;
+<span class="d_keyword">assert</span>(&amp;<span class="d_psymbol">pipe</span>!(<span class="d_string">"a"</span>, <span class="d_string">"a"</span>)(a) == &amp;a);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Template bloat reduction
+<pre class="d_code notranslate"><span class="d_keyword">enum</span>  a = <span class="d_string">"a * 2"</span>;
+<span class="d_keyword">alias</span> b = e =&gt; e + 2;
+
+<span class="d_keyword">alias</span> p0 = <span class="d_psymbol">pipe</span>!(<span class="d_psymbol">pipe</span>!(a, b), <span class="d_psymbol">pipe</span>!(b, a));
+<span class="d_keyword">alias</span> p1 = <span class="d_psymbol">pipe</span>!(a, b, b, a);
+
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(<span class="d_keyword">__traits</span>(isSame, p0, p1));
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".pipe.pipe"></span><div class="quickindex" id="quickindex.pipe.pipe"></div>ref auto <span class="def-anchor" id="pipe"></span><code class="ddoc_psymbol">pipe</code><span class="template_param_list" title="Template parameter list">(Args...)</span>(auto ref Args <code class="ddoc_param">args</code>);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".forward"></span><div class="quickindex" id="quickindex.forward"></div>template <span class="def-anchor" id="forward"></span><code class="ddoc_psymbol">forward</code>(args...)<br></div></dt>
+<dd><div class="summary">Forwards function arguments with saving ref-ness.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">class</span> C
+{
+    <span class="d_keyword">static</span> <span class="d_keyword">int</span> foo(<span class="d_keyword">int</span> n) { <span class="d_keyword">return</span> 1; }
+    <span class="d_keyword">static</span> <span class="d_keyword">int</span> foo(<span class="d_keyword">ref</span> <span class="d_keyword">int</span> n) { <span class="d_keyword">return</span> 2; }
+}
+<span class="d_keyword">int</span> bar()(<span class="d_keyword">auto</span> <span class="d_keyword">ref</span> <span class="d_keyword">int</span> x) { <span class="d_keyword">return</span> C.foo(<span class="d_psymbol">forward</span>!x); }
+
+<span class="d_keyword">assert</span>(bar(1) == 1);
+<span class="d_keyword">int</span> i;
+<span class="d_keyword">assert</span>(bar(i) == 2);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">void</span> foo(<span class="d_keyword">int</span> n, <span class="d_keyword">ref</span> string s) { s = <span class="d_keyword">null</span>; <span class="d_keyword">foreach</span> (i; 0..n) s ~= <span class="d_string">"Hello"</span>; }
+
+<span class="d_comment">// forwards all arguments which are bound to parameter tuple
+</span><span class="d_keyword">void</span> bar(Args...)(<span class="d_keyword">auto</span> <span class="d_keyword">ref</span> Args args) { <span class="d_keyword">return</span> foo(<span class="d_psymbol">forward</span>!args); }
+
+<span class="d_comment">// forwards all arguments with swapping order
+</span><span class="d_keyword">void</span> baz(Args...)(<span class="d_keyword">auto</span> <span class="d_keyword">ref</span> Args args) { <span class="d_keyword">return</span> foo(<span class="d_psymbol">forward</span>!args[$/2..$], <span class="d_psymbol">forward</span>!args[0..$/2]); }
+
+string s;
+bar(1, s);
+<span class="d_keyword">assert</span>(s == <span class="d_string">"Hello"</span>);
+baz(s, 2);
+<span class="d_keyword">assert</span>(s == <span class="d_string">"HelloHello"</span>);
+</pre>
+</div></div>
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Andrei Alexandrescu 2008 - 2009, Ilya Yaroshenko 2016-.
+ | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:13 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

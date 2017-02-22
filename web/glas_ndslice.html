@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>glas.ndslice - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='glas.ndslice' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/glas/ndslice.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">glas.ndslice</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary"><h2>GLAS API</h2>
+</div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko
+<div class="blankline"></div>
+
+
+<h4>Transposition</h4>
+GLAS does not require transposition parameters.
+Use <a href="http://dlang.org/phobos/std_experimental_ndslice_iteration.html#transposed">transposed</a>
+to perform zero cost <span class="def-anchor" id="ndslice"></span><code class="ddoc_psymbol">ndslice</code> transposition.
+
+</div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+<a href=""><span class="def-anchor" id="ndslice"></span><code class="ddoc_psymbol">ndslice</code></a> uses is row major representation.
+    <br></p></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".ConjA"></span><div class="quickindex" id="quickindex.ConjA"></div>enum ulong <span class="def-anchor" id="ConjA"></span><code class="ddoc_psymbol">ConjA</code>;
+<br></div></dt>
+<dd><div class="summary">Specifies if the matrix <span class="d_inlinecode donthyphenate notranslate">asl</span> stores conjugated elements.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ConjB"></span><div class="quickindex" id="quickindex.ConjB"></div>enum ulong <span class="def-anchor" id="ConjB"></span><code class="ddoc_psymbol">ConjB</code>;
+<br></div></dt>
+<dd><div class="summary">Specifies if the matrix <span class="d_inlinecode donthyphenate notranslate">bsl</span> stores conjugated elements.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Lower"></span><div class="quickindex" id="quickindex.Lower"></div>enum ulong <span class="def-anchor" id="Lower"></span><code class="ddoc_psymbol">Lower</code>;
+<br></div></dt>
+<dd><div class="summary">Specifies if the lower  triangular
+part of the symmetric matrix A is to be referenced.
+</div>
+<div class="description">The lower triangular part of the matrix <span class="d_inlinecode donthyphenate notranslate">asl</span>
+must contain the lower triangular part of the symmetric / hermitian
+matrix A and the strictly upper triangular part of <span class="d_inlinecode donthyphenate notranslate">asl</span> is not
+referenced.
+
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+<span class="def-anchor" id="Lower"></span><code class="ddoc_psymbol">Lower</code> is default flag.</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Upper"></span><div class="quickindex" id="quickindex.Upper"></div>enum ulong <span class="def-anchor" id="Upper"></span><code class="ddoc_psymbol">Upper</code>;
+<br></div></dt>
+<dd><div class="summary">Specifies if the upper  triangular
+part of the symmetric matrix A is to be referenced.
+</div>
+<div class="description">The upper triangular
+part of the matrix <span class="d_inlinecode donthyphenate notranslate">asl</span>  must contain the upper triangular part
+of the symmetric / hermitian matrix A and the strictly lower triangular
+part of <span class="d_inlinecode donthyphenate notranslate">asl</span> is not referenced.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Left"></span><div class="quickindex" id="quickindex.Left"></div>enum ulong <span class="def-anchor" id="Left"></span><code class="ddoc_psymbol">Left</code>;
+<br></div></dt>
+<dd><div class="summary">Specifies if the symmetric/hermitian matrix A
+    appears on the left in the  operation.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+<span class="def-anchor" id="Left"></span><code class="ddoc_psymbol">Left</code> is default flag.</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Right"></span><div class="quickindex" id="quickindex.Right"></div>enum ulong <span class="def-anchor" id="Right"></span><code class="ddoc_psymbol">Right</code>;
+<br></div></dt>
+<dd><div class="summary">Specifies if the symmetric/hermitian matrix A
+    appears on the left in the  operation.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".glas_error"></span><div class="quickindex" id="quickindex.glas_error"></div>nothrow @nogc @system string <span class="def-anchor" id="glas_error"></span><code class="ddoc_psymbol">glas_error</code>(int <code class="ddoc_param">error_code</code>);
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">int <code class="ddoc_param">error_code</code></td>
+<td class="param_desc">Error code</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">error message</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".glas_validate_gemm"></span><div class="quickindex" id="quickindex.glas_validate_gemm"></div>nothrow @nogc @system int <span class="def-anchor" id="glas_validate_gemm"></span><code class="ddoc_psymbol">glas_validate_gemm</code>(Structure!2 <code class="ddoc_param">as</code>, Structure!2 <code class="ddoc_param">bs</code>, Structure!2 <code class="ddoc_param">cs</code>, ulong <code class="ddoc_param">settings</code> = 0);
+<br><br><span class="def-anchor" id=".validate_gemm"></span><div class="quickindex" id="quickindex.validate_gemm"></div>alias <span class="def-anchor" id="validate_gemm"></span><code class="ddoc_psymbol">validate_gemm</code> = glas_validate_gemm;
+<br></div></dt>
+<dd><div class="summary">Validates input data for GEMM operations.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Structure!2 <code class="ddoc_param">as</code></td>
+<td class="param_desc">structure for matrix A</td></tr>
+<tr class="param"><td class="param_id">Structure!2 <code class="ddoc_param">bs</code></td>
+<td class="param_desc">structure for matrix B</td></tr>
+<tr class="param"><td class="param_id">Structure!2 <code class="ddoc_param">cs</code></td>
+<td class="param_desc">structure for matrix C</td></tr>
+<tr class="param"><td class="param_id">ulong <code class="ddoc_param">settings</code></td>
+<td class="param_desc">Operation <code class="ddoc_param">settings</code>. Allowed flags are
+            <a href="#ConjA"><span class="d_inlinecode donthyphenate notranslate">ConjA</span></a>, <a href="#ConjB"><span class="d_inlinecode donthyphenate notranslate">ConjB</span></a>.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">0 on success and error code otherwise.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".glas_validate_symm"></span><div class="quickindex" id="quickindex.glas_validate_symm"></div>nothrow @nogc @system int <span class="def-anchor" id="glas_validate_symm"></span><code class="ddoc_psymbol">glas_validate_symm</code>(Structure!2 <code class="ddoc_param">as</code>, Structure!2 <code class="ddoc_param">bs</code>, Structure!2 <code class="ddoc_param">cs</code>, ulong <code class="ddoc_param">settings</code> = 0);
+<br><br><span class="def-anchor" id=".validate_symm"></span><div class="quickindex" id="quickindex.validate_symm"></div>alias <span class="def-anchor" id="validate_symm"></span><code class="ddoc_psymbol">validate_symm</code> = glas_validate_symm;
+<br></div></dt>
+<dd><div class="summary">Validates input data for SYMM operations.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Structure!2 <code class="ddoc_param">as</code></td>
+<td class="param_desc">structure for matrix A</td></tr>
+<tr class="param"><td class="param_id">Structure!2 <code class="ddoc_param">bs</code></td>
+<td class="param_desc">structure for matrix B</td></tr>
+<tr class="param"><td class="param_id">Structure!2 <code class="ddoc_param">cs</code></td>
+<td class="param_desc">structure for matrix C</td></tr>
+<tr class="param"><td class="param_id">ulong <code class="ddoc_param">settings</code></td>
+<td class="param_desc">Operation <code class="ddoc_param">settings</code>. Allowed flags are
+            <a href="#Left"><span class="d_inlinecode donthyphenate notranslate">Left</span></a>, <a href="#Right"><span class="d_inlinecode donthyphenate notranslate">Right</span></a>,
+            <a href="#Lower"><span class="d_inlinecode donthyphenate notranslate">Lower</span></a>, <a href="#Upper"><span class="d_inlinecode donthyphenate notranslate">Upper</span></a>,
+            <a href="#ConjA"><span class="d_inlinecode donthyphenate notranslate">ConjA</span></a>, <a href="#ConjB"><span class="d_inlinecode donthyphenate notranslate">ConjB</span></a>.
+            <a href="#ConjA"><span class="d_inlinecode donthyphenate notranslate">ConjA</span></a> flag specifies if the matrix A is hermitian.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">0 on success and error code otherwise.</div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".glas_sgemm"></span><div class="quickindex" id="quickindex.glas_sgemm"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_sgemm"></span><code class="ddoc_psymbol">glas_sgemm</code>(float <code class="ddoc_param">alpha</code>, Slice!(SliceKind.universal, [2], const(float)*) <code class="ddoc_param">asl</code>, Slice!(SliceKind.universal, [2], const(float)*) <code class="ddoc_param">bsl</code>, float <code class="ddoc_param">beta</code>, Slice!(SliceKind.universal, [2], float*) <code class="ddoc_param">csl</code>, ulong <code class="ddoc_param">settings</code> = 0);
+<br><br><span class="def-anchor" id=".glas_dgemm"></span><div class="quickindex" id="quickindex.glas_dgemm"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_dgemm"></span><code class="ddoc_psymbol">glas_dgemm</code>(double <code class="ddoc_param">alpha</code>, Slice!(SliceKind.universal, [2], const(double)*) <code class="ddoc_param">asl</code>, Slice!(SliceKind.universal, [2], const(double)*) <code class="ddoc_param">bsl</code>, double <code class="ddoc_param">beta</code>, Slice!(SliceKind.universal, [2], double*) <code class="ddoc_param">csl</code>, ulong <code class="ddoc_param">settings</code> = 0);
+<br><br><span class="def-anchor" id=".glas_cgemm"></span><div class="quickindex" id="quickindex.glas_cgemm"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_cgemm"></span><code class="ddoc_psymbol">glas_cgemm</code>(cfloat <code class="ddoc_param">alpha</code>, Slice!(SliceKind.universal, [2], const(cfloat)*) <code class="ddoc_param">asl</code>, Slice!(SliceKind.universal, [2], const(cfloat)*) <code class="ddoc_param">bsl</code>, cfloat <code class="ddoc_param">beta</code>, Slice!(SliceKind.universal, [2], cfloat*) <code class="ddoc_param">csl</code>, ulong <code class="ddoc_param">settings</code> = 0);
+<br><br><span class="def-anchor" id=".glas_zgemm"></span><div class="quickindex" id="quickindex.glas_zgemm"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_zgemm"></span><code class="ddoc_psymbol">glas_zgemm</code>(cdouble <code class="ddoc_param">alpha</code>, Slice!(SliceKind.universal, [2], const(cdouble)*) <code class="ddoc_param">asl</code>, Slice!(SliceKind.universal, [2], const(cdouble)*) <code class="ddoc_param">bsl</code>, cdouble <code class="ddoc_param">beta</code>, Slice!(SliceKind.universal, [2], cdouble*) <code class="ddoc_param">csl</code>, ulong <code class="ddoc_param">settings</code> = 0);
+<br><br><span class="def-anchor" id=".gemm"></span><div class="quickindex" id="quickindex.gemm"></div>alias <span class="def-anchor" id="gemm"></span><code class="ddoc_psymbol">gemm</code> = <span class="def-anchor" id="gemm"></span><code class="ddoc_psymbol">gemm</code>;
+<br><br>alias <span class="def-anchor" id="gemm"></span><code class="ddoc_psymbol">gemm</code> = <span class="def-anchor" id="gemm"></span><code class="ddoc_psymbol">gemm</code>;
+<br><br>alias <span class="def-anchor" id="gemm"></span><code class="ddoc_psymbol">gemm</code> = <span class="def-anchor" id="gemm"></span><code class="ddoc_psymbol">gemm</code>;
+<br><br>alias <span class="def-anchor" id="gemm"></span><code class="ddoc_psymbol">gemm</code> = glas_zgemm;
+<br></div></dt>
+<dd><div class="summary">Performs general matrix-matrix multiplication.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Pseudo code:</span>
+<span class="d_inlinecode donthyphenate notranslate">C := <code class="ddoc_param">alpha</code> A × B + <code class="ddoc_param">beta</code> C</span>.
+
+</p></div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">float <code class="ddoc_param">alpha</code></td>
+<td class="param_desc">scalar</td></tr>
+<tr class="param"><td class="param_id">Slice!(SliceKind.universal, [2], const(float)*) <code class="ddoc_param">asl</code></td>
+<td class="param_desc"><span class="d_inlinecode donthyphenate notranslate">m ⨉ k</span> matrix</td></tr>
+<tr class="param"><td class="param_id">Slice!(SliceKind.universal, [2], const(float)*) <code class="ddoc_param">bsl</code></td>
+<td class="param_desc"><span class="d_inlinecode donthyphenate notranslate">k ⨉ n</span> matrix</td></tr>
+<tr class="param"><td class="param_id">float <code class="ddoc_param">beta</code></td>
+<td class="param_desc">scalar. When  <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">beta</code></span>  is supplied as zero then the matrix <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">csl</code></span> need not be set on input.</td></tr>
+<tr class="param"><td class="param_id">Slice!(SliceKind.universal, [2], float*) <code class="ddoc_param">csl</code></td>
+<td class="param_desc"><span class="d_inlinecode donthyphenate notranslate">m ⨉ n</span> matrix with one stride equal to <span class="d_inlinecode donthyphenate notranslate">±1</span>.</td></tr>
+<tr class="param"><td class="param_id">ulong <code class="ddoc_param">settings</code></td>
+<td class="param_desc">Operation <code class="ddoc_param">settings</code>. Allowed flags are <a href="#ConjA"><span class="d_inlinecode donthyphenate notranslate">ConjA</span></a> and <a href="#ConjB"><span class="d_inlinecode donthyphenate notranslate">ConjB</span></a>.</td></tr>
+</table></div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Unified alias:</span>
+<span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="gemm"></span><code class="ddoc_psymbol">gemm</code></span>
+
+</p></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">BLAS:</span>
+SGEMM, DGEMM, CGEMM, ZGEMM</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".glas_ssymm"></span><div class="quickindex" id="quickindex.glas_ssymm"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_ssymm"></span><code class="ddoc_psymbol">glas_ssymm</code>(float <code class="ddoc_param">alpha</code>, Slice!(SliceKind.universal, [2], const(float)*) <code class="ddoc_param">asl</code>, Slice!(SliceKind.universal, [2], const(float)*) <code class="ddoc_param">bsl</code>, float <code class="ddoc_param">beta</code>, Slice!(SliceKind.universal, [2], float*) <code class="ddoc_param">csl</code>, ulong <code class="ddoc_param">settings</code> = 0);
+<br><br><span class="def-anchor" id=".glas_dsymm"></span><div class="quickindex" id="quickindex.glas_dsymm"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_dsymm"></span><code class="ddoc_psymbol">glas_dsymm</code>(double <code class="ddoc_param">alpha</code>, Slice!(SliceKind.universal, [2], const(double)*) <code class="ddoc_param">asl</code>, Slice!(SliceKind.universal, [2], const(double)*) <code class="ddoc_param">bsl</code>, double <code class="ddoc_param">beta</code>, Slice!(SliceKind.universal, [2], double*) <code class="ddoc_param">csl</code>, ulong <code class="ddoc_param">settings</code> = 0);
+<br><br><span class="def-anchor" id=".glas_csymm"></span><div class="quickindex" id="quickindex.glas_csymm"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_csymm"></span><code class="ddoc_psymbol">glas_csymm</code>(cfloat <code class="ddoc_param">alpha</code>, Slice!(SliceKind.universal, [2], const(cfloat)*) <code class="ddoc_param">asl</code>, Slice!(SliceKind.universal, [2], const(cfloat)*) <code class="ddoc_param">bsl</code>, cfloat <code class="ddoc_param">beta</code>, Slice!(SliceKind.universal, [2], cfloat*) <code class="ddoc_param">csl</code>, ulong <code class="ddoc_param">settings</code> = 0);
+<br><br><span class="def-anchor" id=".glas_zsymm"></span><div class="quickindex" id="quickindex.glas_zsymm"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_zsymm"></span><code class="ddoc_psymbol">glas_zsymm</code>(cdouble <code class="ddoc_param">alpha</code>, Slice!(SliceKind.universal, [2], const(cdouble)*) <code class="ddoc_param">asl</code>, Slice!(SliceKind.universal, [2], const(cdouble)*) <code class="ddoc_param">bsl</code>, cdouble <code class="ddoc_param">beta</code>, Slice!(SliceKind.universal, [2], cdouble*) <code class="ddoc_param">csl</code>, ulong <code class="ddoc_param">settings</code> = 0);
+<br><br><span class="def-anchor" id=".symm"></span><div class="quickindex" id="quickindex.symm"></div>alias <span class="def-anchor" id="symm"></span><code class="ddoc_psymbol">symm</code> = <span class="def-anchor" id="symm"></span><code class="ddoc_psymbol">symm</code>;
+<br><br>alias <span class="def-anchor" id="symm"></span><code class="ddoc_psymbol">symm</code> = <span class="def-anchor" id="symm"></span><code class="ddoc_psymbol">symm</code>;
+<br><br>alias <span class="def-anchor" id="symm"></span><code class="ddoc_psymbol">symm</code> = <span class="def-anchor" id="symm"></span><code class="ddoc_psymbol">symm</code>;
+<br><br>alias <span class="def-anchor" id="symm"></span><code class="ddoc_psymbol">symm</code> = glas_zsymm;
+<br></div></dt>
+<dd><div class="summary">Performs symmetric or hermitian matrix-matrix multiplication.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Pseudo code:</span>
+<span class="d_inlinecode donthyphenate notranslate">C := <code class="ddoc_param">alpha</code> A × B + <code class="ddoc_param">beta</code> C</span> or <span class="d_inlinecode donthyphenate notranslate">C := <code class="ddoc_param">alpha</code> B × A + <code class="ddoc_param">beta</code> C</span>,
+    where  <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">alpha</code></span> and <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">beta</code></span> are scalars, <span class="d_inlinecode donthyphenate notranslate">A</span> is a symmetric or hermitian matrix and <span class="d_inlinecode donthyphenate notranslate">B</span> and
+    <span class="d_inlinecode donthyphenate notranslate">C</span> are <span class="d_inlinecode donthyphenate notranslate">m × n</span> matrices.
+
+</p></div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">float <code class="ddoc_param">alpha</code></td>
+<td class="param_desc">scalar</td></tr>
+<tr class="param"><td class="param_id">Slice!(SliceKind.universal, [2], const(float)*) <code class="ddoc_param">asl</code></td>
+<td class="param_desc"><span class="d_inlinecode donthyphenate notranslate">k ⨉ k</span> matrix, where <span class="d_inlinecode donthyphenate notranslate">k</span> is <span class="d_inlinecode donthyphenate notranslate">n</span>  when <a href="#Right"><span class="d_inlinecode donthyphenate notranslate">Right</span></a> flag is set
+           and is <span class="d_inlinecode donthyphenate notranslate">m</span> otherwise.</td></tr>
+<tr class="param"><td class="param_id">Slice!(SliceKind.universal, [2], const(float)*) <code class="ddoc_param">bsl</code></td>
+<td class="param_desc"><span class="d_inlinecode donthyphenate notranslate">m ⨉ n</span> matrix</td></tr>
+<tr class="param"><td class="param_id">float <code class="ddoc_param">beta</code></td>
+<td class="param_desc">scalar. When  <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">beta</code></span>  is supplied as zero then the matrix <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">csl</code></span> need not be set on input.</td></tr>
+<tr class="param"><td class="param_id">Slice!(SliceKind.universal, [2], float*) <code class="ddoc_param">csl</code></td>
+<td class="param_desc"><span class="d_inlinecode donthyphenate notranslate">m ⨉ n</span> matrix with one stride equals to <span class="d_inlinecode donthyphenate notranslate">±1</span>.</td></tr>
+<tr class="param"><td class="param_id">ulong <code class="ddoc_param">settings</code></td>
+<td class="param_desc">Operation <code class="ddoc_param">settings</code>.
+        Allowed flags are
+            <a href="#Left"><span class="d_inlinecode donthyphenate notranslate">Left</span></a>, <a href="#Right"><span class="d_inlinecode donthyphenate notranslate">Right</span></a>,
+            <a href="#Lower"><span class="d_inlinecode donthyphenate notranslate">Lower</span></a>, <a href="#Upper"><span class="d_inlinecode donthyphenate notranslate">Upper</span></a>,
+            <a href="#ConjA"><span class="d_inlinecode donthyphenate notranslate">ConjA</span></a>, <a href="#ConjB"><span class="d_inlinecode donthyphenate notranslate">ConjB</span></a>.
+            <a href="#ConjA"><span class="d_inlinecode donthyphenate notranslate">ConjA</span></a> flag specifies if the matrix A is hermitian.</td></tr>
+</table></div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Unified alias:</span>
+<span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="symm"></span><code class="ddoc_psymbol">symm</code></span>
+
+</p></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">BLAS:</span>
+SSYMM, DSYMM, CSYMM, ZSYMM, SHEMM, DHEMM, CHEMM, ZHEMM</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".glas_sscal"></span><div class="quickindex" id="quickindex.glas_sscal"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_sscal"></span><code class="ddoc_psymbol">glas_sscal</code>(float <code class="ddoc_param">a</code>, Slice!(SliceKind.universal, [1], float*) <code class="ddoc_param">xsl</code>);
+<br><br><span class="def-anchor" id=".glas_dscal"></span><div class="quickindex" id="quickindex.glas_dscal"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_dscal"></span><code class="ddoc_psymbol">glas_dscal</code>(double <code class="ddoc_param">a</code>, Slice!(SliceKind.universal, [1], double*) <code class="ddoc_param">xsl</code>);
+<br><br><span class="def-anchor" id=".glas_csscal"></span><div class="quickindex" id="quickindex.glas_csscal"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_csscal"></span><code class="ddoc_psymbol">glas_csscal</code>(float <code class="ddoc_param">a</code>, Slice!(SliceKind.universal, [1], cfloat*) <code class="ddoc_param">xsl</code>);
+<br><br><span class="def-anchor" id=".glas_cscal"></span><div class="quickindex" id="quickindex.glas_cscal"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_cscal"></span><code class="ddoc_psymbol">glas_cscal</code>(cfloat <code class="ddoc_param">a</code>, Slice!(SliceKind.universal, [1], cfloat*) <code class="ddoc_param">xsl</code>);
+<br><br><span class="def-anchor" id=".glas_csIscal"></span><div class="quickindex" id="quickindex.glas_csIscal"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_csIscal"></span><code class="ddoc_psymbol">glas_csIscal</code>(ifloat <code class="ddoc_param">a</code>, Slice!(SliceKind.universal, [1], cfloat*) <code class="ddoc_param">xsl</code>);
+<br><br><span class="def-anchor" id=".glas_zdscal"></span><div class="quickindex" id="quickindex.glas_zdscal"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_zdscal"></span><code class="ddoc_psymbol">glas_zdscal</code>(double <code class="ddoc_param">a</code>, Slice!(SliceKind.universal, [1], cdouble*) <code class="ddoc_param">xsl</code>);
+<br><br><span class="def-anchor" id=".glas_zscal"></span><div class="quickindex" id="quickindex.glas_zscal"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_zscal"></span><code class="ddoc_psymbol">glas_zscal</code>(cdouble <code class="ddoc_param">a</code>, Slice!(SliceKind.universal, [1], cdouble*) <code class="ddoc_param">xsl</code>);
+<br><br><span class="def-anchor" id=".glas_zdIscal"></span><div class="quickindex" id="quickindex.glas_zdIscal"></div>nothrow @nogc @system void <span class="def-anchor" id="glas_zdIscal"></span><code class="ddoc_psymbol">glas_zdIscal</code>(idouble <code class="ddoc_param">a</code>, Slice!(SliceKind.universal, [1], cdouble*) <code class="ddoc_param">xsl</code>);
+<br><br><span class="def-anchor" id="._glas_sscal"></span><div class="quickindex" id="quickindex._glas_sscal"></div>nothrow @nogc @system void <span class="def-anchor" id="_glas_sscal"></span><code class="ddoc_psymbol">_glas_sscal</code>(float <code class="ddoc_param">a</code>, size_t <code class="ddoc_param">n</code>, size_t <code class="ddoc_param">incx</code>, float* <code class="ddoc_param">x</code>);
+<br><br><span class="def-anchor" id="._glas_dscal"></span><div class="quickindex" id="quickindex._glas_dscal"></div>nothrow @nogc @system void <span class="def-anchor" id="_glas_dscal"></span><code class="ddoc_psymbol">_glas_dscal</code>(double <code class="ddoc_param">a</code>, size_t <code class="ddoc_param">n</code>, size_t <code class="ddoc_param">incx</code>, double* <code class="ddoc_param">x</code>);
+<br><br><span class="def-anchor" id="._glas_csscal"></span><div class="quickindex" id="quickindex._glas_csscal"></div>nothrow @nogc @system void <span class="def-anchor" id="_glas_csscal"></span><code class="ddoc_psymbol">_glas_csscal</code>(float <code class="ddoc_param">a</code>, size_t <code class="ddoc_param">n</code>, size_t <code class="ddoc_param">incx</code>, cfloat* <code class="ddoc_param">x</code>);
+<br><br><span class="def-anchor" id="._glas_cscal"></span><div class="quickindex" id="quickindex._glas_cscal"></div>nothrow @nogc @system void <span class="def-anchor" id="_glas_cscal"></span><code class="ddoc_psymbol">_glas_cscal</code>(cfloat <code class="ddoc_param">a</code>, size_t <code class="ddoc_param">n</code>, size_t <code class="ddoc_param">incx</code>, cfloat* <code class="ddoc_param">x</code>);
+<br><br><span class="def-anchor" id="._glas_csIscal"></span><div class="quickindex" id="quickindex._glas_csIscal"></div>nothrow @nogc @system void <span class="def-anchor" id="_glas_csIscal"></span><code class="ddoc_psymbol">_glas_csIscal</code>(ifloat <code class="ddoc_param">a</code>, size_t <code class="ddoc_param">n</code>, size_t <code class="ddoc_param">incx</code>, cfloat* <code class="ddoc_param">x</code>);
+<br><br><span class="def-anchor" id="._glas_zdscal"></span><div class="quickindex" id="quickindex._glas_zdscal"></div>nothrow @nogc @system void <span class="def-anchor" id="_glas_zdscal"></span><code class="ddoc_psymbol">_glas_zdscal</code>(double <code class="ddoc_param">a</code>, size_t <code class="ddoc_param">n</code>, size_t <code class="ddoc_param">incx</code>, cdouble* <code class="ddoc_param">x</code>);
+<br><br><span class="def-anchor" id="._glas_zscal"></span><div class="quickindex" id="quickindex._glas_zscal"></div>nothrow @nogc @system void <span class="def-anchor" id="_glas_zscal"></span><code class="ddoc_psymbol">_glas_zscal</code>(cdouble <code class="ddoc_param">a</code>, size_t <code class="ddoc_param">n</code>, size_t <code class="ddoc_param">incx</code>, cdouble* <code class="ddoc_param">x</code>);
+<br><br><span class="def-anchor" id="._glas_zdIscal"></span><div class="quickindex" id="quickindex._glas_zdIscal"></div>nothrow @nogc @system void <span class="def-anchor" id="_glas_zdIscal"></span><code class="ddoc_psymbol">_glas_zdIscal</code>(idouble <code class="ddoc_param">a</code>, size_t <code class="ddoc_param">n</code>, size_t <code class="ddoc_param">incx</code>, cdouble* <code class="ddoc_param">x</code>);
+<br><br><span class="def-anchor" id=".scal"></span><div class="quickindex" id="quickindex.scal"></div>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code>;
+<br><br>alias <span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code> = _glas_zdIscal;
+<br></div></dt>
+<dd><div class="summary"><span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code></span> scales <code class="ddoc_param">a</code> vector by <code class="ddoc_param">a</code> constant.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Pseudo code:</span>
+<span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">x</code> := <code class="ddoc_param">a</code> <code class="ddoc_param">x</code></span>.
+
+</p></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Unified alias:</span>
+<span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="scal"></span><code class="ddoc_psymbol">scal</code></span>
+
+</p></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">BLAS:</span>
+SSCSCAL, DSCSCAL, CSCSCAL, ZSCSCAL, CSCAL, ZSCAL</p></div>
+
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright © 2016-, Ilya Yaroshenko.
+ | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:13 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

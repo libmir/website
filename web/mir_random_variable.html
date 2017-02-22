@@ -1,0 +1,1135 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>mir.random.variable - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='mir.random.variable' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/mir/random/variable.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">mir.random.variable</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary"><script type="text/javascript">inhibitQuickIndex = 1;</script>
+</div>
+<div class="description"><table class="book"><caption><h2>Utilities</h2></caption><div class="blankline"></div>
+
+
+    <tr><th scope="col">Name</th>, <th scope="col">Description</th></tr>
+    <tr><td class="donthyphenate nobr"><a href="#RandomVariable"><span class="d_inlinecode donthyphenate notranslate">RandomVariable</span></a></td> <td>Attribute</td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#isRandomVariable"><span class="d_inlinecode donthyphenate notranslate">isRandomVariable</span></a></td> <td>Trait</td></tr>
+</table>
+<div class="blankline"></div>
+
+
+<table class="book"><caption><h2>Random Variables</h2></caption><div class="blankline"></div>
+
+
+    <tr><th scope="col">Generator name</th> <th scope="col">Description</th></tr>
+    <tr><td class="donthyphenate nobr"><a href="#BernoulliVariable"><span class="d_inlinecode donthyphenate notranslate">BernoulliVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Bernoulli_distribution">Bernoulli random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#Bernoulli2Variable"><span class="d_inlinecode donthyphenate notranslate">Bernoulli2Variable</span></a></td> <td>Optimized <a href="http://en.wikipedia.org/wiki/Bernoulli_distribution">Bernoulli random variable</a> for <span class="d_inlinecode donthyphenate notranslate">p = 1/2</span></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#BetaVariable"><span class="d_inlinecode donthyphenate notranslate">BetaVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Beta_distribution">Beta random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#BinomialVariable"><span class="d_inlinecode donthyphenate notranslate">BinomialVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Binomial_distribution">Binomial random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#CauchyVariable"><span class="d_inlinecode donthyphenate notranslate">CauchyVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Cauchy_distribution">Cauchy random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#ChiSquaredVariable"><span class="d_inlinecode donthyphenate notranslate">ChiSquaredVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Chi-squared_distribution">Chi-squared random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#DiscreteVariable"><span class="d_inlinecode donthyphenate notranslate">DiscreteVariable</span></a></td> <td>Discrete distribution</td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#ExponentialVariable"><span class="d_inlinecode donthyphenate notranslate">ExponentialVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Exponential_distribution">Exponential random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#ExtremeValueVariable"><span class="d_inlinecode donthyphenate notranslate">ExtremeValueVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Generalized_extreme_value_distribution">Extreme value random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#FisherFVariable"><span class="d_inlinecode donthyphenate notranslate">FisherFVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/F_distribution">F random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#GammaVariable"><span class="d_inlinecode donthyphenate notranslate">GammaVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Gamma_distribution">Gamma random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#GeometricVariable"><span class="d_inlinecode donthyphenate notranslate">GeometricVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Geometric_distribution">Geometric random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#LogNormalVariable"><span class="d_inlinecode donthyphenate notranslate">LogNormalVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Log-normal_distribution">Log-normal random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#NegativeBinomialVariable"><span class="d_inlinecode donthyphenate notranslate">NegativeBinomialVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative_binomial random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#NormalVariable"><span class="d_inlinecode donthyphenate notranslate">NormalVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Normal_distribution">Normal random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#PiecewiseConstantVariable"><span class="d_inlinecode donthyphenate notranslate">PiecewiseConstantVariable</span></a></td> <td>Piecewise constant distribution</td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#PiecewiseLinearVariable"><span class="d_inlinecode donthyphenate notranslate">PiecewiseLinearVariable</span></a></td> <td>Piecewise linear distribution</td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#PoissonVariable"><span class="d_inlinecode donthyphenate notranslate">PoissonVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Poisson_distribution">Poisson random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#StudentTVariable"><span class="d_inlinecode donthyphenate notranslate">StudentTVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Student's_t_distribution">Student's_t random variable</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#UniformVariable"><span class="d_inlinecode donthyphenate notranslate">UniformVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Discrete_uniform_distribution">Discrete_uniform random variable</a>
+and <a href="http://en.wikipedia.org/wiki/Uniform_distribution_(continuous)">    Uniform distribution (continuous)</a></td></tr>
+    <tr><td class="donthyphenate nobr"><a href="#WeibullVariable"><span class="d_inlinecode donthyphenate notranslate">WeibullVariable</span></a></td> <td><a href="http://en.wikipedia.org/wiki/Weibull_distribution">Weibull random variable</a></td></tr>
+</table>
+
+</div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko, Sebastian Wilzbach (DiscreteVariable)
+</div></div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+</div></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".RandomVariable"></span><div class="quickindex" id="quickindex.RandomVariable"></div>enum <span class="def-anchor" id="RandomVariable"></span><code class="ddoc_psymbol">RandomVariable</code>;
+<br></div></dt>
+<dd><div class="summary">User Defined Attribute definition for Random Variable.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".isRandomVariable"></span><div class="quickindex" id="quickindex.isRandomVariable"></div>template <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>(T)<br></div></dt>
+<dd><div class="summary">Test if T is a random variable.</div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable"></span><div class="quickindex" id="quickindex.UniformVariable"></div>struct <span class="def-anchor" id="UniformVariable"></span><code class="ddoc_psymbol">UniformVariable</code>(T) if (isIntegral!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Discrete_uniform_distribution">Discrete_uniform random variable</a>.
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">X ~ U[a, b]</span></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">UniformVariable</span>!<span class="d_keyword">int</span>(-10, 10); <span class="d_comment">// [-10, 10]
+</span><span class="d_keyword">auto</span> x = rv(gen); <span class="d_comment">// random variable
+</span><span class="d_keyword">assert</span>(rv.min == -10);
+<span class="d_keyword">assert</span>(rv.max == 10);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.UniformVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable.this"></span><div class="quickindex" id="quickindex.UniformVariable.this"></div>this(T <code class="ddoc_param">a</code>, T <code class="ddoc_param">b</code>);
+<br></div></dt>
+<dd><div class="val"><p class="keyval Section"><span class="key keySection">Constraints:</span>
+<span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">a</code> &lt;= <code class="ddoc_param">b</code></span>.</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable.opCall"></span><div class="quickindex" id="quickindex.UniformVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable.min"></span><div class="quickindex" id="quickindex.UniformVariable.min"></div>@property T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable.max"></span><div class="quickindex" id="quickindex.UniformVariable.max"></div>@property T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable.2"></span><div class="quickindex" id="quickindex.UniformVariable.2"></div>struct <span class="def-anchor" id="UniformVariable"></span><code class="ddoc_psymbol">UniformVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Uniform_distribution_(continuous)">Uniform distribution (continuous)</a>.
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">X ~ U[a, b)</span></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.math : nextDown;
+<span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">UniformVariable</span>!<span class="d_keyword">double</span>(-8, 10); <span class="d_comment">// [-8, 10)
+</span><span class="d_keyword">auto</span> x = rv(gen); <span class="d_comment">// random variable
+</span><span class="d_keyword">assert</span>(rv.min == -8.0);
+<span class="d_keyword">assert</span>(rv.max == 10.0.nextDown);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable.isRandomVariable.2"></span><div class="quickindex" id="quickindex.UniformVariable.isRandomVariable.2"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable.this.2"></span><div class="quickindex" id="quickindex.UniformVariable.this.2"></div>this(T <code class="ddoc_param">a</code>, T <code class="ddoc_param">b</code>);
+<br></div></dt>
+<dd><div class="val"><p class="keyval Section"><span class="key keySection">Constraints:</span>
+<span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">a</code> &lt; <code class="ddoc_param">b</code></span>, <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">a</code></span> and <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">b</code></span> are finite numbers.</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable.opCall.2"></span><div class="quickindex" id="quickindex.UniformVariable.opCall.2"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable.min.2"></span><div class="quickindex" id="quickindex.UniformVariable.min.2"></div>@property T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".UniformVariable.max.2"></span><div class="quickindex" id="quickindex.UniformVariable.max.2"></div>@property T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ExponentialVariable"></span><div class="quickindex" id="quickindex.ExponentialVariable"></div>struct <span class="def-anchor" id="ExponentialVariable"></span><code class="ddoc_psymbol">ExponentialVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Exponential_distribution">Exponential random variable</a>.
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">X ~ Exp(β)</span></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">ExponentialVariable</span>!<span class="d_keyword">double</span>(1);
+<span class="d_keyword">auto</span> x = rv(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".ExponentialVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.ExponentialVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ExponentialVariable.this"></span><div class="quickindex" id="quickindex.ExponentialVariable.this"></div>this(T <code class="ddoc_param">scale</code>);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ExponentialVariable.opCall"></span><div class="quickindex" id="quickindex.ExponentialVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ExponentialVariable.min"></span><div class="quickindex" id="quickindex.ExponentialVariable.min"></div>enum T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ExponentialVariable.max"></span><div class="quickindex" id="quickindex.ExponentialVariable.max"></div>enum T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".WeibullVariable"></span><div class="quickindex" id="quickindex.WeibullVariable"></div>struct <span class="def-anchor" id="WeibullVariable"></span><code class="ddoc_psymbol">WeibullVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Weibull_distribution">Weibull random variable</a>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">WeibullVariable</span>!<span class="d_keyword">double</span>(3, 2);
+<span class="d_keyword">auto</span> x = rv(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".WeibullVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.WeibullVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".WeibullVariable.this"></span><div class="quickindex" id="quickindex.WeibullVariable.this"></div>this(T <code class="ddoc_param">shape</code>, T <code class="ddoc_param">scale</code> = 1);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".WeibullVariable.opCall"></span><div class="quickindex" id="quickindex.WeibullVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".WeibullVariable.min"></span><div class="quickindex" id="quickindex.WeibullVariable.min"></div>enum T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".WeibullVariable.max"></span><div class="quickindex" id="quickindex.WeibullVariable.max"></div>enum T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".GammaVariable"></span><div class="quickindex" id="quickindex.GammaVariable"></div>struct <span class="def-anchor" id="GammaVariable"></span><code class="ddoc_psymbol">GammaVariable</code>(T, bool Exp = false) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Gamma_distribution">Gamma random variable</a>.
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">X ~ Gamma(𝝰, 𝞫)</span>
+</div></div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">T</td>
+<td class="param_desc">floating point type</td></tr>
+<tr class="param"><td class="param_id">Exp</td>
+<td class="param_desc">if <code class="ddoc_keyword">true</code> log-scaled values are produced. <span class="d_inlinecode donthyphenate notranslate">ExpGamma(𝝰, 𝞫)</span>.
+        The flag is useful when shape parameter is small (<span class="d_inlinecode donthyphenate notranslate">𝝰 &lt;&lt; 1</span>).</td></tr>
+</table></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">GammaVariable</span>!<span class="d_keyword">double</span>(1, 1);
+<span class="d_keyword">auto</span> x = rv(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".GammaVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.GammaVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".GammaVariable.this"></span><div class="quickindex" id="quickindex.GammaVariable.this"></div>this(T <code class="ddoc_param">shape</code>, T <code class="ddoc_param">scale</code> = 1);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".GammaVariable.opCall"></span><div class="quickindex" id="quickindex.GammaVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".GammaVariable.min"></span><div class="quickindex" id="quickindex.GammaVariable.min"></div>enum T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".GammaVariable.max"></span><div class="quickindex" id="quickindex.GammaVariable.max"></div>enum T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BetaVariable"></span><div class="quickindex" id="quickindex.BetaVariable"></div>struct <span class="def-anchor" id="BetaVariable"></span><code class="ddoc_psymbol">BetaVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Beta_distribution">Beta random variable</a>.
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">X ~ Beta(𝝰, 𝞫)</span></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">BetaVariable</span>!<span class="d_keyword">double</span>(2, 5);
+<span class="d_keyword">auto</span> x = rv(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".BetaVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.BetaVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BetaVariable.this"></span><div class="quickindex" id="quickindex.BetaVariable.this"></div>this(T <code class="ddoc_param">a</code>, T <code class="ddoc_param">b</code>);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BetaVariable.opCall"></span><div class="quickindex" id="quickindex.BetaVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BetaVariable.min"></span><div class="quickindex" id="quickindex.BetaVariable.min"></div>enum T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BetaVariable.max"></span><div class="quickindex" id="quickindex.BetaVariable.max"></div>enum T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ChiSquaredVariable"></span><div class="quickindex" id="quickindex.ChiSquaredVariable"></div>struct <span class="def-anchor" id="ChiSquaredVariable"></span><code class="ddoc_psymbol">ChiSquaredVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Chi-squared_distribution">Chi-squared random variable</a>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">ChiSquaredVariable</span>!<span class="d_keyword">double</span>(3);
+<span class="d_keyword">auto</span> x = rv(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".ChiSquaredVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.ChiSquaredVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ChiSquaredVariable.this"></span><div class="quickindex" id="quickindex.ChiSquaredVariable.this"></div>this(size_t <code class="ddoc_param">k</code>);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ChiSquaredVariable.opCall"></span><div class="quickindex" id="quickindex.ChiSquaredVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ChiSquaredVariable.min"></span><div class="quickindex" id="quickindex.ChiSquaredVariable.min"></div>enum T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ChiSquaredVariable.max"></span><div class="quickindex" id="quickindex.ChiSquaredVariable.max"></div>enum T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FisherFVariable"></span><div class="quickindex" id="quickindex.FisherFVariable"></div>struct <span class="def-anchor" id="FisherFVariable"></span><code class="ddoc_psymbol">FisherFVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/F_distribution">F random variable</a>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">FisherFVariable</span>!<span class="d_keyword">double</span>(3, 4);
+<span class="d_keyword">auto</span> x = rv(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".FisherFVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.FisherFVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FisherFVariable.this"></span><div class="quickindex" id="quickindex.FisherFVariable.this"></div>this(T <code class="ddoc_param">d1</code>, T <code class="ddoc_param">d2</code>);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FisherFVariable.opCall"></span><div class="quickindex" id="quickindex.FisherFVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FisherFVariable.min"></span><div class="quickindex" id="quickindex.FisherFVariable.min"></div>enum T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".FisherFVariable.max"></span><div class="quickindex" id="quickindex.FisherFVariable.max"></div>enum T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".StudentTVariable"></span><div class="quickindex" id="quickindex.StudentTVariable"></div>struct <span class="def-anchor" id="StudentTVariable"></span><code class="ddoc_psymbol">StudentTVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Student's_t_distribution">Student's_t random variable</a>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">StudentTVariable</span>!<span class="d_keyword">double</span>(10);
+<span class="d_keyword">auto</span> x = rv(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".StudentTVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.StudentTVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".StudentTVariable.this"></span><div class="quickindex" id="quickindex.StudentTVariable.this"></div>this(T <code class="ddoc_param">nu</code>);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".StudentTVariable.opCall"></span><div class="quickindex" id="quickindex.StudentTVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".StudentTVariable.min"></span><div class="quickindex" id="quickindex.StudentTVariable.min"></div>enum T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".StudentTVariable.max"></span><div class="quickindex" id="quickindex.StudentTVariable.max"></div>enum T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".NormalVariable"></span><div class="quickindex" id="quickindex.NormalVariable"></div>struct <span class="def-anchor" id="NormalVariable"></span><code class="ddoc_psymbol">NormalVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Normal_distribution">Normal random variable</a>.
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">X ~ N(μ, σ)</span></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">NormalVariable</span>!<span class="d_keyword">double</span>(0, 1);
+<span class="d_keyword">auto</span> x = rv(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".NormalVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.NormalVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".NormalVariable.this"></span><div class="quickindex" id="quickindex.NormalVariable.this"></div>this(T <code class="ddoc_param">location</code>, T <code class="ddoc_param">scale</code> = 1);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".NormalVariable.opCall"></span><div class="quickindex" id="quickindex.NormalVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".NormalVariable.min"></span><div class="quickindex" id="quickindex.NormalVariable.min"></div>enum T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".NormalVariable.max"></span><div class="quickindex" id="quickindex.NormalVariable.max"></div>enum T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LogNormalVariable"></span><div class="quickindex" id="quickindex.LogNormalVariable"></div>struct <span class="def-anchor" id="LogNormalVariable"></span><code class="ddoc_psymbol">LogNormalVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Log-normal_distribution">Log-normal random variable</a>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">LogNormalVariable</span>!<span class="d_keyword">double</span>(0, 1);
+<span class="d_keyword">auto</span> x = rv(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".LogNormalVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.LogNormalVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LogNormalVariable.this"></span><div class="quickindex" id="quickindex.LogNormalVariable.this"></div>this(T <code class="ddoc_param">normalLocation</code>, T <code class="ddoc_param">normalScale</code> = 1);
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">T <code class="ddoc_param">normalLocation</code></td>
+<td class="param_desc">location of associated normal</td></tr>
+<tr class="param"><td class="param_id">T <code class="ddoc_param">normalScale</code></td>
+<td class="param_desc">scale of associated normal</td></tr>
+</table></div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LogNormalVariable.opCall"></span><div class="quickindex" id="quickindex.LogNormalVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LogNormalVariable.min"></span><div class="quickindex" id="quickindex.LogNormalVariable.min"></div>enum T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".LogNormalVariable.max"></span><div class="quickindex" id="quickindex.LogNormalVariable.max"></div>enum T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".CauchyVariable"></span><div class="quickindex" id="quickindex.CauchyVariable"></div>struct <span class="def-anchor" id="CauchyVariable"></span><code class="ddoc_psymbol">CauchyVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Cauchy_distribution">Cauchy random variable</a>.
+</div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns"><span class="d_inlinecode donthyphenate notranslate">X ~ Cauchy(x, γ)</span></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">CauchyVariable</span>!<span class="d_keyword">double</span>(0, 1);
+<span class="d_keyword">auto</span> x = rv(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".CauchyVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.CauchyVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".CauchyVariable.this"></span><div class="quickindex" id="quickindex.CauchyVariable.this"></div>this(T <code class="ddoc_param">location</code>, T <code class="ddoc_param">scale</code> = 1);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".CauchyVariable.opCall"></span><div class="quickindex" id="quickindex.CauchyVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".CauchyVariable.min"></span><div class="quickindex" id="quickindex.CauchyVariable.min"></div>enum T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".CauchyVariable.max"></span><div class="quickindex" id="quickindex.CauchyVariable.max"></div>enum T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ExtremeValueVariable"></span><div class="quickindex" id="quickindex.ExtremeValueVariable"></div>struct <span class="def-anchor" id="ExtremeValueVariable"></span><code class="ddoc_psymbol">ExtremeValueVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Generalized_extreme_value_distribution">Extreme value random variable</a>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">ExtremeValueVariable</span>!<span class="d_keyword">double</span>(0, 1);
+<span class="d_keyword">auto</span> x = rv(gen);
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".ExtremeValueVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.ExtremeValueVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ExtremeValueVariable.this"></span><div class="quickindex" id="quickindex.ExtremeValueVariable.this"></div>this(T <code class="ddoc_param">location</code>, T <code class="ddoc_param">scale</code> = 1);
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ExtremeValueVariable.opCall"></span><div class="quickindex" id="quickindex.ExtremeValueVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(G)</span>(ref G <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!G)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ExtremeValueVariable.min"></span><div class="quickindex" id="quickindex.ExtremeValueVariable.min"></div>enum T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ExtremeValueVariable.max"></span><div class="quickindex" id="quickindex.ExtremeValueVariable.max"></div>enum T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BernoulliVariable"></span><div class="quickindex" id="quickindex.BernoulliVariable"></div>struct <span class="def-anchor" id="BernoulliVariable"></span><code class="ddoc_psymbol">BernoulliVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Bernoulli_distribution">Bernoulli random variable</a>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">BernoulliVariable</span>!<span class="d_keyword">double</span>(0.7);
+<span class="d_keyword">int</span>[2] hist;
+<span class="d_keyword">foreach</span>(_; 0..1000)
+    hist[rv(gen)]++;
+<span class="d_comment">//import std.stdio;
+</span><span class="d_comment">//writeln(hist);
+</span></pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".BernoulliVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.BernoulliVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BernoulliVariable.this"></span><div class="quickindex" id="quickindex.BernoulliVariable.this"></div>this(T <code class="ddoc_param">p</code>);
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">T <code class="ddoc_param">p</code></td>
+<td class="param_desc"><span class="d_inlinecode donthyphenate notranslate">true</span> probability</td></tr>
+</table></div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BernoulliVariable.opCall"></span><div class="quickindex" id="quickindex.BernoulliVariable.opCall"></div>bool <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(RNG)</span>(ref RNG <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!RNG)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BernoulliVariable.min"></span><div class="quickindex" id="quickindex.BernoulliVariable.min"></div>enum bool <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BernoulliVariable.max"></span><div class="quickindex" id="quickindex.BernoulliVariable.max"></div>enum bool <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Bernoulli2Variable"></span><div class="quickindex" id="quickindex.Bernoulli2Variable"></div>struct <span class="def-anchor" id="Bernoulli2Variable"></span><code class="ddoc_psymbol">Bernoulli2Variable</code>;
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Bernoulli_distribution">Bernoulli random variable</a>. A fast specialization for <span class="d_inlinecode donthyphenate notranslate">p := 1/2</span>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">Bernoulli2Variable</span>.init;
+<span class="d_keyword">int</span>[2] hist;
+<span class="d_keyword">foreach</span>(_; 0..1000)
+    hist[rv(gen)]++;
+<span class="d_comment">//import std.stdio;
+</span><span class="d_comment">//writeln(hist);
+</span></pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".Bernoulli2Variable.isRadomVariable"></span><div class="quickindex" id="quickindex.Bernoulli2Variable.isRadomVariable"></div>enum bool <span class="def-anchor" id="isRadomVariable"></span><code class="ddoc_psymbol">isRadomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Bernoulli2Variable.opCall"></span><div class="quickindex" id="quickindex.Bernoulli2Variable.opCall"></div>bool <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(RNG)</span>(ref RNG <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!RNG)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Bernoulli2Variable.min"></span><div class="quickindex" id="quickindex.Bernoulli2Variable.min"></div>enum bool <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".Bernoulli2Variable.max"></span><div class="quickindex" id="quickindex.Bernoulli2Variable.max"></div>enum bool <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".GeometricVariable"></span><div class="quickindex" id="quickindex.GeometricVariable"></div>struct <span class="def-anchor" id="GeometricVariable"></span><code class="ddoc_psymbol">GeometricVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Geometric_distribution">Geometric random variable</a>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">GeometricVariable</span>!<span class="d_keyword">double</span>(0.1);
+size_t[<span class="d_keyword">ulong</span>] hist;
+<span class="d_keyword">foreach</span>(_; 0..1000)
+    hist[rv(gen)]++;
+<span class="d_comment">//import std.stdio;
+</span><span class="d_comment">//foreach(i; 0..100)
+</span><span class="d_comment">//    if(auto count = i in hist)
+</span><span class="d_comment">//        write(*count, ", ");
+</span><span class="d_comment">//    else
+</span><span class="d_comment">//        write("0, ");
+</span><span class="d_comment">//writeln();
+</span></pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".GeometricVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.GeometricVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".GeometricVariable.this"></span><div class="quickindex" id="quickindex.GeometricVariable.this"></div>this(T <code class="ddoc_param">p</code>, bool <code class="ddoc_param">success</code> = true);
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">T <code class="ddoc_param">p</code></td>
+<td class="param_desc">probability</td></tr>
+<tr class="param"><td class="param_id">reverse</td>
+<td class="param_desc"><code class="ddoc_param">p</code> is <code class="ddoc_param">success</code> probability if <span class="d_inlinecode donthyphenate notranslate">true</span> and failure probability otherwise.</td></tr>
+</table></div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".GeometricVariable.opCall"></span><div class="quickindex" id="quickindex.GeometricVariable.opCall"></div>ulong <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(RNG)</span>(ref RNG <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!RNG)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".GeometricVariable.min"></span><div class="quickindex" id="quickindex.GeometricVariable.min"></div>enum ulong <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".GeometricVariable.max"></span><div class="quickindex" id="quickindex.GeometricVariable.max"></div>enum ulong <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PoissonVariable"></span><div class="quickindex" id="quickindex.PoissonVariable"></div>struct <span class="def-anchor" id="PoissonVariable"></span><code class="ddoc_psymbol">PoissonVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Poisson_distribution">Poisson random variable</a>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random;
+<span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">PoissonVariable</span>!<span class="d_keyword">double</span>(10);
+size_t[<span class="d_keyword">ulong</span>] hist;
+<span class="d_keyword">foreach</span>(_; 0..1000)
+    hist[rv(gen)]++;
+<span class="d_comment">//import std.stdio;
+</span><span class="d_comment">//foreach(i; 0..100)
+</span><span class="d_comment">//    if(auto count = i in hist)
+</span><span class="d_comment">//        write(*count, ", ");
+</span><span class="d_comment">//    else
+</span><span class="d_comment">//        write("0, ");
+</span><span class="d_comment">//writeln();
+</span></pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".PoissonVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.PoissonVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PoissonVariable.this"></span><div class="quickindex" id="quickindex.PoissonVariable.this"></div>this(T <code class="ddoc_param">rate</code>);
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">p</td>
+<td class="param_desc">probability</td></tr>
+<tr class="param"><td class="param_id">reverse</td>
+<td class="param_desc">p is success probability if <span class="d_inlinecode donthyphenate notranslate">true</span> and failure probability otherwise.</td></tr>
+</table></div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PoissonVariable.opCall"></span><div class="quickindex" id="quickindex.PoissonVariable.opCall"></div>ulong <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(RNG)</span>(ref RNG <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!RNG)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PoissonVariable.min"></span><div class="quickindex" id="quickindex.PoissonVariable.min"></div>enum ulong <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PoissonVariable.max"></span><div class="quickindex" id="quickindex.PoissonVariable.max"></div>enum ulong <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".NegativeBinomialVariable"></span><div class="quickindex" id="quickindex.NegativeBinomialVariable"></div>struct <span class="def-anchor" id="NegativeBinomialVariable"></span><code class="ddoc_psymbol">NegativeBinomialVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative_binomial random variable</a>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random;
+<span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">NegativeBinomialVariable</span>!<span class="d_keyword">double</span>(30, 0.3);
+size_t[<span class="d_keyword">ulong</span>] hist;
+<span class="d_keyword">foreach</span>(_; 0..1000)
+    hist[rv(gen)]++;
+<span class="d_comment">//import std.stdio;
+</span><span class="d_comment">//foreach(i; 0..100)
+</span><span class="d_comment">//    if(auto count = i in hist)
+</span><span class="d_comment">//        write(*count, ", ");
+</span><span class="d_comment">//    else
+</span><span class="d_comment">//        write("0, ");
+</span><span class="d_comment">//writeln();
+</span></pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".NegativeBinomialVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.NegativeBinomialVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".NegativeBinomialVariable.this"></span><div class="quickindex" id="quickindex.NegativeBinomialVariable.this"></div>this(size_t <code class="ddoc_param">r</code>, T <code class="ddoc_param">p</code>);
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">size_t <code class="ddoc_param">r</code></td>
+<td class="param_desc"><code class="ddoc_param">r</code> &gt; 0; number of failures until the experiment is stopped</td></tr>
+<tr class="param"><td class="param_id">T <code class="ddoc_param">p</code></td>
+<td class="param_desc"><code class="ddoc_param">p</code> ∈ (0,1); success probability in each experiment</td></tr>
+</table></div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".NegativeBinomialVariable.opCall"></span><div class="quickindex" id="quickindex.NegativeBinomialVariable.opCall"></div>ulong <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(RNG)</span>(ref RNG <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!RNG)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".NegativeBinomialVariable.min"></span><div class="quickindex" id="quickindex.NegativeBinomialVariable.min"></div>enum ulong <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".NegativeBinomialVariable.max"></span><div class="quickindex" id="quickindex.NegativeBinomialVariable.max"></div>enum ulong <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BinomialVariable"></span><div class="quickindex" id="quickindex.BinomialVariable"></div>struct <span class="def-anchor" id="BinomialVariable"></span><code class="ddoc_psymbol">BinomialVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary"><a href="http://en.wikipedia.org/wiki/Binomial_distribution">Binomial random variable</a>.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.random;
+<span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_keyword">auto</span> rv = <span class="d_psymbol">BinomialVariable</span>!<span class="d_keyword">double</span>(20, 0.5);
+<span class="d_keyword">int</span>[] hist = <span class="d_keyword">new</span> <span class="d_keyword">int</span>[rv.max + 1];
+<span class="d_keyword">auto</span> cnt = 1000;
+<span class="d_keyword">foreach</span>(_; 0..cnt)
+    hist[rv(gen)]++;
+<span class="d_comment">//import std.stdio;
+</span><span class="d_comment">//foreach(n, e; hist)
+</span><span class="d_comment">//    writefln("p(x = %s) = %s", n, double(e) / cnt);
+</span></pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".BinomialVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.BinomialVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BinomialVariable.this"></span><div class="quickindex" id="quickindex.BinomialVariable.this"></div>this(size_t <code class="ddoc_param">n</code>, T <code class="ddoc_param">p</code>);
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">size_t <code class="ddoc_param">n</code></td>
+<td class="param_desc"><code class="ddoc_param">n</code> &gt; 0; number of trials</td></tr>
+<tr class="param"><td class="param_id">T <code class="ddoc_param">p</code></td>
+<td class="param_desc"><code class="ddoc_param">p</code> ∈ [0,1]; success probability in each trial</td></tr>
+</table></div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BinomialVariable.opCall"></span><div class="quickindex" id="quickindex.BinomialVariable.opCall"></div>size_t <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(RNG)</span>(ref RNG <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!RNG)</span>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BinomialVariable.min"></span><div class="quickindex" id="quickindex.BinomialVariable.min"></div>enum size_t <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".BinomialVariable.max"></span><div class="quickindex" id="quickindex.BinomialVariable.max"></div>@property size_t <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".DiscreteVariable"></span><div class="quickindex" id="quickindex.DiscreteVariable"></div>struct <span class="def-anchor" id="DiscreteVariable"></span><code class="ddoc_psymbol">DiscreteVariable</code>(T) if (isNumeric!T);
+<br></div></dt>
+<dd><div class="summary">Discrete distribution sampler that draws random values from a discrete
+distribution given an array of the respective probability density points (weights).</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_comment">// 10%, 20%, 20%, 40%, 10%
+</span><span class="d_keyword">auto</span> weights = [10.0, 20, 20, 40, 10];
+<span class="d_keyword">auto</span> ds = <span class="d_psymbol">DiscreteVariable</span>!<span class="d_keyword">double</span>(weights);
+
+<span class="d_comment">// weight is changed to cumulative sums
+</span><span class="d_keyword">assert</span>(weights == [10, 30, 50, 90, 100]);
+
+<span class="d_comment">// sample from the discrete distribution
+</span><span class="d_keyword">auto</span> obs = <span class="d_keyword">new</span> <span class="d_keyword">uint</span>[weights.length];
+
+<span class="d_keyword">foreach</span> (i; 0..1000)
+    obs[ds(gen)]++;
+
+<span class="d_comment">//import std.stdio;
+</span><span class="d_comment">//writeln(obs);
+</span></pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Comulative
+<pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+
+<span class="d_keyword">auto</span> cumulative = [10.0, 30, 40, 90, 120];
+<span class="d_keyword">auto</span> ds = <span class="d_psymbol">DiscreteVariable</span>!<span class="d_keyword">double</span>(cumulative, <span class="d_keyword">true</span>);
+
+<span class="d_keyword">assert</span>(cumulative == [10.0, 30, 40, 90, 120]);
+
+<span class="d_comment">// sample from the discrete distribution
+</span><span class="d_keyword">auto</span> obs = <span class="d_keyword">new</span> <span class="d_keyword">uint</span>[cumulative.length];
+<span class="d_keyword">foreach</span> (i; 0..1000)
+    obs[ds(gen)]++;
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".DiscreteVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.DiscreteVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".DiscreteVariable.this"></span><div class="quickindex" id="quickindex.DiscreteVariable.this"></div>this(T[] <code class="ddoc_param">weights</code>, bool <code class="ddoc_param">cumulative</code> = false);
+<br></div></dt>
+<dd><div class="summary"><span class="d_inlinecode donthyphenate notranslate">DiscreteVariable</span> constructor computes <code class="ddoc_param">cumulative</code> density points
+    in place without memory allocation.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">T[] <code class="ddoc_param">weights</code></td>
+<td class="param_desc">density points</td></tr>
+<tr class="param"><td class="param_id">bool <code class="ddoc_param">cumulative</code></td>
+<td class="param_desc">optional flag indiciates if <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">weights</code></span> are already <code class="ddoc_param">cumulative</code></td></tr>
+</table></div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".DiscreteVariable.opCall"></span><div class="quickindex" id="quickindex.DiscreteVariable.opCall"></div>size_t <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(RNG)</span>(ref RNG <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!RNG)</span>;
+<br></div></dt>
+<dd><div class="summary">Samples a value from the discrete distribution using a custom random generator.
+</div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Complexity:</span>
+<span class="d_inlinecode donthyphenate notranslate">O(log n)</span> where <span class="d_inlinecode donthyphenate notranslate">n</span> is the number of <span class="d_inlinecode donthyphenate notranslate">weights</span>.</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".DiscreteVariable.min"></span><div class="quickindex" id="quickindex.DiscreteVariable.min"></div>enum size_t <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".DiscreteVariable.max"></span><div class="quickindex" id="quickindex.DiscreteVariable.max"></div>@property size_t <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseConstantVariable"></span><div class="quickindex" id="quickindex.PiecewiseConstantVariable"></div>struct <span class="def-anchor" id="PiecewiseConstantVariable"></span><code class="ddoc_psymbol">PiecewiseConstantVariable</code>(T, W = T) if (isNumeric!T &amp;&amp; isNumeric!W);
+<br></div></dt>
+<dd><div class="summary">Piecewise constant variable.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_comment">// 50% of the time, generate a random number between 0 and 1
+</span><span class="d_comment">// 50% of the time, generate a random number between 10 and 15
+</span><span class="d_keyword">double</span>[] i = [0,  1, 10, 15];
+<span class="d_keyword">double</span>[] w =   [1,  0,  1];
+<span class="d_keyword">auto</span> pcv = <span class="d_psymbol">PiecewiseConstantVariable</span>!(<span class="d_keyword">double</span>, <span class="d_keyword">double</span>)(i, w);
+<span class="d_keyword">assert</span>(w == [1, 1, 2]);
+
+<span class="d_keyword">int</span>[<span class="d_keyword">int</span>] hist;
+<span class="d_keyword">foreach</span>(_; 0 .. 10000)
+    ++hist[<span class="d_keyword">cast</span>(<span class="d_keyword">int</span>)pcv(gen)];
+
+<span class="d_comment">//import std.stdio, std.range;
+</span><span class="d_comment">//foreach(j; 0..cast(int)i[$-1])
+</span><span class="d_comment">//    if(auto count = j in hist)
+</span><span class="d_comment">//        writefln("%2s %s", j, '*'.repeat.take(*count / 100));
+</span>
+<span class="d_comment">//////// output example /////////
+</span><span class="d_comment">/+
+ 0 **************************************************
+10 *********
+11 *********
+12 **********
+13 *********
+14 **********
++/</span>
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseConstantVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.PiecewiseConstantVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseConstantVariable.this"></span><div class="quickindex" id="quickindex.PiecewiseConstantVariable.this"></div>this(T[] <code class="ddoc_param">intervals</code>, W[] <code class="ddoc_param">weights</code>, bool <code class="ddoc_param">cumulative</code> = false);
+<br></div></dt>
+<dd><div class="summary"><span class="d_inlinecode donthyphenate notranslate">PiecewiseConstantVariable</span> constructor computes <code class="ddoc_param">cumulative</code> density points
+    in place without memory allocation.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">T[] <code class="ddoc_param">intervals</code></td>
+<td class="param_desc">strictly increasing sequence of interval bounds.</td></tr>
+<tr class="param"><td class="param_id">W[] <code class="ddoc_param">weights</code></td>
+<td class="param_desc">density points</td></tr>
+<tr class="param"><td class="param_id">bool <code class="ddoc_param">cumulative</code></td>
+<td class="param_desc">optional flag indicates if <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">weights</code></span> are already <code class="ddoc_param">cumulative</code></td></tr>
+</table></div></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseConstantVariable.opCall"></span><div class="quickindex" id="quickindex.PiecewiseConstantVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(RNG)</span>(ref RNG <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!RNG)</span>;
+<br></div></dt>
+<dd><div class="val"><p class="keyval Section"><span class="key keySection">Complexity:</span>
+<span class="d_inlinecode donthyphenate notranslate">O(log n)</span> where <span class="d_inlinecode donthyphenate notranslate">n</span> is the number of <span class="d_inlinecode donthyphenate notranslate">weights</span>.</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseConstantVariable.min"></span><div class="quickindex" id="quickindex.PiecewiseConstantVariable.min"></div>@property T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseConstantVariable.max"></span><div class="quickindex" id="quickindex.PiecewiseConstantVariable.max"></div>@property T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseLinearVariable"></span><div class="quickindex" id="quickindex.PiecewiseLinearVariable"></div>struct <span class="def-anchor" id="PiecewiseLinearVariable"></span><code class="ddoc_psymbol">PiecewiseLinearVariable</code>(T) if (isFloatingPoint!T);
+<br></div></dt>
+<dd><div class="summary">Piecewise constant variable.</div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> gen = Random(unpredictableSeed);
+<span class="d_comment">// increase the probability from 0 to 5
+</span><span class="d_comment">// remain flat from 5 to 10
+</span><span class="d_comment">// decrease from 10 to 15 at the same rate
+</span><span class="d_keyword">double</span>[] i = [0, 5, 10, 15];
+<span class="d_keyword">double</span>[] w = [0, 1,  1,  0];
+<span class="d_keyword">auto</span> pcv = <span class="d_psymbol">PiecewiseLinearVariable</span>!<span class="d_keyword">double</span>(i, w, <span class="d_keyword">new</span> <span class="d_keyword">double</span>[w.length - 1]);
+
+<span class="d_keyword">int</span>[<span class="d_keyword">int</span>] hist;
+<span class="d_keyword">foreach</span>(_; 0 .. 10000)
+    ++hist[<span class="d_keyword">cast</span>(<span class="d_keyword">int</span>)pcv(gen)];
+
+<span class="d_comment">//import std.stdio, std.range;
+</span><span class="d_comment">//foreach(j; 0..cast(int)i[$-1]+1)
+</span><span class="d_comment">//    if(auto count = j in hist)
+</span><span class="d_comment">//        writefln("%2s %s", j, '*'.repeat.take(*count / 100));
+</span>
+<span class="d_comment">//////// output example /////////
+</span><span class="d_comment">/+
+ 0 *
+ 1 **
+ 2 *****
+ 3 *******
+ 4 ********
+ 5 **********
+ 6 *********
+ 7 *********
+ 8 **********
+ 9 *********
+10 *********
+11 *******
+12 ****
+13 **
+14 *
++/</span>
+</pre>
+</div></div>
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseLinearVariable.isRandomVariable"></span><div class="quickindex" id="quickindex.PiecewiseLinearVariable.isRandomVariable"></div>enum auto <span class="def-anchor" id="isRandomVariable"></span><code class="ddoc_psymbol">isRandomVariable</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseLinearVariable.this"></span><div class="quickindex" id="quickindex.PiecewiseLinearVariable.this"></div>this(T[] <code class="ddoc_param">points</code>, T[] <code class="ddoc_param">weights</code>, T[] <code class="ddoc_param">areas</code>);
+<br></div></dt>
+<dd><div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">intervals</td>
+<td class="param_desc">strictly increasing sequence of interval bounds.</td></tr>
+<tr class="param"><td class="param_id">T[] <code class="ddoc_param">weights</code></td>
+<td class="param_desc">density <code class="ddoc_param">points</code></td></tr>
+<tr class="param"><td class="param_id">T[] <code class="ddoc_param">areas</code></td>
+<td class="param_desc">user allocated uninitialized array</td></tr>
+</table></div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Constrains:</span>
+<span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">points</code>.length == <code class="ddoc_param">weights</code>.length</span> <br>
+        <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">areas</code>.length &gt; 0</span> <br>
+        <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">areas</code>.length + 1 == <code class="ddoc_param">weights</code>.length</span></p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseLinearVariable.opCall"></span><div class="quickindex" id="quickindex.PiecewiseLinearVariable.opCall"></div>T <span class="def-anchor" id="opCall"></span><code class="ddoc_psymbol">opCall</code><span class="template_param_list" title="Template parameter list">(RNG)</span>(ref RNG <code class="ddoc_param">gen</code>)<br><span class="constraint">if (isSaturatedRandomEngine!RNG)</span>;
+<br></div></dt>
+<dd><div class="val"><p class="keyval Section"><span class="key keySection">Complexity:</span>
+<span class="d_inlinecode donthyphenate notranslate">O(log n)</span> where <span class="d_inlinecode donthyphenate notranslate">n</span> is the number of <span class="d_inlinecode donthyphenate notranslate">weights</span>.</p></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseLinearVariable.min"></span><div class="quickindex" id="quickindex.PiecewiseLinearVariable.min"></div>@property T <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".PiecewiseLinearVariable.max"></span><div class="quickindex" id="quickindex.PiecewiseLinearVariable.max"></div>@property T <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code>();
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright, Ilya Yaroshenko 2016-.
+ | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:14 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>mir.ndslice.allocation - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='mir.ndslice.allocation' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/mir/ndslice/allocation.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">mir.ndslice.allocation</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary">This is a submodule of <a href="mir_ndslice.html"><span class="d_inlinecode donthyphenate notranslate">mir.ndslice</span></a>.
+</div>
+<div class="description">It contains <span class="def-anchor" id="allocation"></span><code class="ddoc_psymbol">allocation</code> utilities.
+<div class="blankline"></div>
+
+
+<table class="book"><caption><h2>Transpose operators</h2></caption><tr><th scope="col">Function Name</th> <th scope="col">Description</th></tr>
+<tr><td class="donthyphenate nobr"><a href="#makeNdarray"><span class="d_inlinecode donthyphenate notranslate">makeNdarray</span></a></td> <td>Allocates a common n-dimensional array from a slice using an allocator. </td></tr>
+<tr><td class="donthyphenate nobr"><a href="#makeSlice"><span class="d_inlinecode donthyphenate notranslate">makeSlice</span></a></td> <td>Allocates a slice using an allocator. </td></tr>
+<tr><td class="donthyphenate nobr"><a href="#makeUninitializedSlice"><span class="d_inlinecode donthyphenate notranslate">makeUninitializedSlice</span></a></td> <td>Allocates an uninitialized slice using an allocator. </td></tr>
+<tr><td class="donthyphenate nobr"><a href="#ndarray"><span class="d_inlinecode donthyphenate notranslate">ndarray</span></a></td> <td>Allocates a common n-dimensional array from a slice. </td></tr>
+<tr><td class="donthyphenate nobr"><a href="#shape"><span class="d_inlinecode donthyphenate notranslate">shape</span></a></td> <td>Returns a shape of a common n-dimensional array. </td></tr>
+<tr><td class="donthyphenate nobr"><a href="#slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></td> <td>Allocates a slice using GC.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#uninitializedSlice"><span class="d_inlinecode donthyphenate notranslate">uninitializedSlice</span></a></td> <td>Allocates an uninitialized slice using GC. </td></tr>
+</table>
+<div class="blankline"></div>
+
+
+
+</div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors">Ilya Yaroshenko
+
+</div></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".slice"></span><div class="quickindex" id="quickindex.slice"></div>Slice!(Contiguous, [N], T*) <span class="def-anchor" id="slice"></span><code class="ddoc_psymbol">slice</code>(T, size_t N)(size_t[N] <code class="ddoc_param">lengths</code>...);
+<br><br>auto <span class="def-anchor" id="slice"></span><code class="ddoc_psymbol">slice</code>(T, size_t N)(size_t[N] <code class="ddoc_param">lengths</code>, T <code class="ddoc_param">init</code>);
+<br><br>auto <span class="def-anchor" id="slice"></span><code class="ddoc_psymbol">slice</code>(SliceKind kind, size_t[] packs, Iterator)(Slice!(kind, packs, Iterator) <span class="def-anchor" id="slice"></span><code class="ddoc_psymbol">slice</code>);
+<br></div></dt>
+<dd><div class="summary">Creates an array and an n-dimensional <span class="def-anchor" id="slice"></span><code class="ddoc_psymbol">slice</code> over it.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">size_t[N] <code class="ddoc_param">lengths</code></td>
+<td class="param_desc">List of <code class="ddoc_param">lengths</code> for each dimension.</td></tr>
+<tr class="param"><td class="param_id">T <code class="ddoc_param">init</code></td>
+<td class="param_desc">Value to initialize with.</td></tr>
+<tr class="param"><td class="param_id">Slice!(kind, packs, Iterator) <span class="def-anchor" id="slice"></span><code class="ddoc_psymbol">slice</code></td>
+<td class="param_desc">Slice to copy shape and data from.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">n-dimensional <span class="def-anchor" id="slice"></span><code class="ddoc_psymbol">slice</code></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> tensor = <span class="d_psymbol">slice</span>!<span class="d_keyword">int</span>(5, 6, 7);
+<span class="d_keyword">assert</span>(tensor.length == 5);
+<span class="d_keyword">assert</span>(tensor.elementsCount == 5 * 6 * 7);
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(<span class="d_keyword">is</span>(<span class="d_keyword">typeof</span>(tensor) == Slice!(Contiguous, [3], <span class="d_keyword">int</span>*)));
+
+<span class="d_comment">// creates duplicate using `slice`
+</span><span class="d_keyword">auto</span> dup = tensor.<span class="d_psymbol">slice</span>;
+<span class="d_keyword">assert</span>(dup == tensor);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> tensor = <span class="d_psymbol">slice</span>([2, 3], 5);
+<span class="d_keyword">assert</span>(tensor.elementsCount == 2 * 3);
+<span class="d_keyword">assert</span>(tensor[1, 1] == 5);
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".uninitializedSlice"></span><div class="quickindex" id="quickindex.uninitializedSlice"></div>auto <span class="def-anchor" id="uninitializedSlice"></span><code class="ddoc_psymbol">uninitializedSlice</code>(T, size_t N)(size_t[N] <code class="ddoc_param">lengths</code>...);
+<br></div></dt>
+<dd><div class="summary">Creates an uninitialized array and an n-dimensional slice over it.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">size_t[N] <code class="ddoc_param">lengths</code></td>
+<td class="param_desc">list of <code class="ddoc_param">lengths</code> for each dimension</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">uninitialized n-dimensional slice</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">auto</span> tensor = <span class="d_psymbol">uninitializedSlice</span>!<span class="d_keyword">int</span>(5, 6, 7);
+<span class="d_keyword">assert</span>(tensor.length == 5);
+<span class="d_keyword">assert</span>(tensor.elementsCount == 5 * 6 * 7);
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(<span class="d_keyword">is</span>(<span class="d_keyword">typeof</span>(tensor) == Slice!(Contiguous, [3], <span class="d_keyword">int</span>*)));
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".makeSlice"></span><div class="quickindex" id="quickindex.makeSlice"></div>auto <span class="def-anchor" id="makeSlice"></span><code class="ddoc_psymbol">makeSlice</code>(Allocator, size_t N, Iterator)(auto ref Allocator <code class="ddoc_param">alloc</code>, Slice!(N, Iterator) <code class="ddoc_param">slice</code>);
+<br><br>SliceAllocationResult!(N, T) <span class="def-anchor" id="makeSlice"></span><code class="ddoc_psymbol">makeSlice</code>(T, Allocator, size_t N)(auto ref Allocator <code class="ddoc_param">alloc</code>, size_t[N] <code class="ddoc_param">lengths</code>...);
+<br><br>SliceAllocationResult!(N, T) <span class="def-anchor" id="makeSlice"></span><code class="ddoc_psymbol">makeSlice</code>(T, Allocator, size_t N)(auto ref Allocator <code class="ddoc_param">alloc</code>, size_t[N] <code class="ddoc_param">lengths</code>, T <code class="ddoc_param">init</code>);
+<br></div></dt>
+<dd><div class="summary">Allocates an array through a specified allocator and creates an n-dimensional <code class="ddoc_param">slice</code> over it.
+See also <a href="std_experimental_allocator.html"><span class="d_inlinecode donthyphenate notranslate">std.experimental.allocator</span></a>.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Allocator <code class="ddoc_param">alloc</code></td>
+<td class="param_desc">allocator</td></tr>
+<tr class="param"><td class="param_id">size_t[N] <code class="ddoc_param">lengths</code></td>
+<td class="param_desc">list of <code class="ddoc_param">lengths</code> for each dimension</td></tr>
+<tr class="param"><td class="param_id">T <code class="ddoc_param">init</code></td>
+<td class="param_desc">default value for array initialization</td></tr>
+<tr class="param"><td class="param_id">Slice!(N, Iterator) <code class="ddoc_param">slice</code></td>
+<td class="param_desc"><code class="ddoc_param">slice</code> to copy shape and data from</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">a structure with fields <span class="d_inlinecode donthyphenate notranslate">array</span> and <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">slice</code></span>
+</div></div>
+<div class="val"><p class="keyval Section"><span class="key keySection">Note:</span>
+<span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="makeSlice"></span><code class="ddoc_psymbol">makeSlice</code></span> always returns <code class="ddoc_param">slice</code> with mutable elements</p></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">ditto
+<div class="blankline"></div>
+
+
+<div class="blankline"></div>
+
+
+<div class="blankline"></div>
+
+
+Initialization with default value
+<pre class="d_code notranslate"><span class="d_keyword">import</span> std.experimental.allocator;
+<span class="d_keyword">import</span> std.experimental.allocator.mallocator;
+
+<span class="d_keyword">auto</span> tup = <span class="d_psymbol">makeSlice</span>(Mallocator.instance, [2, 3, 4], 10);
+<span class="d_keyword">auto</span> <span class="d_param">slice</span> = tup.<span class="d_param">slice</span>;
+<span class="d_keyword">assert</span>(<span class="d_param">slice</span>[1, 1, 1] == 10);
+Mallocator.instance.dispose(tup.array);
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".makeUninitializedSlice"></span><div class="quickindex" id="quickindex.makeUninitializedSlice"></div>SliceAllocationResult!(N, T) <span class="def-anchor" id="makeUninitializedSlice"></span><code class="ddoc_psymbol">makeUninitializedSlice</code>(T, Allocator, size_t N)(auto ref Allocator <code class="ddoc_param">alloc</code>, size_t[N] <code class="ddoc_param">lengths</code>...);
+<br></div></dt>
+<dd><div class="summary">Allocates an uninitialized array through a specified allocator and creates an n-dimensional slice over it.
+See also <a href="std_experimental_allocator.html"><span class="d_inlinecode donthyphenate notranslate">std.experimental.allocator</span></a>.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Allocator <code class="ddoc_param">alloc</code></td>
+<td class="param_desc">allocator</td></tr>
+<tr class="param"><td class="param_id">size_t[N] <code class="ddoc_param">lengths</code></td>
+<td class="param_desc">list of <code class="ddoc_param">lengths</code> for each dimension</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">a structure with fields <span class="d_inlinecode donthyphenate notranslate">array</span> and <span class="d_inlinecode donthyphenate notranslate">slice</span></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.experimental.allocator;
+<span class="d_keyword">import</span> std.experimental.allocator.mallocator;
+
+<span class="d_keyword">auto</span> tup = <span class="d_psymbol">makeUninitializedSlice</span>!<span class="d_keyword">int</span>(Mallocator.instance, 2, 3, 4);
+
+<span class="d_keyword">assert</span>(tup.array.length           == 24);
+<span class="d_keyword">assert</span>(tup.slice.elementsCount    == 24);
+<span class="d_keyword">assert</span>(tup.array.ptr == &amp;tup.slice[0, 0, 0]);
+
+Mallocator.instance.dispose(tup.array);
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".SliceAllocationResult"></span><div class="quickindex" id="quickindex.SliceAllocationResult"></div>struct <span class="def-anchor" id="SliceAllocationResult"></span><code class="ddoc_psymbol">SliceAllocationResult</code>(size_t N, T);
+<br></div></dt>
+<dd><div class="summary">Structure used by <a href="#makeSlice"><span class="d_inlinecode donthyphenate notranslate">makeSlice</span></a> and <a href="#makeUninitializedSlice"><span class="d_inlinecode donthyphenate notranslate">makeUninitializedSlice</span></a>.</div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".SliceAllocationResult.array"></span><div class="quickindex" id="quickindex.SliceAllocationResult.array"></div>T[] <span class="def-anchor" id="array"></span><code class="ddoc_psymbol">array</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".SliceAllocationResult.slice"></span><div class="quickindex" id="quickindex.SliceAllocationResult.slice"></div>Slice!(Contiguous, [N], T*) <span class="def-anchor" id="slice"></span><code class="ddoc_psymbol">slice</code>;
+<br></div></dt>
+<dd><div class="blankline"></div>
+
+</dd>
+</dl>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".ndarray"></span><div class="quickindex" id="quickindex.ndarray"></div>auto <span class="def-anchor" id="ndarray"></span><code class="ddoc_psymbol">ndarray</code>(SliceKind kind, size_t[] packs, Iterator)(Slice!(kind, packs, Iterator) <code class="ddoc_param">slice</code>);
+<br></div></dt>
+<dd><div class="summary">Creates a common n-dimensional array from a <code class="ddoc_param">slice</code>.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Slice!(kind, packs, Iterator) <code class="ddoc_param">slice</code></td>
+<td class="param_desc"><code class="ddoc_param">slice</code></td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">multidimensional D array</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.topology : iota;
+<span class="d_keyword">auto</span> <span class="d_param">slice</span> = iota(3, 4);
+<span class="d_keyword">auto</span> m = <span class="d_param">slice</span>.<span class="d_psymbol">ndarray</span>;
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(<span class="d_keyword">is</span>(<span class="d_keyword">typeof</span>(m) == size_t[][]));
+<span class="d_keyword">assert</span>(m == [[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]]);
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".makeNdarray"></span><div class="quickindex" id="quickindex.makeNdarray"></div>auto <span class="def-anchor" id="makeNdarray"></span><code class="ddoc_psymbol">makeNdarray</code>(T, Allocator, SliceKind kind, size_t[] packs, Iterator)(auto ref Allocator <code class="ddoc_param">alloc</code>, Slice!(kind, packs, Iterator) <code class="ddoc_param">slice</code>);
+<br></div></dt>
+<dd><div class="summary">Allocates a common n-dimensional array using data from a <code class="ddoc_param">slice</code>.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">Allocator <code class="ddoc_param">alloc</code></td>
+<td class="param_desc">allocator (optional)</td></tr>
+<tr class="param"><td class="param_id">Slice!(kind, packs, Iterator) <code class="ddoc_param">slice</code></td>
+<td class="param_desc"><code class="ddoc_param">slice</code></td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">multidimensional D array</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">import</span> std.experimental.allocator;
+<span class="d_keyword">import</span> std.experimental.allocator.mallocator;
+<span class="d_keyword">import</span> mir.ndslice.topology : iota;
+
+<span class="d_keyword">auto</span> <span class="d_param">slice</span> = iota(3, 4);
+<span class="d_keyword">auto</span> m = Mallocator.instance.<span class="d_psymbol">makeNdarray</span>!<span class="d_keyword">long</span>(<span class="d_param">slice</span>);
+
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(<span class="d_keyword">is</span>(<span class="d_keyword">typeof</span>(m) == <span class="d_keyword">long</span>[][]));
+
+<span class="d_keyword">static</span> <span class="d_keyword">immutable</span> ar = [[0L, 1, 2, 3], [4L, 5, 6, 7], [8L, 9, 10, 11]];
+<span class="d_keyword">assert</span>(m == ar);
+
+<span class="d_keyword">foreach</span> (<span class="d_keyword">ref</span> row; m)
+    Mallocator.instance.dispose(row);
+Mallocator.instance.dispose(m);
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".shape"></span><div class="quickindex" id="quickindex.shape"></div>auto <span class="def-anchor" id="shape"></span><code class="ddoc_psymbol">shape</code><span class="template_param_list" title="Template parameter list">(T)</span>(T[] <code class="ddoc_param">array</code>, ref int <code class="ddoc_param">err</code>);
+<br></div></dt>
+<dd><div class="summary">Shape of a common n-dimensional <code class="ddoc_param">array</code>.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">T[] <code class="ddoc_param">array</code></td>
+<td class="param_desc">common n-dimensional <code class="ddoc_param">array</code></td></tr>
+<tr class="param"><td class="param_id">int <code class="ddoc_param">err</code></td>
+<td class="param_desc">error flag passed by reference</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">static <code class="ddoc_param">array</code> of dimensions type of <span class="d_inlinecode donthyphenate notranslate">size_t[n]</span>
+</div></div>
+<div class="keyval Throws"><span class="key keyThrows">Throws:</span> <div class="val valThrows"><a href="#SliceException"><span class="d_inlinecode donthyphenate notranslate">SliceException</span></a> if the <code class="ddoc_param">array</code> is not an n-dimensional parallelotope.</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">int</span> <span class="d_param">err</span>;
+size_t[2] <span class="d_psymbol">shape</span> = [[1, 2, 3], [4, 5, 6]].<span class="d_psymbol">shape</span>(<span class="d_param">err</span>);
+<span class="d_keyword">assert</span>(<span class="d_param">err</span> == 0);
+<span class="d_keyword">assert</span>(<span class="d_psymbol">shape</span> == [2, 3]);
+
+[[1, 2], [4, 5, 6]].<span class="d_psymbol">shape</span>(<span class="d_param">err</span>);
+<span class="d_keyword">assert</span>(<span class="d_param">err</span> == 1);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples">Slice from ndarray
+<pre class="d_code notranslate"><span class="d_keyword">import</span> mir.ndslice.allocation: slice, <span class="d_psymbol">shape</span>;
+<span class="d_keyword">int</span> <span class="d_param">err</span>;
+<span class="d_keyword">auto</span> <span class="d_param">array</span> = [[1, 2, 3], [4, 5, 6]];
+<span class="d_keyword">auto</span> s = <span class="d_param">array</span>.<span class="d_psymbol">shape</span>(<span class="d_param">err</span>).slice!<span class="d_keyword">int</span>;
+s[] = [[1, 2, 3], [4, 5, 6]];
+<span class="d_keyword">assert</span>(s == <span class="d_param">array</span>);
+</pre>
+</div></div>
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Copyright © 2016-, Ilya Yaroshenko
+ | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:13 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>

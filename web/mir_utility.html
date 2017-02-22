@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="algorithm mir libmir numeric blas array vector tensor numpy math stats">
+<meta name="description" content="Generic Linear Algebra Subprograms">
+<title>mir.utility - D Programming Language</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+
+</head>
+<body id='mir.utility' class='std'>
+<script type="text/javascript">document.body.className += ' have-javascript'</script>
+<div id="top"><div class="helper"><div class="helper expand-container">    <a href="menu.html" title="Menu" class="hamburger expand-toggle"><span>Menu</span></a>
+    
+<div id="cssmenu"><ul>    <li><a href='https://github.com/libmir/mir-algorithm'><span>Github</span></a></li>
+    <li><a href='https://github.com/libmir/mir-algorithm/issues'><span>Issues</span></a></li>
+    <li><a href='https://gitter.im/libmir/public '><span>Chat</span></a></li>
+    <li class='expand-container'><a class='expand-toggle' href='mir.html'><span>Mir Projects</span></a>
+      
+<ul class='expand-content'>    <li><a href='http://docs.mir.dlang.io'>Mir</a></li>
+    <li><a href='http://docs.algorithm.dlang.io'>Mir Algorithm</a></li>
+    <li><a href='http://docs.cpuid.dlang.io'>CPUID</a></li>
+    <li><a href='http://docs.glas.dlang.io'>GLAS</a></li>
+    <li><a href='http://docs.random.dlang.io'>Random Numbers Generators</a></li>
+ </ul></li>
+    <li><a href='https://dlang.org'><span>Dlang</span></a></li>
+</ul></div>
+    <div class="search-container expand-container">        <a href="search.html" class="expand-toggle" title="Search"><span>Search</span></a>
+        
+    <div id="search-box">        <form method="get" action="https://google.com/search">
+            <input type="hidden" id="domains" name="domains" value="dlang.org">
+            <input type="hidden" id="sourceid" name="sourceid" value="google-search">
+            <input type="hidden" id="sitesearch" name="sitesearch" value="algorithm.dlang.io">
+            <span id="search-query"><input id="q" name="q" placeholder="Search"></span>
+            <span id="search-submit"><button type="submit"><i class="fa fa-search"></i><span>go</span></button></span>
+        </form>
+    </div>
+    </div>
+</div></div></div>
+
+<div class="container">    
+<div class="subnav-helper"></div> <div class="subnav">    <div class="head">        <h2>Library Reference</h2>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    <ul>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">mir</em></span></a>
+<ul><li>  <a href="mir_conv.html" title="mir.conv"><span class="d_inlinecode donthyphenate notranslate">conv</span></a></li><li>  <a href="mir_functional.html" title="mir.functional"><span class="d_inlinecode donthyphenate notranslate">functional</span></a></li><li>  <h7><span class="d_inlinecode donthyphenate notranslate">math</span></h7><ul><li>    <a href="mir_math_constant.html" title="mir.math.constant"><span class="d_inlinecode donthyphenate notranslate">constant</span></a></li><li>    <h7><span class="d_inlinecode donthyphenate notranslate">func</span></h7><ul><li>      <a href="mir_math_func_expdigamma.html" title="mir.math.func.expdigamma"><span class="d_inlinecode donthyphenate notranslate">expdigamma</span></a>
+    </li></ul></li><li>    <a href="mir_math_sum.html" title="mir.math.sum"><span class="d_inlinecode donthyphenate notranslate">sum</span></a>
+  </li></ul></li><li>  <a href="mir_ndslice.html" title="mir.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a><ul><li>    <a href="mir_ndslice_algorithm.html" title="mir.ndslice.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_ndslice_allocation.html" title="mir.ndslice.allocation"><span class="d_inlinecode donthyphenate notranslate">allocation</span></a></li><li>    <a href="mir_ndslice_dynamic.html" title="mir.ndslice.dynamic"><span class="d_inlinecode donthyphenate notranslate">dynamic</span></a></li><li>    <a href="mir_ndslice_field.html" title="mir.ndslice.field"><span class="d_inlinecode donthyphenate notranslate">field</span></a></li><li>    <a href="mir_ndslice_iterator.html" title="mir.ndslice.iterator"><span class="d_inlinecode donthyphenate notranslate">iterator</span></a></li><li>    <a href="mir_ndslice_slice.html" title="mir.ndslice.slice"><span class="d_inlinecode donthyphenate notranslate">slice</span></a></li><li>    <a href="mir_ndslice_sorting.html" title="mir.ndslice.sorting"><span class="d_inlinecode donthyphenate notranslate">sorting</span></a></li><li>    <a href="mir_ndslice_stack.html" title="mir.ndslice.stack"><span class="d_inlinecode donthyphenate notranslate">stack</span></a></li><li>    <a href="mir_ndslice_topology.html" title="mir.ndslice.topology"><span class="d_inlinecode donthyphenate notranslate">topology</span></a>
+  </li></ul></li><li>  <a href="mir_primitives.html" title="mir.primitives"><span class="d_inlinecode donthyphenate notranslate">primitives</span></a></li><li>  <a href="mir_random.html" title="mir.random"><span class="d_inlinecode donthyphenate notranslate">random</span></a><ul><li>    <a href="mir_random_algorithm.html" title="mir.random.algorithm"><span class="d_inlinecode donthyphenate notranslate">algorithm</span></a></li><li>    <a href="mir_random_engine.html" title="mir.random.engine"><span class="d_inlinecode donthyphenate notranslate">engine</span></a><ul><li>      <a href="mir_random_engine_linear_congruential.html" title="mir.random.engine.linear_congruential"><span class="d_inlinecode donthyphenate notranslate">linear_congruential</span></a></li><li>      <a href="mir_random_engine_mersenne_twister.html" title="mir.random.engine.mersenne_twister"><span class="d_inlinecode donthyphenate notranslate">mersenne_twister</span></a></li><li>      <a href="mir_random_engine_xorshift.html" title="mir.random.engine.xorshift"><span class="d_inlinecode donthyphenate notranslate">xorshift</span></a>
+    </li></ul></li><li>    <a href="mir_random_flex.html" title="mir.random.flex"><span class="d_inlinecode donthyphenate notranslate">flex</span></a></li><li>    <a href="mir_random_variable.html" title="mir.random.variable"><span class="d_inlinecode donthyphenate notranslate">variable</span></a>
+  </li></ul></li><li>  <a href="mir_utility.html" title="mir.utility"><span class="d_inlinecode donthyphenate notranslate">utility</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">cpuid</em></span></a>
+<ul><li>  <a href="cpuid_amd.html" title="cpuid.amd"><span class="d_inlinecode donthyphenate notranslate">amd</span></a></li><li>  <a href="cpuid_common.html" title="cpuid.common"><span class="d_inlinecode donthyphenate notranslate">common</span></a></li><li>  <a href="cpuid_intel.html" title="cpuid.intel"><span class="d_inlinecode donthyphenate notranslate">intel</span></a></li><li>  <a href="cpuid_unified.html" title="cpuid.unified"><span class="d_inlinecode donthyphenate notranslate">unified</span></a></li><li>  <a href="cpuid_x86_any.html" title="cpuid.x86_any"><span class="d_inlinecode donthyphenate notranslate">x86_any</span></a>
+</li></ul>
+</li>
+
+<li class='expand-container'><a class='expand-toggle' href='#'><span><em class="tt">glas</em></span></a>
+<ul><li>  <a href="glas_fortran.html" title="glas.fortran"><span class="d_inlinecode donthyphenate notranslate">fortran</span></a></li><li>  <a href="glas_ndslice.html" title="glas.ndslice"><span class="d_inlinecode donthyphenate notranslate">ndslice</span></a>
+</li></ul>
+</li></ul>
+</div>
+    <div class="hyphenate" id="content">        
+<div id="tools"><div >	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/issues">Report a bug</a>
+		<div >			If you spot a problem with this page, click here to create a Github issue.
+		</div>
+	</div>
+	<div class="tip smallprint">		<a href="https://github.com/libmir/mir-algorithm/edit/master/doc/../all/mir/utility.d">Improve this page</a>
+		<div >			Quickly fork, edit online, and submit a pull request for this page.
+			Requires a signed-in GitHub account. This works well for small changes.
+			If you'd like to make larger changes you may want to consider using
+			a local clone.
+		</div>
+	</div>
+</div></div>
+        <h1><span class="d_inlinecode donthyphenate notranslate">mir.utility</span></h1>
+        <div class="quickindex" id="quickindex"></div>
+        <div class="summary">Generic utilities.
+</div>
+<div class="description"><table class="book"><caption>Cheat Sheet</caption><tr><th scope="col">Function Name</th> <th scope="col">Description</th></tr>
+<tr><td class="donthyphenate nobr"><a href="#swap"><span class="d_inlinecode donthyphenate notranslate">swap</span></a></td> <td>Swaps two values.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#min"><span class="d_inlinecode donthyphenate notranslate">min</span></a></td> <td>Minimum value.</td></tr>
+<tr><td class="donthyphenate nobr"><a href="#max"><span class="d_inlinecode donthyphenate notranslate">max</span></a></td> <td>Maximum value.</td></tr>
+</table>
+
+</div>
+<div class="keyval License"><span class="key keyLicense">License:</span> <div class="val valLicense"><a href="http://boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</div></div>
+<div class="keyval Authors"><span class="key keyAuthors">Authors:</span> <div class="val valAuthors"><a href="http://erdani.com">Andrei Alexandrescu</a> (original std.* modules), Ilya Yaroshenko
+</div></div>
+
+<dl><dt class="d_decl"><div ><span class="def-anchor" id=".swap"></span><div class="quickindex" id="quickindex.swap"></div>pure nothrow @nogc @trusted void <span class="def-anchor" id="swap"></span><code class="ddoc_psymbol">swap</code><span class="template_param_list" title="Template parameter list">(T)</span>(ref T <code class="ddoc_param">lhs</code>, ref T <code class="ddoc_param">rhs</code>)<br><span class="constraint">if (isBlitAssignable!T &amp;&amp; !is(typeof(<code class="ddoc_param">lhs</code>.proxySwap(<code class="ddoc_param">rhs</code>))))</span>;
+<br><br>void <span class="def-anchor" id="swap"></span><code class="ddoc_psymbol">swap</code><span class="template_param_list" title="Template parameter list">(T)</span>(ref T <code class="ddoc_param">lhs</code>, ref T <code class="ddoc_param">rhs</code>)<br><span class="constraint">if (is(typeof(<code class="ddoc_param">lhs</code>.proxySwap(<code class="ddoc_param">rhs</code>))))</span>;
+<br></div></dt>
+<dd><div class="summary">Swaps <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">lhs</code></span> and <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">rhs</code></span>. The instances <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">lhs</code></span> and <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">rhs</code></span> are moved in
+memory, without ever calling <span class="d_inlinecode donthyphenate notranslate">opAssign</span>, nor any other function. <span class="d_inlinecode donthyphenate notranslate">T</span>
+need not be assignable at all to be swapped.
+If <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">lhs</code></span> and <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">rhs</code></span> reference the same instance, then nothing is done.
+<span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">lhs</code></span> and <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">rhs</code></span> must be mutable. If <span class="d_inlinecode donthyphenate notranslate">T</span> is a struct or union, then
+its fields must also all be (recursively) mutable.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">T <code class="ddoc_param">lhs</code></td>
+<td class="param_desc">Data to be swapped with <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">rhs</code></span>.</td></tr>
+<tr class="param"><td class="param_id">T <code class="ddoc_param">rhs</code></td>
+<td class="param_desc">Data to be swapped with <span class="d_inlinecode donthyphenate notranslate"><code class="ddoc_param">lhs</code></span>.</td></tr>
+</table></div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_comment">// Swapping POD (plain old data) types:
+</span><span class="d_keyword">int</span> a = 42, b = 34;
+<span class="d_psymbol">swap</span>(a, b);
+<span class="d_keyword">assert</span>(a == 34 &amp;&amp; b == 42);
+
+<span class="d_comment">// Swapping structs with indirection:
+</span><span class="d_keyword">static</span> <span class="d_keyword">struct</span> S { <span class="d_keyword">int</span> x; <span class="d_keyword">char</span> c; <span class="d_keyword">int</span>[] y; }
+S s1 = { 0, 'z', [ 1, 2 ] };
+S s2 = { 42, 'a', [ 4, 6 ] };
+<span class="d_psymbol">swap</span>(s1, s2);
+<span class="d_keyword">assert</span>(s1.x == 42);
+<span class="d_keyword">assert</span>(s1.c == 'a');
+<span class="d_keyword">assert</span>(s1.y == [ 4, 6 ]);
+
+<span class="d_keyword">assert</span>(s2.x == 0);
+<span class="d_keyword">assert</span>(s2.c == 'z');
+<span class="d_keyword">assert</span>(s2.y == [ 1, 2 ]);
+
+<span class="d_comment">// Immutables cannot be swapped:
+</span><span class="d_keyword">immutable</span> <span class="d_keyword">int</span> imm1, imm2;
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(!<span class="d_keyword">__traits</span>(compiles, <span class="d_psymbol">swap</span>(imm1, imm2)));
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_comment">// Non-copyable types can still be swapped.
+</span><span class="d_keyword">static</span> <span class="d_keyword">struct</span> NoCopy
+{
+    <span class="d_keyword">this</span>(<span class="d_keyword">this</span>) { <span class="d_keyword">assert</span>(0); }
+    <span class="d_keyword">int</span> n;
+    string s;
+}
+NoCopy nc1, nc2;
+nc1.n = 127; nc1.s = <span class="d_string">"abc"</span>;
+nc2.n = 513; nc2.s = <span class="d_string">"uvwxyz"</span>;
+
+<span class="d_psymbol">swap</span>(nc1, nc2);
+<span class="d_keyword">assert</span>(nc1.n == 513 &amp;&amp; nc1.s == <span class="d_string">"uvwxyz"</span>);
+<span class="d_keyword">assert</span>(nc2.n == 127 &amp;&amp; nc2.s == <span class="d_string">"abc"</span>);
+
+<span class="d_psymbol">swap</span>(nc1, nc1);
+<span class="d_psymbol">swap</span>(nc2, nc2);
+<span class="d_keyword">assert</span>(nc1.n == 513 &amp;&amp; nc1.s == <span class="d_string">"uvwxyz"</span>);
+<span class="d_keyword">assert</span>(nc2.n == 127 &amp;&amp; nc2.s == <span class="d_string">"abc"</span>);
+
+<span class="d_comment">// Types containing non-copyable fields can also be swapped.
+</span><span class="d_keyword">static</span> <span class="d_keyword">struct</span> NoCopyHolder
+{
+    NoCopy noCopy;
+}
+NoCopyHolder h1, h2;
+h1.noCopy.n = 31; h1.noCopy.s = <span class="d_string">"abc"</span>;
+h2.noCopy.n = 65; h2.noCopy.s = <span class="d_keyword">null</span>;
+
+<span class="d_psymbol">swap</span>(h1, h2);
+<span class="d_keyword">assert</span>(h1.noCopy.n == 65 &amp;&amp; h1.noCopy.s == <span class="d_keyword">null</span>);
+<span class="d_keyword">assert</span>(h2.noCopy.n == 31 &amp;&amp; h2.noCopy.s == <span class="d_string">"abc"</span>);
+
+<span class="d_psymbol">swap</span>(h1, h1);
+<span class="d_psymbol">swap</span>(h2, h2);
+<span class="d_keyword">assert</span>(h1.noCopy.n == 65 &amp;&amp; h1.noCopy.s == <span class="d_keyword">null</span>);
+<span class="d_keyword">assert</span>(h2.noCopy.n == 31 &amp;&amp; h2.noCopy.s == <span class="d_string">"abc"</span>);
+
+<span class="d_comment">// Const types cannot be swapped.
+</span><span class="d_keyword">const</span> NoCopy const1, const2;
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(!<span class="d_keyword">__traits</span>(compiles, <span class="d_psymbol">swap</span>(const1, const2)));
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".min"></span><div class="quickindex" id="quickindex.min"></div>auto <span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code><span class="template_param_list" title="Template parameter list">(T...)</span>(T <code class="ddoc_param">args</code>)<br><span class="constraint">if (T.length &gt;= 2)</span>;
+<br></div></dt>
+<dd><div class="summary">Iterates the passed arguments and returns the minimum value.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">T <code class="ddoc_param">args</code></td>
+<td class="param_desc">The values to select the minimum from. At least two arguments
+    must be passed, and they must be comparable with <span class="d_inlinecode donthyphenate notranslate">&lt;</span>.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">The minimum of the passed-in values.</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="min"></span><code class="ddoc_psymbol">min</code></span> is not defined for arguments of mixed signedness because of security reasons.
+Please unify type or use a Phobos analog.
+<pre class="d_code notranslate"><span class="d_keyword">int</span> a = -10;
+<span class="d_keyword">uint</span> b = 10;
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(!<span class="d_keyword">is</span>(<span class="d_keyword">typeof</span>(<span class="d_psymbol">min</span>(a, b))));
+</pre>
+</div></div>
+</dd>
+<dt class="d_decl"><div ><span class="def-anchor" id=".max"></span><div class="quickindex" id="quickindex.max"></div>auto <span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code><span class="template_param_list" title="Template parameter list">(T...)</span>(T <code class="ddoc_param">args</code>)<br><span class="constraint">if (T.length &gt;= 2)</span>;
+<br></div></dt>
+<dd><div class="summary">Iterates the passed arguments and returns the minimum value.
+</div>
+<div class="keyval Parameters"><span class="key keyParameters">Parameters:</span> <div class="val valParameters"><table class="params"><tr class="param"><td class="param_id">T <code class="ddoc_param">args</code></td>
+<td class="param_desc">The values to select the minimum from. At least two arguments
+    must be passed, and they must be comparable with <span class="d_inlinecode donthyphenate notranslate">&lt;</span>.</td></tr>
+</table></div></div>
+<div class="keyval Returns"><span class="key keyReturns">Returns:</span> <div class="val valReturns">The minimum of the passed-in values.</div></div>
+<span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><pre class="d_code notranslate"><span class="d_keyword">int</span> a = 5;
+<span class="d_keyword">short</span> b = 6;
+<span class="d_keyword">double</span> c = 2;
+<span class="d_keyword">auto</span> d = <span class="d_psymbol">max</span>(a, b);
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(<span class="d_keyword">is</span>(<span class="d_keyword">typeof</span>(d) == <span class="d_keyword">int</span>));
+<span class="d_keyword">assert</span>(d == 6);
+<span class="d_keyword">auto</span> e = min(a, b, c);
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(<span class="d_keyword">is</span>(<span class="d_keyword">typeof</span>(e) == <span class="d_keyword">double</span>));
+<span class="d_keyword">assert</span>(e == 2);
+</pre>
+</div></div><span class="dlang_runnable"></span><div class="keyval Examples"><span class="key keyExamples">Examples:</span> <div class="val valExamples"><span class="d_inlinecode donthyphenate notranslate"><span class="def-anchor" id="max"></span><code class="ddoc_psymbol">max</code></span> is not defined for arguments of mixed signedness because of security reasons.
+Please unify type or use a Phobos analog.
+<pre class="d_code notranslate"><span class="d_keyword">int</span> a = -10;
+<span class="d_keyword">uint</span> b = 10;
+<span class="d_keyword">static</span> <span class="d_keyword">assert</span>(!<span class="d_keyword">is</span>(<span class="d_keyword">typeof</span>(<span class="d_psymbol">max</span>(a, b))));
+</pre>
+</div></div>
+</dd>
+</dl>
+
+        <div class="smallprint" id="copyright">Andrei Alexandrescu 2008-2016, Ilya Yaroshenko 2016-.
+ | Page generated by
+<a href="spec/ddoc.html">Ddoc</a> on Wed Feb 22 08:45:13 2017
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="js/jquery-1.7.2.min.js">\x3C/script>');</script>
+    <script type="text/javascript" src="js/dlang.js"></script>
+    
+    <script type="text/javascript" src="js/run.js"></script>
+
+<script type="text/javascript" src="js/listanchors.js"></script>
+<script type="text/javascript">jQuery(document).ready(listanchors);</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</body>
+</html>
