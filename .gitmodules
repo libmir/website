@@ -13,21 +13,12 @@
 [submodule "mir-cpuid"]
 	path = mir-cpuid
 	url = https://github.com/libmir/mir-cpuid
-[submodule "mir-internal"]
-	path = mir-internal
-	url = https://github.com/libmir/mir-internal
 [submodule "mir-neural"]
 	path = mir-neural
 	url = https://github.com/libmir/mir-neural
 [submodule "mir-runtime"]
 	path = mir-runtime
 	url = https://github.com/libmir/mir-runtime
-[submodule "mir-math"]
-	path = mir-math
-	url = https://github.com/libmir/mir-math
-[submodule "mir-std"]
-	path = mir-std
-	url = https://github.com/libmir/mir-std
 [submodule "dcv"]
 	path = dcv
 	url = https://github.com/libmir/dcv
