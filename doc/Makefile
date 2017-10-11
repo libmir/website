@@ -29,9 +29,9 @@ MIR_REPOS=$(addsuffix /source, $(addprefix $(DOC_SOURCE_DIR)/../, \
 # Packages in mir. Just mention the package name here. The contents of package
 # xy/zz is in variable PACKAGE_xy_zz. This allows automation in iterating
 # packages and their modules.
-TLD_PACKAGES = mir cpuid glas
+TLD_PACKAGES = cpuid glas
 
-MIR_PACKAGES = $(TLD_PACKAGES) mir mir/ndslice mir/ndslice/connect mir/internal mir/math mir/math/func mir/array mir/interpolation mir/random/engine mir/random/flex
+MIR_PACKAGES = $(TLD_PACKAGES) mir mir/ndslice mir/ndslice/connect mir/internal mir/math mir/math/func mir/array mir/interpolation mir/random mir/random/engine mir/random/flex
 
 PACKAGE_mir = bitmanip conv functional primitives range timeseries utility
 
@@ -58,8 +58,8 @@ PACKAGE_mir_ndslice = \
 	topology\
 	traits\
 
-PACKAGE_mir_random = package algorithm variable
-PACKAGE_mir_random_engine = package linear_congruential mersenne_twister xorshift
+PACKAGE_mir_random = package algorithm variable ndvariable
+PACKAGE_mir_random_engine = package linear_congruential mersenne_twister pcg xorshift
 PACKAGE_mir_random_flex = package
 
 PACKAGE_cpuid = unified common x86_any intel amd
@@ -68,8 +68,6 @@ PACKAGE_glas = ndslice fortran
 
 MOD_EXCLUDES=$(addprefix --ex=, \
 	mir.ndslice.internal \
-	mir.math.internal \
-	mir.internal. \
 	mir.random.flex.internal. \
 	glas.internal. glas.precompiled. \
 )
