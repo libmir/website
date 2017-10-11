@@ -19,7 +19,7 @@ ARTWORK_DIR=$(DOC_SOURCE_DIR)/artwork
 
 ALGORITHM_DIR=$(DOC_SOURCE_DIR)/../all
 MIR_REPOS=$(addsuffix /source, $(addprefix $(DOC_SOURCE_DIR)/../, \
-	mir-algorithm mir-random mir-math mir-internal mir-cpuid mir-glas \
+	mir-algorithm mir-random mir-cpuid mir-glas \
 ))
 
 ###########################################################
@@ -30,16 +30,33 @@ MIR_REPOS=$(addsuffix /source, $(addprefix $(DOC_SOURCE_DIR)/../, \
 # xy/zz is in variable PACKAGE_xy_zz. This allows automation in iterating
 # packages and their modules.
 TLD_PACKAGES = mir cpuid glas
-MIR_PACKAGES = $(TLD_PACKAGES) $(addprefix mir/, \
-		ndslice random random/engine random/flex math math/func \
-)
 
-PACKAGE_mir = conv functional primitives utility
+MIR_PACKAGES = $(TLD_PACKAGES) mir mir/ndslice mir/ndslice/connect mir/internal mir/math mir/math/func mir/array mir/interpolation mir/random/engine mir/random/flex
 
-PACKAGE_mir_ndslice = package algorithm allocation dynamic field iterator package slice sorting stack topology
+PACKAGE_mir = bitmanip conv functional primitives range timeseries utility
 
-PACKAGE_mir_math = sum constant
+PACKAGE_mir_array = primitives
+PACKAGE_mir_internal = utility
+PACKAGE_mir_interpolation = package linear pchip
+PACKAGE_mir_math = constant common sum numeric package
 PACKAGE_mir_math_func = expdigamma
+PACKAGE_mir_ndslice_connect = cpp cpython
+
+PACKAGE_mir_ndslice = \
+	algorithm\
+	allocation\
+	chunks\
+	concatenation\
+	dynamic\
+	field\
+	iterator\
+	mutation\
+	ndfield\
+	package\
+	slice\
+	sorting\
+	topology\
+	traits\
 
 PACKAGE_mir_random = package algorithm variable
 PACKAGE_mir_random_engine = package linear_congruential mersenne_twister xorshift
