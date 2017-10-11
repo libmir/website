@@ -18,4 +18,4 @@ deployment:
   aws:
     branch: master
     commands:
-      - AWS_DEFAULT_REGION=eu-west-1 aws s3 sync --acl public-read --delete web s3://docs.algorithm.dlang.io/latest
+      - AWS_DEFAULT_REGION=eu-west-1 aws s3 sync --acl public-read --delete web s3://mir.dlang.io/latest
