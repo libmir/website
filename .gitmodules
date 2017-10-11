@@ -16,9 +16,6 @@
 [submodule "mir-neural"]
 	path = mir-neural
 	url = https://github.com/libmir/mir-neural
-[submodule "mir-runtime"]
-	path = mir-runtime
-	url = https://github.com/libmir/mir-runtime
 [submodule "dcv"]
 	path = dcv
 	url = https://github.com/libmir/dcv
