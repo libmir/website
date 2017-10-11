@@ -4,7 +4,6 @@ branches:
   - master
 script:
 - git pull --recurse-submodules
-- git submodule update --remote --recursive
 - make -f doc/Makefile html
 deploy:
   provider: s3
